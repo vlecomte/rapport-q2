@@ -8,6 +8,8 @@ Avantages de GitHub par rapport à Drive:
 - pas de confusion avec les Ctrl+Z, pas de risque de perdre des modifs
 - ce sera utile plus tard pour des projets d'info
 - on peut éditer les fichiers .tex avec l'éditeur qu'on veut
+- on peut toujours restaurer les versions, même quand on fait des bêtises
+- un sentiment gratifiant au moment du commit
 
 Étapes pour utiliser Git et GitHub:
 - Installer git:

@@ -1,2 +1,8 @@
 # vim swap files
 .*.swp
+# latex compilation files
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.pdf
