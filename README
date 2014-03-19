@@ -1,3 +1,14 @@
+Repo pour rédiger ensemble en LaTeX le rapport final.
+
+Avantages de GitHub par rapport à Drive:
+- on peut avoir sa propre copie des fichiers, et compiler direct
+- on ne doit pas copier coller les fichiers tout le temps
+- on peut travailler hors ligne
+- les actions des autres ne nous distraient pas
+- pas de confusion avec les Ctrl+Z, pas de risque de perdre des modifs
+- ce sera utile plus tard pour des projets d'info
+- on peut éditer les fichiers .tex avec l'éditeur qu'on veut
+
 Étapes pour utiliser Git et GitHub:
 - Installer git: voir https://help.github.com/articles/set-up-git
 - Pour copier le repo chez soi, créer des commits et les "push":
