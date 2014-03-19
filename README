@@ -10,6 +10,9 @@ Avantages de GitHub par rapport à Drive:
 - on peut éditer les fichiers .tex avec l'éditeur qu'on veut
 
 Étapes pour utiliser Git et GitHub:
-- Installer git: voir https://help.github.com/articles/set-up-git
+- Installer git:
+        voir https://help.github.com/articles/set-up-git
 - Pour copier le repo chez soi, créer des commits et les "push":
-        voir http://git-scm.com/book/en/Git-Basics (de 2.1 à 2.5)
+        voir http://git-scm.com/book/en/Git-Basics (2.1-2.5)
+- Pour travailler avec le serveur:
+        voir http://git-scm.com/book/en/Git-Branching (3.1, 3.2, 3.5)
