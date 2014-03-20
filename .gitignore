@@ -6,5 +6,6 @@
 *.fdb_latexmk
 *.fls
 *.log
+*.gz
 # Output pdf
 *.pdf
