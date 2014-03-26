@@ -1,1 +1,91 @@
-\section{Exemple: filtre passe-bas}
+\section{Méthode classique: filtre passe-bas}
+
+Le filtre passe-bas consiste en une résistance $R$ et une capacité $C$
+mises en série,
+comme illustré dans la figure~\ref{circ:passe-bas}.
+Le signal d'entrée est reçu aux extrémités, et la tension de sortie est prise
+aux bornes de la capacité.
+
+Définissons:
+\begin{itemize}
+    \item $v_{in}(t)$ la tension d'entrée;
+    \item $v_R(t)$ la tension aux bornes de la résistance;
+    \item $v_C(t)$ la tension aux bornes de la capacité;
+    \item $i(t)$ le courant (de haut en bas).
+\end{itemize}
+
+À partir d'ici nous les considérerons implicitement
+comme des fonctions du temps.
+Nous supposons que le circuit est en régime sinusoïdal stable.
+
+Les données dont nous disposons sont:
+\begin{itemize}
+    \item Loi des tensions de Kirchhoff: $v_R + v_C = v_{in}$
+    \item Résistance: $v_R = Ri$
+    \item Capacité: $i = C\,dv_C/dt$
+\end{itemize}
+
+Développons la première relation:
+\begin{equation}
+    v_{in} = v_R + v_C = Ri + v_C = RC\,\frac{dv_C}{dt} + v_C
+\end{equation}
+
+Ceci est une équation différentielle linéaire d'ordre 1 en $v_C$,
+à coefficients constants, non-homogène.
+La solution de l'équation homogène correspondante est $v_C = e^{-t/RC}$.
+Toutefois, il s'agit d'une exponentielle décroissante,
+donc son effet va s'estomper à l'état stable.
+
+Posons $v_{in}(t) = V_{in}\cos(\omega t)$.
+Puisque le signal d'entrée est sinusoïdal, on peut trouver une solution
+particulière de la forme
+\[
+    v_C(t) = V_C\cos(\omega t + \phi)
+    = (V_C\cos\phi)\,\cos(\omega t) - (V_C\sin\phi)\,\sin(\omega t)
+\]
+En substituant ces expressions dans l'équation,
+puis en séparant les termes en $\cos(\omega t)$ et $\sin(\omega t)$,
+on obtient:
+\begin{equation}
+    \left\{
+        \begin{array}{ccrcr}
+            V_{in} &=& V_C\cos\phi &-& \omega RC\ V_C\sin\phi \\
+            0 &=& -\omega RC\ V_C\cos\phi &-& V_C\sin\phi
+        \end{array}
+    \right.
+\end{equation}
+ou encore:
+\begin{equation}
+    \left\{
+        \begin{array}{ccl}
+            V_C\cos\phi &=& V_{in}\,/(1+(\omega RC)^2) \\
+            V_C\sin\phi &=& V_{in}\,(-\omega RC) / (1+(\omega RC)^2)
+        \end{array}
+    \right.
+\end{equation}
+et donc:
+\begin{equation}
+    \left\{
+        \begin{array}{ccl}
+            V_C &=& V_{in}\,/ \sqrt{1+(\omega RC)^2} \\
+            \phi &=& \arctan(-\omega RC)
+        \end{array}
+    \right.
+\end{equation}
+où $V_C$ est l'\emph{amplitude} et $\phi$ le \emph{déphasage}
+du signal de sortie.
+Ces valeurs sont représentées dans la figure~\ref{graph:passe-bas},
+et seront discutées plus tard.
+
+Cette méthode a certains désavantages.
+Outre la longueur des calculs qu'elle nécessite,
+elle n'est pas facilement automatisable.
+En effet, nous avons pris un cas très simple où l'équation différentielle
+vient naturellement.
+Mais dans d'autres cas,
+d'une part la simple expression d'une
+des lois de Kirchoff ne suffit pas,
+et d'autre part il faudra parfois dériver les équations
+obtenues pour faire apparaître la variable choisie.
+
+Dès lors, une méthode plus générale et plus efficace est nécessaire.
