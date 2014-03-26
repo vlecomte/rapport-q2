@@ -29,9 +29,8 @@ Développons la première relation:
 \begin{equation}
     v_{in} = v_R + v_C = Ri + v_C = RC\,\frac{dv_C}{dt} + v_C
 \end{equation}
-
 Ceci est une équation différentielle linéaire d'ordre 1 en $v_C$,
-à coefficients constants, non-homogène.
+à coefficients constants, et non-homogène.
 La solution de l'équation homogène correspondante est $v_C = e^{-t/RC}$.
 Toutefois, il s'agit d'une exponentielle décroissante,
 donc son effet va s'estomper à l'état stable.
@@ -39,10 +38,10 @@ donc son effet va s'estomper à l'état stable.
 Posons $v_{in}(t) = V_{in}\cos(\omega t)$.
 Puisque le signal d'entrée est sinusoïdal, on peut trouver une solution
 particulière de la forme
-\[
+\begin{equation*}
     v_C(t) = V_C\cos(\omega t + \phi)
     = (V_C\cos\phi)\,\cos(\omega t) - (V_C\sin\phi)\,\sin(\omega t)
-\]
+\end{equation*}
 En substituant ces expressions dans l'équation,
 puis en séparant les termes en $\cos(\omega t)$ et $\sin(\omega t)$,
 on obtient:
