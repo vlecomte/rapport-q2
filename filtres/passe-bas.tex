@@ -38,30 +38,30 @@ donc son effet va s'estomper à l'état stable.
 Posons $v_{in}(t) = V_{in}\cos(\omega t)$.
 Puisque le signal d'entrée est sinusoïdal, on peut trouver une solution
 particulière de la forme
-\begin{equation*}
+\[
     v_C(t) = V_C\cos(\omega t + \phi)
     = (V_C\cos\phi)\,\cos(\omega t) - (V_C\sin\phi)\,\sin(\omega t)
-\end{equation*}
+\]
 En substituant ces expressions dans l'équation,
 puis en séparant les termes en $\cos(\omega t)$ et $\sin(\omega t)$,
 on obtient:
-\begin{equation}
+\[
     \left\{
         \begin{array}{ccrcr}
             V_{in} &=& V_C\cos\phi &-& \omega RC\ V_C\sin\phi \\
             0 &=& -\omega RC\ V_C\cos\phi &-& V_C\sin\phi
         \end{array}
     \right.
-\end{equation}
+\]
 ou encore:
-\begin{equation}
+\[
     \left\{
         \begin{array}{ccl}
             V_C\cos\phi &=& V_{in}\,/(1+(\omega RC)^2) \\
             V_C\sin\phi &=& V_{in}\,(-\omega RC) / (1+(\omega RC)^2)
         \end{array}
     \right.
-\end{equation}
+\]
 et donc:
 \begin{equation}
     \left\{
