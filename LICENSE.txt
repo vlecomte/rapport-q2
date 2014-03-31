@@ -1,2 +1,3 @@
-Ce travail est placé sous la "Creative Commons Attribution 4.0 International License".
-http://creativecommons.org/licenses/by/4.0/
+Ce travail est placé sous la licence
+"Creative Commons Attribution-ShareAlike 4.0 International License":
+http://creativecommons.org/licenses/by-sa/4.0/
