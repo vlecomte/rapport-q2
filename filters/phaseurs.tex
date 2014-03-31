@@ -24,3 +24,70 @@ mais cette méthode s'applique à bien d'autres phénomènes,
 à commencer par les oscillateurs harmoniques,
 comme nous le montrerons plus tard dans
 une analyse simplifée de la propagation du son.
+
+\subsection{Définition de l'isomorphisme}
+Commençons par étudier l'ensemble des fonctions du temps
+\[
+    f(t) = A\cos(\omega t + \phi)
+\]
+où $A$ est une constante réelle (avec éventuellement une dimension physique
+\footnote{
+    En réalité, le support complet des grandeurs physiques
+    nécessite une extension de la définition d'espace vectoriel.
+    En effet, seules des valeurs de mêmes unités sont additionnables,
+    et la multiplication par un scalaire possédant des unités
+    va changer les unités de la fonction.
+    Dans la suite de ce raisonnement,
+    nous procéderons comme si toutes les valeurs étaient sans unités.
+}),
+$\phi$ est une constante réelle en radians,
+$t$ est une variable en secondes
+et $\omega$ est un paramètre de l'ensemble, en Hertz
+(c'est le même pour toutes les fonctions de l'ensemble).
+
+Il s'agit d'un espace vectoriel.
+Nous ne détaillerons pas ici la preuve complète
+(qui se trouve dans l'annexe \ref{}),
+et nous nous limiterons à prouver que l'addition est interne.
+Pour des fonctions sinusoïdales $f$ et $g$, on a:
+\[
+    \begin{array}{rcl}
+        (f+g)(t) &=& A\cos(\omega t + \phi) + B\cos(\omega t + \psi) \\
+                 &=& (A\cos\phi+B\cos\psi)\cos(\omega t)
+                     - (A\sin\phi+B\sin\psi)\sin(\omega t)
+    \end{array}
+\]
+
+Calculons l'amplitude résultante:
+\[
+    \begin{array}{rcl}
+        C &=& \sqrt{(A\cos\phi+B\cos\psi)^2+(A\sin\phi+B\sin\psi)^2} \\
+          &=& \sqrt{A^2+B^2+2AB\cos(\phi-\psi)}
+    \end{array}
+\]
+qu'on peut également trouver grâce à la loi des cosinus.
+On peut donc réécrire la somme:
+\[
+    (f+g)(t) = C\left[ \frac{A\cos\phi+B\cos\psi}{C}\, \cos(\omega t)
+                     - \frac{A\sin\phi+B\sin\psi}{C}\, \sin(\omega t) \right]
+\]
+
+Enfin, puisque $\left( \frac{A\cos\phi+B\cos\psi}{C} \right)^2
++ \left( \frac{A\sin\phi+B\sin\psi}{C} \right)^2 = 1$,
+il existe un réel $\theta$ tel que:
+\[
+    \left\{
+    \begin{array}{rcl}
+        \cos\theta &=& \frac{A\cos\phi+B\cos\psi}{C} \\
+        \sin\theta &=& \frac{A\sin\phi+B\sin\psi}{C}
+    \end{array}
+    \right.
+\]
+et donc:
+\[
+    \begin{array}{rcl}
+        (f+g)(t) &=& C ( \cos\theta\cos(\omega t)
+                       - \sin\theta\sin(\omega t) ) \\
+                 &=& C\cos(\omega t + \theta)
+    \end{array}
+\]
