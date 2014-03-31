@@ -1,0 +1,66 @@
+\subsection{Définition de l'isomorphisme}
+Commençons par étudier l'ensemble des fonctions du temps
+\[
+    f(t) = A\cos(\omega t + \phi)
+\]
+où $A$ est une constante réelle (avec éventuellement une dimension physique
+\footnote{
+    En réalité, le support complet des grandeurs physiques
+    nécessite une extension de la définition d'espace vectoriel.
+    En effet, seules des valeurs de mêmes unités sont additionnables,
+    et la multiplication par un scalaire possédant des unités
+    va changer les unités de la fonction.
+    Dans la suite de ce raisonnement,
+    nous procéderons comme si toutes les valeurs étaient sans unités.
+}),
+$\phi$ est une constante réelle en radians,
+$t$ est une variable en secondes
+et $\omega$ est un paramètre de l'ensemble, en Hertz
+(c'est le même pour toutes les fonctions de l'ensemble).
+Notons cet ensemble $\mathbb{S}_\omega$.
+
+Il s'agit d'un espace vectoriel.
+Nous ne détaillerons pas ici la preuve
+(qui se trouve dans l'annexe~\ref{app:espace-vect-sinus}),
+mais en pratique cela signifie qu'une combinaison linéaire
+de sinusoïdales reste une sinusoïdales,
+et que ces fonctions ont un certain nombre de propriétés
+typiquement associées aux vecteurs.
+
+Revenons à notre but de représenter des sinusoïdes
+par des objets mathématiques plus simples.
+Les exponentielles complexes allient un caractère sinusoïdal à
+la simplicité d'une exponentielle.
+Elles sont donc un bon candidat potentiel.
+Nous savons que:
+\[
+    f(t) = A\cos(\omega t + \phi) = \mathfrak{Re}\{Ae^{j(\omega t + \phi)}\}
+    = \mathfrak{Re}\{Ae^{j\phi}\cdot e^{j\omega t}\}
+\]
+où $j$ est l'unité imaginaire.
+On remarque que $e^{j\omega t}$ ne dépend pas de la sinusoïde représentée.
+Cela signifie que la constante complexe $Ae^{j\phi}$ contient
+toute l'information qui caractérise la fonction $f$.
+
+On peut même aller plus loin: définissons l'application $L$
+qui à une fonction $f(t) = A\cos(\omega t + \phi)$
+associe le complexe $Ae^{j\phi}$,
+qu'on appellera le \emph{phaseur}.
+On peut montrer (voir l'annexe~\ref{app:isomorphisme}) qu'il s'agit d'un
+isomorphisme entre $S_\omega$ et $\mathbb{C}$.
+
+Cela a deux conséquences importantes:
+\begin{itemize}
+    \item À toute fonction sinusoïdale correspond un et un seul phaseur
+        (un isomorphisme est une bijection).
+    \item On peut effectuer des sommes ou des multiplications par un scalaire
+        indifféremment sur les fonctions ou sur les phaseurs correspondants.
+\end{itemize}
+
+On peut déjà voir les avantages de cette représentation.
+En effet,
+les opérations sur les complexes sont bien plus simples et mieux connues
+que celles sur les fonctions.
+
+Dans les sections suivantes nous montrerons
+encore d'autres avantages.
