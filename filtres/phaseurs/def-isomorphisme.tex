@@ -33,21 +33,23 @@ Les exponentielles complexes allient un caractère sinusoïdal à
 la simplicité d'une exponentielle.
 Elles sont donc un bon candidat potentiel.
 Nous savons que:
-\[
+\begin{equation}
     f(t) = F\cos(\omega t + \phi) = \mathfrak{Re}\{Fe^{j(\omega t + \phi)}\}
     = \mathfrak{Re}\{Fe^{j\phi}\cdot e^{j\omega t}\}
-\]
+\end{equation}
 où $j$ est l'unité imaginaire.
-On remarque que $e^{j\omega t}$ ne dépend pas de la sinusoïde représentée.
-Cela signifie que la constante complexe $Fe^{j\phi}$ contient
+Remarquons que $e^{j\omega t}$ ne dépend pas de la sinusoïde représentée.
+Cela signifie que la constante complexe $Fe^{j\phi}$,
+qu'on appellera \emph{phaseur}, contient
 toute l'information qui caractérise la fonction $f$.
+D'ailleurs, l'amplitude $F$ correspond module du phaseur
+tandis que le déphasage $\phi$ correspond à son argument.
 
 On peut même aller plus loin: définissons l'application $L$
 qui à une fonction $f(t) = F\cos(\omega t + \phi)$
-associe le complexe $Fe^{j\phi}$,
-qu'on appellera le \emph{phaseur}.
+associe le complexe $Fe^{j\phi}$.
 On peut montrer (voir l'annexe~\ref{app:isomorphisme}) qu'il s'agit d'un
-isomorphisme entre $S_\omega$ et $\mathbb{C}$.
+isomorphisme entre $\mathbb{S}_\omega$ et $\mathbb{C}$.
 
 Cela a deux conséquences importantes:
 \begin{itemize}

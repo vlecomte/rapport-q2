@@ -27,13 +27,14 @@ Les données dont nous disposons sont:
 
 Développons la première relation:
 \begin{equation}
+    \label{eq:diff-passe-bas}
     v_{in} = v_R + v_C = Ri + v_C = RC\,\frac{dv_C}{dt} + v_C
 \end{equation}
-Ceci est une équation différentielle linéaire d'ordre 1 en $v_C$,
+ceci est une équation différentielle linéaire d'ordre 1 en $v_C$,
 à coefficients constants, et non-homogène.
 La solution de l'équation homogène correspondante est $v_C = e^{-t/RC}$.
 Toutefois, il s'agit d'une exponentielle décroissante,
-donc son effet va s'estomper à l'état stable.
+donc son effet n'est pas présent à l'état d'équilibre.
 
 Posons $v_{in}(t) = V_{in}\cos(\omega t)$.
 Puisque le signal d'entrée est sinusoïdal, on peut trouver une solution
@@ -42,26 +43,27 @@ particulière de la forme
     v_C(t) = V_C\cos(\omega t + \phi)
     = (V_C\cos\phi)\,\cos(\omega t) - (V_C\sin\phi)\,\sin(\omega t)
 \]
+
 En substituant ces expressions dans l'équation,
 puis en séparant les termes en $\cos(\omega t)$ et $\sin(\omega t)$,
 on obtient:
-\[
+\begin{equation}
     \left\{
         \begin{array}{ccrcr}
             V_{in} &=& V_C\cos\phi &-& \omega RC\ V_C\sin\phi \\
             0 &=& -\omega RC\ V_C\cos\phi &-& V_C\sin\phi
         \end{array}
     \right.
-\]
+\end{equation}
 ou encore:
-\[
+\begin{equation}
     \left\{
         \begin{array}{ccl}
             V_C\cos\phi &=& V_{in}\,/(1+(\omega RC)^2) \\
             V_C\sin\phi &=& V_{in}\,(-\omega RC) / (1+(\omega RC)^2)
         \end{array}
     \right.
-\]
+\end{equation}
 et donc:
 \begin{equation}
     \left\{
