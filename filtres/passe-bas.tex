@@ -8,7 +8,7 @@ aux bornes de la capacité.
 
 Définissons:
 \begin{itemize}
-    \item $v_{in}(t)$ la tension d'entrée;
+    \item $v\ind{in}(t)$ la tension d'entrée;
     \item $v_R(t)$ la tension aux bornes de la résistance;
     \item $v_C(t)$ la tension aux bornes de la capacité;
     \item $i(t)$ le courant (de haut en bas).
@@ -20,7 +20,7 @@ Nous supposons que le circuit est en régime sinusoïdal stable.
 
 Les données dont nous disposons sont:
 \begin{itemize}
-    \item Loi des tensions de Kirchhoff: $v_R + v_C = v_{in}$
+    \item Loi des tensions de Kirchhoff: $v_R + v_C = v\ind{in}$
     \item Résistance: $v_R = Ri$
     \item Capacité: $i = C\,dv_C/dt$
 \end{itemize}
@@ -28,7 +28,7 @@ Les données dont nous disposons sont:
 Développons la première relation:
 \begin{equation}
     \label{eq:diff-passe-bas}
-    v_{in} = v_R + v_C = Ri + v_C = RC\,\frac{dv_C}{dt} + v_C
+    v\ind{in} = v_R + v_C = Ri + v_C = RC\,\frac{dv_C}{dt} + v_C
 \end{equation}
 ceci est une équation différentielle linéaire d'ordre 1 en $v_C$,
 à coefficients constants, et non-homogène.
@@ -36,7 +36,7 @@ La solution de l'équation homogène correspondante est $v_C = e^{-t/RC}$.
 Toutefois, il s'agit d'une exponentielle décroissante,
 donc son effet n'est pas présent à l'état d'équilibre.
 
-Posons $v_{in}(t) = V_{in}\cos(\omega t)$.
+Posons $v\ind{in}(t) = V\ind{in}\cos(\omega t)$.
 Puisque le signal d'entrée est sinusoïdal, on peut trouver une solution
 particulière de la forme
 \[
@@ -50,7 +50,7 @@ on obtient:
 \begin{equation}
     \left\{
         \begin{array}{ccrcr}
-            V_{in} &=& V_C\cos\phi &-& \omega RC\ V_C\sin\phi \\
+            V\ind{in} &=& V_C\cos\phi &-& \omega RC\ V_C\sin\phi \\
             0 &=& -\omega RC\ V_C\cos\phi &-& V_C\sin\phi
         \end{array}
     \right.
@@ -59,8 +59,8 @@ ou encore:
 \begin{equation}
     \left\{
         \begin{array}{ccl}
-            V_C\cos\phi &=& V_{in}\,/(1+(\omega RC)^2) \\
-            V_C\sin\phi &=& V_{in}\,(-\omega RC) / (1+(\omega RC)^2)
+            V_C\cos\phi &=& V\ind{in}\,/(1+(\omega RC)^2) \\
+            V_C\sin\phi &=& V\ind{in}\,(-\omega RC) / (1+(\omega RC)^2)
         \end{array}
     \right.
 \end{equation}
@@ -68,7 +68,7 @@ et donc:
 \begin{equation}
     \left\{
         \begin{array}{ccl}
-            V_C &=& V_{in}\,/ \sqrt{1+(\omega RC)^2} \\
+            V_C &=& V\ind{in}\,/ \sqrt{1+(\omega RC)^2} \\
             \phi &=& \arctan(-\omega RC)
         \end{array}
     \right.
