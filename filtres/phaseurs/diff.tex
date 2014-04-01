@@ -19,8 +19,16 @@ Le phaseur correspondant $\overline{F'}$ vaut:
 
 On découvre donc que quand on dérive une fonction sinusoïdale,
 son phaseur est simplement multiplié par $j\omega$.
+\footnote{
+    Alternativement, on aurait pu voir que
+    $(\mathfrak{Re}\{Ae^{j\phi}e^{j\omega t}\})'
+    = \mathfrak{Re}\{(Ae^{j\phi}e^{j\omega t})'\}
+    = \mathfrak{Re}\{(j\omega A e^{j\phi}) e^{j\omega t}\}$,
+    ce qui montre bien que le phaseur $Ae^{j\phi}$ est multiplié par $j\omega$.
+}
 Cela a comme conséquence immédiate de simplifier énormément
-le calcul de solutions particulières sinusoïdales d'équations différentielles.
+le calcul de solutions particulières sinusoïdales d'équations différentielles,
+les transformant en de simples équations linéaires sur les complexes.
 
 Reprenons l'équation différentielle décrivant le filtre passe-bas
 \eqref{eq:diff-passe-bas}:
