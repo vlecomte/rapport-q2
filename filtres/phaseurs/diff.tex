@@ -34,15 +34,15 @@ les transformant en de simples équations linéaires sur les complexes.
 Reprenons l'équation différentielle décrivant le filtre passe-bas
 \eqref{eq:diff-passe-bas}:
 \[
-    v_{in} = RC\frac{dv_C}{dt} + v_C
+    v\ind{in} = RC\frac{dv_C}{dt} + v_C
 \]
 on peut la réécrire sous forme de phaseurs:
 \begin{equation}
-    \overline{V_{in}} = RC(j\omega)\overline{V_C} + \overline{V_C}
+    \overline{V\ind{in}} = RC(j\omega)\overline{V_C} + \overline{V_C}
 \end{equation}
 ce qui donne immédiatement la solution:
 \begin{equation}
-    \overline{V_C} = \frac{\overline{V_{in}}}{1 + j\omega RC}
+    \overline{V_C} = \frac{\overline{V\ind{in}}}{1 + j\omega RC}
 \end{equation}
 
 On peut ensuite extraire l'amplitude et le déphasage de $v_C$
@@ -51,8 +51,8 @@ en calculant respectivement le module et l'argument de $\overline{V_C}$:
     \left\{
         \begin{array}{ccl}
             V_C &=& \left\|\,\overline{V_C}\,\right\|
-            = V_{in}\,/\,\|1+j\omega RC\|
-            = V_{in}\,/\sqrt{1 + (\omega RC)^2} \\
+            = V\ind{in}\,/\,\|1+j\omega RC\|
+            = V\ind{in}\,/\sqrt{1 + (\omega RC)^2} \\
             \phi &=& \arg\left(\overline{V_C}\right) = -\arg(1+j\omega RC)
             = - \arctan(\omega RC)
         \end{array}
