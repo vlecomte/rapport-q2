@@ -1,0 +1,27 @@
+\subsection{Moyenne d'un produit}
+
+Le produit de deux fonctions $f$ et $g$ dans $\mathbb{S}_\omega$
+n'est pas interne.
+En effet, la fréquence de $f \cdot g$ est doublée,
+et une constante s'ajoute à la sinusoïde.
+
+Toutefois, il est possible d'exprimer de manière intéressante
+la moyenne de ce produit.
+Un exemple d'application est la puissance moyenne absorbée par un circuit,
+qui vaut la moyenne du produit $v\cdot i$ de la tension et du courant.
+
+Posons $f(t) = F\cos(\omega t + \phi)$ et $g(t) = G\cos(\omega t + \psi)$.
+Exprimons le produit de ces deux fonctions:
+\begin{equation}
+    \begin{split}
+        (f\cdot g)(t) &= FG\cos(\omega t + \phi)\cos(\omega t + \psi) \\
+        &= \frac{FG}{2}(\cos(2\omega t + \phi + \psi) + \cos(\phi - \psi))
+    \end{split}
+\end{equation}
+la seconde égalité découlant de la formule de Simpson.
+
+Le terme $\cos(2\omega t + \phi + \psi)$ oscille autour de 0,
+donc sa contribution à la moyenne est nulle.
+Il reste donc le terme constant:
+\[
+    \frac
