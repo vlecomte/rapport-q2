@@ -1,9 +1,9 @@
 \subsection{Définition de l'isomorphisme}
 Commençons par étudier l'ensemble des fonctions du temps
 \[
-    f(t) = A\cos(\omega t + \phi)
+    f(t) = F\cos(\omega t + \phi)
 \]
-où $A$ est une constante réelle (avec éventuellement une dimension physique
+où $F$ est une constante réelle (avec éventuellement une dimension physique
 \footnote{
     En réalité, le support complet des grandeurs physiques
     nécessite une extension de la définition d'espace vectoriel.
@@ -34,17 +34,17 @@ la simplicité d'une exponentielle.
 Elles sont donc un bon candidat potentiel.
 Nous savons que:
 \[
-    f(t) = A\cos(\omega t + \phi) = \mathfrak{Re}\{Ae^{j(\omega t + \phi)}\}
-    = \mathfrak{Re}\{Ae^{j\phi}\cdot e^{j\omega t}\}
+    f(t) = F\cos(\omega t + \phi) = \mathfrak{Re}\{Fe^{j(\omega t + \phi)}\}
+    = \mathfrak{Re}\{Fe^{j\phi}\cdot e^{j\omega t}\}
 \]
 où $j$ est l'unité imaginaire.
 On remarque que $e^{j\omega t}$ ne dépend pas de la sinusoïde représentée.
-Cela signifie que la constante complexe $Ae^{j\phi}$ contient
+Cela signifie que la constante complexe $Fe^{j\phi}$ contient
 toute l'information qui caractérise la fonction $f$.
 
 On peut même aller plus loin: définissons l'application $L$
-qui à une fonction $f(t) = A\cos(\omega t + \phi)$
-associe le complexe $Ae^{j\phi}$,
+qui à une fonction $f(t) = F\cos(\omega t + \phi)$
+associe le complexe $Fe^{j\phi}$,
 qu'on appellera le \emph{phaseur}.
 On peut montrer (voir l'annexe~\ref{app:isomorphisme}) qu'il s'agit d'un
 isomorphisme entre $S_\omega$ et $\mathbb{C}$.
@@ -62,5 +62,11 @@ En effet,
 les opérations sur les complexes sont bien plus simples et mieux connues
 que celles sur les fonctions.
 
-Dans les sections suivantes nous montrerons
+Nous noterons en général les fonctions en minuscules,
+les amplitudes en majuscules,
+et les phaseurs en majuscule avec une barre.
+Par exemple: $v(t) = V\cos(\omega t + \phi)$ et
+$\overline{V} = Ve^{j\phi}$.
+
+Dans les sous-sections suivantes, nous allons montrer
 encore d'autres avantages.
