@@ -1,31 +1,32 @@
-\documentclass[a4paper,12pt]{report}
-
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[main=frenchb,english]{babel}
+\ifdefined\twosided
+    \documentclass[a4paper,12pt,twoside]{report}
+\else
+    \documentclass[a4paper,12pt]{report}
+\fi
 
 \usepackage{mystyle}
 
 \begin{document}
 
-\input{top/title.tex}
-\input{top/abstract.tex}
+\input{top/title}
+\input{top/abstract}
 
 \tableofcontents
 
-\input{intro/chapter.tex}
-\input{docu/chapter.tex}
-\input{in-volume/chapter.tex}
-\input{filtres/chapter.tex}
-\input{aimant/chapter.tex}
-\input{membrane/chapter.tex}
-\input{conclu/chapter.tex}
+\input{intro/chapter}
+\input{docu/chapter}
+\input{in-volume/chapter}
+\input{filtres/chapter}
+\input{aimant/chapter}
+\input{membrane/chapter}
+\input{conclu/chapter}
 
 \appendix
-\input{ann/approx-lin/chapter.tex}
-\input{ann/phaseurs/chapter.tex}
-\input{ann/math/chapter.tex}
-\input{ann/demarche/chapter.tex}
-\input{ann/planning/chapter.tex}
+% Éviter de changer l'ordre
+\input{ann/approx-lin/chapter}
+\input{ann/demarche/chapter}
+\input{ann/phaseurs/chapter}
+\input{ann/math/chapter}
+\input{ann/planning/chapter}
 
 \end{document}

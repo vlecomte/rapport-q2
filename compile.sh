@@ -1,2 +1,4 @@
 #!/bin/bash
-latexmk -pdf root.tex
+latexmk -pdf -auxdir=out -outdir=out var/full
+shopt -s extglob
+rm out/*.!(pdf)
