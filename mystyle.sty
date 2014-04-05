@@ -11,7 +11,28 @@
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 \linespread{1.15}
 
-% Math
-\newcommand{\ind}[1]{_{\mathrm{\tiny #1}}} % Text indices
+% Bilingual abstract (english-native)
+\newcommand{\biabstract}[2]
+{
+    \titlepage\null\vfil
+
+    \begin{otherlanguage}{english}
+        \begin{center}
+            \bfseries \abstractname
+        \end{center}
+        #1
+    \end{otherlanguage}
+
+    \begin{center}
+        \bfseries \abstractname
+    \end{center}
+    #2
+
+    \par\vfil\null\endtitlepage
+}
+
+% --- Math ---
+% Text indices
+\newcommand{\ind}[1]{_{\mathrm{\tiny #1}}}
 
 \endinput
