@@ -1,42 +1,42 @@
 \subsection*{Introduction}
 
-Une partie importante du travail de modélisation que nous avons effectué
-s'est centrée sur les filtres de fréquences,
-en commençant par les filtres passe-haut et passe-bas inclus dans notre circuit,
-puis en élargissant vers d'autres types de filtres que nous avons découvert
-dans nos recherches bibliographiques.
+Les filtres servent à limiter les fréquences transmises au haut-parleur
+à un certain intervalle, réglable par des potentiomètres.
+Dans le schéma général du circuit (Fig.~\ref{fig:schema-gen-filtres}),
+ils se situent après le réglage de volume, et avant l'amplification du signal.
 
-Les filtres auxquels nous nous sommes intéressés sont caractérisés
-par ces propriétés communes:
+Ces deux filtres (passe-haut et passe-bas) sont les éléments les plus complexes
+du circuit, et ils ont constitué
+une partie importante du travail de modélisation que nous avons effectué.
+Nous y consacrons d'ailleurs trois annexes:
 \begin{itemize}
-    \item ils utilisent exclusivement des résistances,
-        des capacités et des inductances;
-    \item la tension d'entrée est sinusoïdale;
-    \item la tension de sortie est prise entre deux points arbitraires
-        du circuit.
+    \item D'abord, une découverte de la méthode des phaseurs comme un isomorphisme
+        entre les fonctions sinusoïdale et les complexes
+        (Annexe~\ref{app:phaseurs}).
+    \item Ensuite,
+        l'identification linéaire par morceaux du gain des filtres utilisés
+        (Annexe~\ref{app:approx-lin}).
+    \item Enfin,
+        la généralisation de cette identification à d'autres types de filtres
+        (Annexe~\ref{app:filtres-gen}).
 \end{itemize}
 
-L'objet de notre étude a été la comparaison des tensions d'entrée et sortie,
-c'est-à-dire le rapport de leurs amplitudes ainsi que leur déphasage,
-en fonction de la fréquence du signal.
-
+Dans ce chapitre,
+nous nous concentrerons plutôt sur le rôle pratique de ces filtres
+dans notre circuit.
 
 \subsubsection*{Plan du chapitre}
 \begin{enumerate}
-    \item Nous commencerons par la modélisation
-        d'un filtre passe-bas par la méthode classique, en résolvant une
-        équation différentielle de la tension.
-    \item Puis nous introduirons la notation complexe des fonctions sinusoïdales
-        et plus particulièrement la notion d'impédance et son utilité
-        dans le calcul des gains et déphasages.
-    \item Ensuite, nous étudierons grâce à cette notion
-        les différents filtres que nous avons découverts à travers
-        la recherche bibliographique;
-        nous en profiterons pour discuter
-        le choix des filtres dans notre circuit.
-    \item Enfin, nous extrairons de ces exemples une manière de caractériser
-        n'importe quel filtre par un rapport de fonctions
-        polynômiales de la fréquence, et nous montrerons comment construire
-        un filtre à partir de deux polynômes arbitraires donnés.
-        (Pas sûr qu'on sait faire ça.)
+    \item Nous commencerons par expliquer plus en profondeur la \emph{fonction}
+        des deux filtres de fréquence et leur effet dans la perception du son.
+    \item Puis nous présenterons leurs \emph{caractéristiques techniques},
+        c'est-à-dire les composants impliqués et leur agencement.
+    \item Ensuite, nous ferons la \emph{modélisation} mathématique
+        des deux filtres
+        par la méthode des phaseurs.
+    \item Après cela, nous donneronrs une \emph{interprétation} des résultats
+        obtenus et nous justifierons le dimensionnement par rapport
+        aux fréquences de coupure.
+    \item Enfin, nous ferons la synthèse des mesures effectuées ainsi qu'une
+        \emph{confrontation} entre la théorie et la pratique.
 \end{enumerate}
