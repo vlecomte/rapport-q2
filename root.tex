@@ -4,7 +4,7 @@
     \documentclass[a4paper,12pt]{report}
 \fi
 
-\usepackage{mystyle}
+\usepackage{top/mystyle}
 
 \begin{document}
 
@@ -13,23 +13,23 @@
 
 \tableofcontents
 
-\input{intro/chapter}
-\input{docu/chapter}
-\input{in-volume/chapter}
-\input{filtres/chapter}
-\input{aimant/chapter}
-\input{membrane/chapter}
-\input{conclu/chapter}
+\input{main/intro/chapter}
+\input{main/docu/chapter}
+\input{main/in-volume/chapter}
+\input{main/filtres/chapter}
+\input{main/aimant/chapter}
+\input{main/membrane/chapter}
+\input{main/conclu/chapter}
 
 \appendix
 % Penser à changer l'ordre des compteurs pour les annexes détachables dans var/
 \addcontentsline{toc}{part}{Annexes théoriques}
-\input{ann/phaseurs/chapter}
-\input{ann/approx-lin/chapter}
-\input{ann/filtres-gen/chapter}
-\input{ann/math/chapter}
+\input{app/phaseurs/chapter}
+\input{app/approx-lin/chapter}
+\input{app/filtres-gen/chapter}
+\input{app/math/chapter}
 \addcontentsline{toc}{part}{Annexes pratiques}
-\input{ann/demarche/chapter}
-\input{ann/planning/chapter}
+\input{app/demarche/chapter}
+\input{app/planning/chapter}
 
 \end{document}
