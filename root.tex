@@ -22,11 +22,14 @@
 \input{conclu/chapter}
 
 \appendix
-% Ne pas changer l'ordre des deux premiers!
-\input{ann/approx-lin/chapter}
-\input{ann/demarche/chapter}
+% Penser à changer l'ordre des compteurs pour les annexes détachables dans var/
+\addcontentsline{toc}{part}{Annexes théoriques}
 \input{ann/phaseurs/chapter}
+\input{ann/approx-lin/chapter}
+\input{ann/filtres-gen/chapter}
 \input{ann/math/chapter}
+\addcontentsline{toc}{part}{Annexes pratiques}
+\input{ann/demarche/chapter}
 \input{ann/planning/chapter}
 
 \end{document}
