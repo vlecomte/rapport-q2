@@ -7,7 +7,7 @@ Introduction
 Ceci est notre rapport final de projet du 2ème quadrimestre 2014,
 portant sur la modélisation et la réalisation d'un haut-parleur artisanal.
 Nous sommes le groupe 113.2, en 1ère bachelier d'ingénieur civil
-à l'[EPL](http://uclouvain.be/epl):
+à l'[EPL](http://uclouvain.be/epl) :
 - Noëlla Bola Malanda
 - Giulia de Dorlodot
 - Maxime Hanot
