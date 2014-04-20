@@ -6,7 +6,7 @@ Introduction
 
 Ceci est notre rapport final de projet du 2ème quadrimestre 2014,
 portant sur la modélisation et la réalisation d'un haut-parleur artisanal.
-Nous sommes le groupe 1132, en 1ère bachelier d'ingénieur civil
+Nous sommes le groupe 113.2, en 1ère bachelier d'ingénieur civil
 à l'[EPL](http://uclouvain.be/epl):
 - Noëlla Bola Malanda
 - Giulia de Dorlodot
@@ -22,7 +22,7 @@ Ce rapport détaille le fonctionnement, la modélisation et le dimensionnement
 de tous les sous-ensembles du haut-parleur:
 - Entrée jack et réglage de volume
 - Filtres de fréquence
-- Ampli audio et bobine mobile
+- Ampli audio, bobine mobile et membrane
 - Électroaimant
 
 De plus, il contient des approfondissements sur certains aspects mathématiques
@@ -35,4 +35,4 @@ Compilation
 Pour compiler le rapport complet, compiler directement root.tex ou lancer
 ./compile.sh depuis le dossier principal.
 Pour compiler le rapport complet en one-sided et two-sided ainsi que les
-annexes détachables demandées, lancer ./compile-all.sh.
+annexes détachables demandées, lancer ./compile-all.sh à la place.
