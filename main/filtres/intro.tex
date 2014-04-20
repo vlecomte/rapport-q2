@@ -1,0 +1,42 @@
+\subsection*{Introduction}
+
+Les filtres servent à limiter les fréquences transmises au haut-parleur
+à un certain intervalle, réglable par des potentiomètres.
+Dans le schéma général du circuit (Fig.~\ref{fig:schema-gen-filtres}),
+ils se situent après le réglage de volume, et avant l'amplification du signal.
+
+Ces deux filtres (passe-haut et passe-bas) sont les éléments les plus complexes
+du circuit, et ils ont constitué
+une partie importante du travail de modélisation que nous avons effectué.
+Nous y consacrons d'ailleurs trois annexes:
+\begin{itemize}
+    \item D'abord, une découverte de la méthode des phaseurs comme un isomorphisme
+        entre les fonctions sinusoïdale et les complexes
+        (Annexe~\ref{app:phaseurs}).
+    \item Ensuite,
+        l'identification linéaire par morceaux du gain des filtres utilisés
+        (Annexe~\ref{app:approx-lin}).
+    \item Enfin,
+        la généralisation de cette identification à d'autres types de filtres
+        (Annexe~\ref{app:filtres-gen}).
+\end{itemize}
+
+Dans ce chapitre,
+nous nous concentrerons plutôt sur le rôle pratique de ces filtres
+dans notre circuit.
+
+\subsubsection*{Plan du chapitre}
+\begin{enumerate}
+    \item Nous commencerons par expliquer plus en profondeur la \emph{fonction}
+        des deux filtres de fréquence et leur effet dans la perception du son.
+    \item Puis nous présenterons leurs \emph{caractéristiques techniques},
+        c'est-à-dire les composants impliqués et leur agencement.
+    \item Ensuite, nous ferons la \emph{modélisation} mathématique
+        des deux filtres
+        par la méthode des phaseurs.
+    \item Après cela, nous donneronrs une \emph{interprétation} des résultats
+        obtenus et nous justifierons le dimensionnement par rapport
+        aux fréquences de coupure.
+    \item Enfin, nous ferons la synthèse des mesures effectuées ainsi qu'une
+        \emph{confrontation} entre la théorie et la pratique.
+\end{enumerate}
