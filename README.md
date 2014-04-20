@@ -1,5 +1,5 @@
-Rapport de projet Q2 --- Groupe 113.2
-=====================================
+Rapport de projet Q2 — Groupe 113.2
+===================================
 
 Introduction
 ------------
@@ -19,15 +19,15 @@ Contenu
 -------
 
 Ce rapport détaille le fonctionnement, la modélisation et le dimensionnement
-de tous les sous-ensemble du haut-parleur:
+de tous les sous-ensembles du haut-parleur:
 - Entrée jack et réglage de volume
 - Filtres de fréquence
 - Ampli audio et bobine mobile
 - Électroaimant
 
 De plus, il contient des approfondissements sur certains aspects mathématiques
-liés à la modélisation, et une descriptions des recherches documentaires
-effectuées afin de mener le projet à bien.
+liés à la modélisation, et une description de la recherche documentaire
+effectuée afin de mener le projet à bien.
 
 Compilation
 -----------
