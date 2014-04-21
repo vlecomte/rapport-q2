@@ -8,12 +8,30 @@ comme l'illustre la figure~\ref{fig:filtre-ideal} en échelle log-log.
 
 Ce genre de dispositif s'appelle un filtre \emph{passe-bande},
 car il tend à laisser passer une bande de fréquences et exclure le reste.
-Dans notre cas, il est formé par la combinaison d'un filtre
-\emph{passe-haut} et d'un filtre \emph{passe-bas}.\cite{kanasewich1981time}
+Il peut être formé par la combinaison d'un filtre
+\emph{passe-haut} et d'un filtre \emph{passe-bas},\cite{high-low-pass-combined}
+comme c'est le cas dans notre circuit.
 
-Le filtre \emph{passe-haut} laisse passer les hautes fréquences,
+En particulier,
+le filtre \emph{passe-haut} laisse passer les hautes fréquences,
 il se charge donc d'atténuer les basses fréquences ($f<f\ind{min}$);
 tandis que le filtre \emph{passe-bas} laisse passer les basses fréquences,
 il se charge donc d'atténuer les hautes fréquences ($f>f\ind{max}$).
 
-L'oreille humaine est capable de
+Pour se donner une idée,
+l'oreille humaine est capable de percevoir des sons de fréquences
+allant de $20\,\hertz$ à $20\,\kilo\hertz$.\cite{hearing-range}.
+En musique, les basses fréquences correspondent aux notes graves et aux basses,
+tandis que les hautes fréquences correspondent aux notes aiguës et
+à la mélodie.
+
+Par conséquent, une première fonction des filtres est de
+favoriser la mélodie au détriment des
+basses, ou les basses au détriment de la mélodie, selon les préférences
+de l'auditeur.
+
+De plus, étant donné la grande étendue des fréquences audibles,
+une deuxième fonction possible est de séparer les graves des aigus
+afin de les diffuser par deux haut-parleurs spécialisés chacun
+dans la restitution de sa bande de fréquences,
+comme nous avons décidé de le faire lors de ce projet.
