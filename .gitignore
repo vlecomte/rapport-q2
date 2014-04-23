@@ -8,5 +8,8 @@
 *.log
 *.toc
 *.gz
+*.bcf
+*.out
+*.run.xml
 # Output pdf
 *.pdf
