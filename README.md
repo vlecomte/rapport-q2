@@ -36,3 +36,5 @@ Pour compiler le rapport complet, compiler directement root.tex ou lancer
 ./compile.sh depuis le dossier principal.
 Pour compiler le rapport complet en one-sided et two-sided ainsi que les
 annexes détachables demandées, lancer ./compile-all.sh à la place.
+
+Les deux scripts requièrent une version récente de latexmk.
