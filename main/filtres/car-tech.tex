@@ -4,20 +4,25 @@ Comme illustré dans la figure~\ref{schema-elec-filtres},
 la sous-ensemble des filtres est composé, dans l'ordre, de:
 \begin{enumerate}
     \item un premier suiveur répétant le signal venant du réglage de volume
-        à travers le JP\,1, grâce à l'ampli op LM358N;
+        à travers le JP\,1, grâce à l'ampli-op LM358N;
     \item le filtre passe-haut formé d'un
         condensateur de capacité $C_2 = 470\,\nano\farad$;
         et un potentiomètre de résistance
-        maximale $R\ind{2,max} = 1\,\kilo\ohm$;
+        maximale $R\ind{2,max} = 10\,\kilo\ohm$;
     \item un deuxième suiveur, sur le même ampli;
     \item le filtre passe-bas formé d'un potentiomètre de résistance
-        maximale $R\ind{3,max} = 10\,\kilo\ohm$
+        maximale $R\ind{3,max} = 1\,\kilo\ohm$
         et un condensateur de même capacité $C_3 = 470\,\nano\farad$;
     \item la sortie au niveau du JP\,2 vers l'amplificateur audio.
 \end{enumerate}
 
-%Référencer ici les datasheets.
+Les références des datasheets des composants se trouvent dans la bibliographie:
+\begin{itemize}
+    \item Ampli-op: Fairchild Semiconductor --- LM358N \cite{datasheet-lm358n};
+    \item Capacités: AVX --- SR215E474MAR \cite{datasheet-470nf};
+    \item Potentiomètres: Bourns --- 3386W-1-102LF et -103LF \cite{datasheet-pot}.
+\end{itemize}
 
-L'ampli op et les capacités nous étaient imposés,
-et pour le reste, nous discuterons le choix des potentiomètres dans
+L'ampli-op et les capacités nous étaient imposés,
+mais nous discuterons du choix des potentiomètres dans
 la section~\ref{dimen-filtres} sur le dimensiomment.
