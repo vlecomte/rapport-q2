@@ -1,0 +1,45 @@
+\section{Modélisation}
+
+Pour modéliser la réponse des filtres à différents signaux nous allons utiliser
+la méthode des phaseurs, comme décrite dans l'annexe~\ref{chap:phaseurs}.
+Nous supposerons ici que le signal est une sinusoïde pure, les autres cas
+pouvant s'y ramener en prenant la transformée de Fourier.
+
+Définissons comme sur la figure~\ref{fig:filtres-v1v2v3}
+$v_1(t),v_2(t),v_3(t)$ les tensions
+à l'entrée, après le filtre passe-haut et après le filtre passe-bas;
+et $\overline{V_1}, \overline{V_2}, \overline{V_3}$ leurs phaseurs associés.
+
+Supposons que le courant à l'entrée des suiveurs est négligeable.
+Tout le courant passant à travers le condensateur $C_2$ passe donc
+aussi à travers la résistance $R_2$.
+Par conséquent, on peut appliquer la loi de division des tensions,
+avec les impédances $\frac{1}{j\omega C_2}$ et $R_2$:
+\begin{equation}
+    \overline{V_2} = \frac{R_2}{\frac{1}{j\omega C_2} + R_2}\,\overline{V_1}
+    = \frac{j\omega R_2C_2}{1+j\omega R_2C_2}\,\overline{V_1}
+\end{equation}
+Le gain en tension du filtre passe-haut est donc
+$\frac{j\omega R_2C_2}{1+j\omega R_2C_2}$.
+
+Pour le filtre passe-bas, on peut supposer de manière similaire que
+le courant à l'entrée de l'ampli audio est négligeable,
+et appliquer la loi de division des tensions avec les impédances
+$R_3$ et $\frac{1}{j\omega C_3}$:
+\begin{equation}
+    \overline{V_3} =
+    \frac{\frac{1}{j\omega C_3}}{\frac{1}{j\omega C_3} + R_3}\,\overline{V_2}
+    = \frac{1}{1+j\omega R_3C_3}\,\overline{V_2}
+\end{equation}
+Le gain en tension du filtre passe-bas est donc
+$\frac{1}{1 + j\omega R_3C_3}$.
+
+Étant donné que la tension $v_2$ est répétée de la sortie du filtre passe-haut
+à l'entrée du filtre passe-bas, le gain total du système est:
+\begin{align}
+    \overline{V_3}\,/\,\overline{V_1} &=
+    \frac{j\omega R_2C_2}{1 + j\omega R_2C_2}\,\cdot\,
+    \frac{1}{1 + j\omega R_3C_3}\\
+    &= \frac{j\omega R_2C_2}{1 + j\omega\,(R_2C_2+R_3C_3) +
+        (j\omega)^2\,(R_2C_2R_3C_3)}
+\end{align}
