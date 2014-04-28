@@ -1,14 +1,15 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{mystyle}[2014/04/01 Custom Style]
+\ProvidesPackage{top/mystyle}[2014/04/01 Custom Style]
 
 % Includes
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[T1]{fontenc}
 \RequirePackage[main=frenchb,english]{babel}
+\RequirePackage{csquotes}
 
 \RequirePackage{hyperref}
-\RequirePackage[sorting=none,isbn=false,url=false]{biblatex}
-%\RequirePackage[nottoc]{tocbibind}
+\RequirePackage[backend=biber,sorting=none,isbn=false,url=false]{biblatex}
+\RequirePackage{parskip}
 
 \RequirePackage{graphicx}
 \RequirePackage{tabu}
@@ -18,7 +19,8 @@
 % General
 \addbibresource{top/ref.bib}
 \linespread{1.15}
-\setlength{\parskip}{.2cm}
+\setlength{\parskip}{2mm plus1mm minus1mm}
+\setlength{\parindent}{15pt}
 
 % Bilingual abstract (english-native)
 \newcommand{\biabstract}[2]
@@ -41,11 +43,11 @@
 }
 
 % Typesetting
+\frenchbsetup{og=«,fg=»}
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 \newcommand{\sts}{\hspace{.1em}}
 
-% --- Math ---
-% Text indices
+% Text indices in math
 \newcommand{\ind}[1]{_{\mathrm{#1}}}
 
 \endinput
