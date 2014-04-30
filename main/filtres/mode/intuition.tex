@@ -1,0 +1,33 @@
+\subsection{Intuition}
+
+Le filtre passe-haut comme le filtre passe-bas
+consistent en une capacité et une résistance en série,
+avec une tension forcée aux bouts.
+
+Prenons une analogie hydraulique:
+les tensions deviennent des différences de pressions
+et les courants deviennent des débits.
+On peut voir la capacité comme une large membrane élastique
+tendue par les déplacements d'eau;
+et la résistance comme un fin tuyau
+qui requiert une plus grande pression pour un même débit.
+La source est une pompe qui crée une différence de pression.
+
+Les deux représentations sont comparées dans la figure~\ref{fig:ana-hydr}.
+
+Pour de basses fréquences, la pression oscille doucement.
+La membrane de la capacité à donc bien le temps de s'équilibrer avec elle,
+tandis que la pression à travers le fin tuyau sera petite.
+
+Pour de hautes fréquences, au contraire,
+la pression oscille très rapidement.
+La membrane n'a donc pas le temps d'être tendue par le débit,
+et toute la différence de pression
+se trouvera aux extrémités du fin tuyau.
+
+En conclusion, on s'attend à ce que le filtre passe-haut,
+qui prend la tension aux bornes de la résistance (fin tuyau),
+atténue les basses fréquences et conserve les hautes fréquences;
+et à ce que le filtre passe-bas,
+qui prend la tension aux bornes de la capacité (membrane),
+conserve les basses fréquences et atténue les hautes fréquences.

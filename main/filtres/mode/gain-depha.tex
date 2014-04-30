@@ -1,0 +1,42 @@
+\subsection{Gain et déphasage}
+
+Intéressons-nous maintenant de manière plus rigoureuse
+au \emph{gain} (rapport d'amplitude) et au  \emph{déphasage} (décalage)
+entre l'entrée et la sortie.
+Ils correspondent respectivement au module et à l'argument de la fonction de
+transfert.
+
+C'est-à-dire, pour le filtre passe-haut:
+\begin{align}
+    G\ind{ph}(j\omega) &= |H\ind{ph}(j\omega)|
+    = \frac{|j\omega R_2C_2|}{|1 + j\omega R_2C_2|}
+    = \frac{\omega R_2C_2}{\sqrt{1+(\omega R_2C_2)^2}}\\
+    \phi\ind{ph}(j\omega) &= \arg\big(H\ind{ph}(j\omega)\big)
+    %= \arctan(j\omega R_2C_2) - \arctan(1+j\omega R_2C_2)
+    = \arctan\left(\frac{1}{\omega R_2C_2}\right)
+\end{align}
+et pour le filtre passe-bas:
+\begin{align}
+    G\ind{pb}(j\omega) &= |H\ind{pb}(j\omega)|
+    = \frac{|1|}{|1 + j\omega R_3C_3|}
+    = \frac{1}{\sqrt{1+(\omega R_3C_3)^2}}\\
+    \phi\ind{pb}(j\omega) &= \arg\big(H\ind{pb}(j\omega)\big)
+    = \arctan(-\omega R_3C_3)
+\end{align}
+
+Ces résultats sont illustrés par des graphes dans
+les figures~\ref{fig:graphes-pb} et~\ref{fig:graphes-pb}, avec en abcisse la pulsation
+et en ordonnée le gain et le déphasage.
+Les tendances découvertes sont en pointillés.
+Ici, les potentiomètres sont tous deux réglés à $20\%$,
+donc $R_2 = 200\,\ohm$ et $R_3 = 2\,\kilo\ohm$.
+
+Nous utilisons une échelle logarithmique pour les fréquences
+ou pulsations, ainsi que pour les gains.
+Les raisons de ce choix sont expliquées en détail dans
+la section~\ref{sec:log}.
+
+Enfin, pour la combinaison des deux filtres,
+les fonctions de transfert sont multipliées,
+donc les gains sont multipliés et les déphasages sont additionnés.
+Le résultat est illustré dans la figure~\ref{fig:graphes-bande}.
