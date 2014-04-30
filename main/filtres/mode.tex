@@ -12,37 +12,36 @@ et enfin nous interpréterons les résultats.
 
 Le filtre passe-haut comme le filtre passe-bas
 consistent en une capacité et une résistance en série,
-avec un signal imposé à leurs bouts.
-La tension de sortie est prise aux bornes de la résistance pour le passe-haut
-et aux bornes de la capacité pour le passe-bas.
+avec une tension forcée aux bouts.
 
-On peut voir la capacité comme un réservoir qui se charge lentement avec le
-courant augmenter la tension, tandis que la résistance est un dispositif
-qui laisse passer le courant, mais en freinant par une différence de tension.
+Prenons une analogie hydraulique:
+les tensions deviennent des différences de pressions
+et les courants deviennent des débits.
+On peut voir la capacité comme une large membrane élastique
+tendue par les déplacements d'eau;
+et la résistance comme un fin tuyau
+qui requiert une plus grande pression pour un même débit.
+La source est une pompe qui crée une différence de pression.
 
-Pour de petites fréquences, la tension d'entrée bouge lentement.
-La capacité a donc tout le temps de charger,
-s'approchant à tout moment de la tension d'entrée,
-avec un courant très faible.
-Autrement dit, elle agit comme un circuit ouvert.
-La résistance, par conséquent, n'a pas une grande différence
-de tension à ses bornes.
+Les deux représentations sont comparées dans la figure~\ref{fig:ana-hydr}.
 
-Pour de hautes fréquences, au contraire, la tension d'entrée bouge rapidement.
-La capacité n'a donc pas du tout le temps de charger,
-et la différence de tension à ses bornes est très faible,
-pour n'importe quel courant.
-Autrement dit, elle agit comme un court-circuit.
-La résistance, par conséquent, aura à ses bornes
-une différence de tension qui s'approche de la tension d'entrée.
+Pour de basses fréquences, la pression oscille doucement.
+La membrane de la capacité à donc bien le temps de s'équilibrer avec elle,
+tandis que la pression à travers le fin tuyau sera petite.
+
+Pour de hautes fréquences, au contraire,
+la pression oscille très rapidement.
+La membrane n'a donc pas le temps d'être tendue par le débit,
+et toute la différence de pression
+se trouvera aux extrémités du fin tuyau.
 
 En conclusion, on s'attend à ce que le filtre passe-haut,
-qui prend la tension aux bornes de la résistance,
-atténue les petites fréquences et conserve les hautes fréquences;
+qui prend la tension aux bornes de la résistance (fin tuyau),
+atténue les basses fréquences et conserve les hautes fréquences;
 et à ce que le filtre passe-bas,
-qui prend la tension aux bornes de la capacité,
-conserve les petites fréquences et atténue les hautes fréquences.
-Fort heureusement, cela respecte leurs définitions.
+qui prend la tension aux bornes de la capacité (membrane),
+conserve les basses fréquences et atténue les hautes fréquences.
+
 
 \subsection{Hypothèses}
 
