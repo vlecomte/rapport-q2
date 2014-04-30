@@ -13,6 +13,7 @@
 
 \tableofcontents
 
+\part{Corps du rapport}
 \input{main/intro/chapter}
 \input{main/docu/chapter}
 \input{main/in-volume/chapter}
@@ -23,16 +24,14 @@
 
 \appendix
 % Penser à changer l'ordre des compteurs pour les annexes détachables dans var/
-\addcontentsline{toc}{part}{Annexes théoriques}
+\part{Annexes théoriques}
 \input{app/phaseurs/chapter}
 \input{app/approx-lin/chapter}
 \input{app/filtres-gen/chapter}
 \input{app/math/chapter}
-\addcontentsline{toc}{part}{Annexes pratiques}
+\part{Annexes pratiques}
 \input{app/demarche/chapter}
 \input{app/planning/chapter}
-\clearpage
-\addcontentsline{toc}{part}{Bibliographie}
-\printbibliography
+\printbibliography[heading=bibintoc]
 
 \end{document}
