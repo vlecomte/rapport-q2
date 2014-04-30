@@ -1,8 +1,8 @@
 \subsection{Gain et déphasage}
 
-Intéressons-nous maintenant de manière plus rigoureuse
-au \emph{gain} (rapport d'amplitude) et au  \emph{déphasage} (décalage)
-entre l'entrée et la sortie.
+Nous allons maintenant déterminer
+le \emph{gain} (rapport d'amplitude) et le  \emph{déphasage} (décalage)
+entre l'entrée et la sortie de chacun des filtres.
 Ils correspondent respectivement au module et à l'argument de la fonction de
 transfert.
 
@@ -38,5 +38,10 @@ la section~\ref{sec:log}.
 
 Enfin, pour la combinaison des deux filtres,
 les fonctions de transfert sont multipliées,
-donc les gains sont multipliés et les déphasages sont additionnés.
+donc les gains sont multipliés et les déphasages sont additionnés.%
+\footnote{
+    Cela découle des propriétés du module et de l'argument.
+    En effet, pour des complexes $x$ et $y$,
+    on a $|xy| = |x||y|$ et $\arg(xy) = \arg x + \arg y$.
+}
 Le résultat est illustré dans la figure~\ref{fig:graphes-bande}.
