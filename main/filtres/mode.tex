@@ -1,17 +1,69 @@
 \section{Modélisation}
 
+Dans cette section, nous allons commencer par analyser les filtres
+par une bonne intuition,
+ensuite nous poserons nos hypothèses de modélisation,
+puis nous trouverons les fonctions de transfert et en extrairons
+des tendances générales
+et les expressions des gains et amplitudes,
+et enfin nous interpréterons les résultats.
+
+\subsection{Intuition}
+
+Le filtre passe-haut comme le filtre passe-bas
+consistent en une capacité et une résistance en série,
+avec un signal imposé à leurs bouts.
+La tension de sortie est prise aux bornes de la résistance pour le passe-haut
+et aux bornes de la capacité pour le passe-bas.
+
+On peut voir la capacité comme un réservoir qui se charge lentement avec le
+courant augmenter la tension, tandis que la résistance est un dispositif
+qui laisse passer le courant, mais en freinant par une différence de tension.
+
+Pour de petites fréquences, la tension d'entrée bouge lentement.
+La capacité a donc tout le temps de charger,
+s'approchant à tout moment de la tension d'entrée,
+avec un courant très faible.
+Autrement dit, elle agit comme un circuit ouvert.
+La résistance, par conséquent, n'a pas une grande différence
+de tension à ses bornes.
+
+Pour de hautes fréquences, au contraire, la tension d'entrée bouge rapidement.
+La capacité n'a donc pas du tout le temps de charger,
+et la différence de tension à ses bornes est très faible,
+pour n'importe quel courant.
+Autrement dit, elle agit comme un court-circuit.
+La résistance, par conséquent, aura à ses bornes
+une différence de tension qui s'approche de la tension d'entrée.
+
+En conclusion, on s'attend à ce que le filtre passe-haut,
+qui prend la tension aux bornes de la résistance,
+atténue les petites fréquences et conserve les hautes fréquences;
+et à ce que le filtre passe-bas,
+qui prend la tension aux bornes de la capacité,
+conserve les petites fréquences et atténue les hautes fréquences.
+Fort heureusement, cela respecte leurs définitions.
+
+\subsection{Hypothèses}
+
 Pour modéliser la réponse des filtres à différents signaux nous allons utiliser
 la méthode des phaseurs, comme décrite dans l'annexe~\ref{chap:phaseurs}.
-Nous supposerons ici que le signal est une sinusoïde pure, les autres cas
+Nous supposerons donc ici que le signal est une sinusoïde pure, les autres cas
 pouvant s'y ramener en prenant la transformée de Fourier.
+
+Nous supposons également que tous les composants et les liaisons entre ceux-ci
+sont idéaux.
+En particulier, nous considérons que les courants d'entrée de l'ampli-op
+et l'ampli audio sont négligeable.
+
+\subsection{Résolution}
 
 Définissons comme sur la figure~\ref{fig:filtres-v1v2v3}
 $v_1(t),v_2(t),v_3(t)$ les tensions
 à l'entrée, après le filtre passe-haut et après le filtre passe-bas;
 et $\overline{V_1}, \overline{V_2}, \overline{V_3}$ leurs phaseurs associés.
 
-Supposons que le courant à l'entrée des suiveurs est négligeable.
-Tout le courant passant à travers le condensateur $C_2$ passe donc
+Tout le courant passant à travers le condensateur $C_2$ passe
 aussi à travers la résistance $R_2$.
 Par conséquent, on peut appliquer la loi de division des tensions,
 avec les impédances $\frac{1}{j\omega C_2}$ et $R_2$:
@@ -19,8 +71,8 @@ avec les impédances $\frac{1}{j\omega C_2}$ et $R_2$:
     \overline{V_2} = \frac{R_2}{\frac{1}{j\omega C_2} + R_2}\,\overline{V_1}
     = \frac{j\omega R_2C_2}{1+j\omega R_2C_2}\,\overline{V_1}
 \end{equation}
-Le gain en tension du filtre passe-haut est donc
-$\frac{j\omega R_2C_2}{1+j\omega R_2C_2}$.
+La fonction de transfert du filtre passe-haut est donc
+$H\ind{ph}(j\omega) = \frac{j\omega R_2C_2}{1+j\omega R_2C_2}$.
 
 Pour le filtre passe-bas, on peut supposer de manière similaire que
 le courant à l'entrée de l'ampli audio est négligeable,
@@ -32,14 +84,132 @@ $R_3$ et $\frac{1}{j\omega C_3}$:
     = \frac{1}{1+j\omega R_3C_3}\,\overline{V_2}
 \end{equation}
 Le gain en tension du filtre passe-bas est donc
-$\frac{1}{1 + j\omega R_3C_3}$.
+$H\ind{pb}(j\omega) = \frac{1}{1 + j\omega R_3C_3}$.
 
 Étant donné que la tension $v_2$ est répétée de la sortie du filtre passe-haut
-à l'entrée du filtre passe-bas, le gain total du système est:
+à l'entrée du filtre passe-bas, la fonction de transfert totale du système est:
 \begin{align}
-    \overline{V_3}\,/\,\overline{V_1} &=
+    H\ind{tot}(j\omega) &= H\ind{ph}(j\omega)\,H\ind{pb}(j\omega) =
     \frac{j\omega R_2C_2}{1 + j\omega R_2C_2}\,\cdot\,
     \frac{1}{1 + j\omega R_3C_3}\\
     &= \frac{j\omega R_2C_2}{1 + j\omega\,(R_2C_2+R_3C_3) +
         (j\omega)^2\,(R_2C_2R_3C_3)}
 \end{align}
+
+\subsection{Tendances}
+
+\textbf{\textsc{À bouger en annexe}}
+
+Avant de calculer les gains et déphasages en détail,
+nous allons mettre en évidence des tendances dans les fonctions de transfert.
+
+Commençons par le filtre passe-haut, dont la fonction de transfert est
+$H\ind{ph}(j\omega) = \frac{j\omega R_2C_2}{1+j\omega R_2C_2}$.
+Le dénominateur contient deux termes qui «dominent» à tour de rôle:
+le premier, 1, sera le plus grand en norme pour de petites valeurs de $\omega$,
+jusqu'au point $\omega = 1/R_2C_2$, où $j\omega R_2C_2$, qui grandit
+avec $\omega$, «prendra le relais».
+Notons cette pulsation critique $\omega\ind{bas}= 1/R_2C_2$ et
+appelons-la \emph{pulsation de coupure}.
+
+Plus précisément,
+\begin{itemize}
+    \item quand $\omega << \omega\ind{bas}$,
+        $H\ind{ph} \approx \frac{j\omega R_2C_2}{1} = j\omega R_2C_2$;
+    \item quand $\omega >> \omega\ind{bas}$,
+        $H\ind{ph} \approx \frac{j\omega R_2C_2}{j\omega R_2C_2} = 1$.
+\end{itemize}
+
+Cette rapide analyse confirme notre intuition et la précise:
+\begin{itemize}
+    \item pour de petites pulsations,
+        le signal est de moins en moins atténué et est en avance de $\pi/2$
+        sur l'entrée (à cause du facteur $j$);
+    \item à partir de la pulsation de coupure le signal sera presque
+        restitué à l'identique.
+\end{itemize}
+
+Pour le filtre passe-bas, la situation est analogue.
+Le dénominateur fait apparaître une pulsation de coupure
+$\omega\ind{haut} = 1/R_3C_3$.
+À partir de la fonction de transfert
+$H\ind{pb}(j\omega) = \frac{1}{1 + j\omega R_3C_3}$,
+on découvre que:
+\begin{itemize}
+    \item quand $\omega << \omega\ind{haut}$, $H\ind{pb} \approx 1$;
+    \item quand $\omega >> \omega\ind{haut}$, $H\ind{pb}
+        \approx \frac{1}{j\omega R_3C_3}$;
+\end{itemize}
+ce qui confirme et précise notre intuition:
+\begin{itemize}
+    \item pour de petites pulsations, le signal sera presque restitué
+        à l'identique;
+    \item à partir de la pulsation de coupure, le signal est de plus en plus
+        atténué
+        et est en retard de $\pi/2$ sur l'entrée (à cause du facteur $1/j$).
+\end{itemize}
+
+\subsection{Gain et déphasage}
+
+Intéressons-nous maintenant de manière plus rigoureuse
+au \emph{gain} (rapport d'amplitude) et au  \emph{déphasage} (décalage)
+entre l'entrée et la sortie.
+Ils correspondent respectivement au module et à l'argument de la fonction de
+transfert.
+
+C'est-à-dire, pour le filtre passe-haut:
+\begin{align}
+    G\ind{ph}(j\omega) &= |H\ind{ph}(j\omega)|
+    = \frac{|j\omega R_2C_2|}{|1 + j\omega R_2C_2|}
+    = \frac{\omega R_2C_2}{\sqrt{1+(\omega R_2C_2)^2}}\\
+    \phi\ind{ph}(j\omega) &= \arg\big(H\ind{ph}(j\omega)\big)
+    %= \arctan(j\omega R_2C_2) - \arctan(1+j\omega R_2C_2)
+    = \arctan\left(\frac{1}{\omega R_2C_2}\right)
+\end{align}
+et pour le filtre passe-bas:
+\begin{align}
+    G\ind{pb}(j\omega) &= |H\ind{pb}(j\omega)|
+    = \frac{|1|}{|1 + j\omega R_3C_3|}
+    = \frac{1}{\sqrt{1+(\omega R_3C_3)^2}}\\
+    \phi\ind{pb}(j\omega) &= \arg\big(H\ind{pb}(j\omega)\big)
+    = \arctan(-\omega R_3C_3)
+\end{align}
+
+Ces résultats sont illustrés par des graphes dans
+les figures~\ref{fig:graphes-pb} et~\ref{fig:graphes-pb}, avec en abcisse la pulsation
+et en ordonnée le gain et le déphasage.
+Les tendances découvertes sont en pointillés.
+Ici, les potentiomètres sont tous deux réglés à $20\%$,
+donc $R_2 = 200\,\ohm$ et $R_3 = 2\,\kilo\ohm$.
+
+Nous utilisons une échelle logarithmique pour les fréquences
+ou pulsations, ainsi que pour les gains.
+Les raisons de ce choix sont expliquées en détail dans
+la section~\ref{sec:log}.
+
+Enfin, pour la combinaison des deux filtres,
+les fonctions de transfert sont multipliées,
+donc les gains sont multipliés et les déphasages sont additionnés.
+Le résultat est illustré dans la figure~\ref{fig:graphes-bande}.
+
+\subsection{Interprétation}
+
+\textbf{\textsc{À réécrire et compléter}}
+
+Nous pouvons voir dans la figure~\ref{fig:graphes-bande}
+que notre combinaison de filtres a bien le résultat attendu.
+En effet, on voit que les signaux dont les pulsations sont dans l'intervalle
+$[\omega\ind{bas},\omega\ind{haut}]$
+\footnote{Ou dont les fréquences sont dans l'intervalle
+    $[f\ind{bas},f\ind{haut}]$ avec
+    $f\ind{bas} = \omega\ind{bas}/2\pi$ et
+    $f\ind{haut} = \omega\ind{haut}/2\pi$.}
+sont conservées.
+
+La première remarque à faire est que les filtres ne sont pas des filtres idéaux
+en ce sens que la coupure de signal n'est pas brutale:
+dans le filtre passe-haut comme dans le filtre passe-bas,
+l'amplitude décroit linéairement en échelle log-log.
+Cela dit, ce n'est pas forcément une mauvaise chose.
+En effet, cela permet d'atténuer certaines fréquences sans pour autant
+les supprimer complètement.
