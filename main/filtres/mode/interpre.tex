@@ -1,21 +1,28 @@
 \subsection{Interprétation}
 
-\textbf{\textsc{À réécrire et compléter}}
-
-Nous pouvons voir dans la figure~\ref{fig:graphes-bande}
-que notre combinaison de filtres a bien le résultat attendu.
-En effet, on voit que les signaux dont les pulsations sont dans l'intervalle
+D'abord, nous pouvons voir dans la figure~\ref{fig:graphes-bande}
+que notre combinaison de filtres répond bien à la définition de
+filtre passe-bande.
+En effet, les signaux dont les pulsations sont dans l'intervalle
 $[\omega\ind{bas},\omega\ind{haut}]$
-\footnote{Ou dont les fréquences sont dans l'intervalle
+\footnote{
+    Ou dont les fréquences sont dans l'intervalle
     $[f\ind{bas},f\ind{haut}]$ avec
     $f\ind{bas} = \omega\ind{bas}/2\pi$ et
-    $f\ind{haut} = \omega\ind{haut}/2\pi$.}
-sont conservées.
+    $f\ind{haut} = \omega\ind{haut}/2\pi$.
+}
+sont conservés, et les autres signaux sont atténués.
 
-La première remarque à faire est que les filtres ne sont pas des filtres idéaux
-en ce sens que la coupure de signal n'est pas brutale:
-dans le filtre passe-haut comme dans le filtre passe-bas,
-l'amplitude décroit linéairement en échelle log-log.
-Cela dit, ce n'est pas forcément une mauvaise chose.
+Ce n'est par contre pas un filtre passe-bande parfait:
+au lieu d'une coupure nette de signal, le gain décroît
+de manière linéaire en échelle log-log.
+Cela peut avoir des avantages.
 En effet, cela permet d'atténuer certaines fréquences sans pour autant
 les supprimer complètement.
+
+Enfin, les pulsations de coupures $1/R_2C_2$ et $1/R_3C_3$
+peuvent être réglées facilement en changeant les valeurs des résistances,
+grâce au curseur mobile des potentiomètres.
+Dans la prochaine section, nous sélectionnerons les potentiomètres
+qui permettront le choix de pulsations de coupure
+le plus adapté.
