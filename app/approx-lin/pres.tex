@@ -1,0 +1,62 @@
+\section{Présentation}
+\label{sec:approx-lin/pres}
+
+Dans cette section nous allons d'abord expliquer ce qu'est
+«passer en double échelle logarithmique» et ensuite presenter
+chacune des méthodes proposées
+
+\subsection{Double échelle logarithmique}
+Pour commencer, nous avons déterminé à plusieurs fréquences
+le gain en tension d'un filtre passe-bas
+(sur base des mesures en section~\ref{sec:mesures/filtres-1k-12357}),
+ce qui constitue nos points de mesure.
+
+Ensuite, nous les passons en double-échelle logarithmique (ou \emph{log-log})
+ce qui signifie en pratique qu'au lieu de représenter le point $(x,y)$,
+nous représenterons sur le graphe le point $(x',y') = (\log x,\log y)$.%
+\footnote{
+    Dans ce chapitre et le suivant, nous utiliserons
+    $\log$ pour noter la fonction $x \to \log_{10} x$
+    et $\exp$ pour noter la fonction $x \to 10^x$.
+}
+La figure~\ref{fig:regular-to-loglog} montre les graphes
+avant et après ce changement de variable.
+
+Outre la très nette amélioration de visibilité,
+l'échelle log-log permet de faire apparaître clairement
+des tendances polynômiales.
+En effet, si les points d'origine obéissent à la relation $y = f(x)$,
+après le changement de variable, celle-ci devient:
+\begin{equation}
+    \exp(y') = f(\exp(x')) \Longrightarrow y' = \log(f(\exp(x'))
+\end{equation}
+transformant la fonction $f$ en une fonction $f' = \log\circ f\circ\exp$.
+Dès lors, si $f(x) = ax^k$, la courbe dessinée aura pour
+équation
+\begin{equation}
+    y' = f'(x') = \log(a(\exp(x')^k)) = kx'+\log a
+\end{equation}
+soit une droite.
+
+Dans notre cas, le gain théorique a pour équation
+$G\ind{pb}(\omega) = \frac{1}{\sqrt{1+(RC\omega)^2}}$.
+Nous pouvons étudier son comportement en deux parties:
+\begin{itemize}
+    \item si $\omega << 1/RC$, alors $1 >> (RC\omega)^2$,
+        donc $G\ind{pb} \approx 1$;
+    \item si $\omega >> 1/RC$, alors $1 << (RC\omega)^2$,
+        donc $G\ind{pb} \approx 1/(RC\omega)$.
+\end{itemize}
+
+Il s'agit bien là de deux d'équation de la forme $f(x) = ax^k$,
+ce qui entraîne donc l'apparition des droites dans le graphe.
+Plus précisément, on peut y voir
+une première partie s'approchant d'une droite horizontale et
+une seconde partie s'approchant d'une droite décroissante,
+de pente $-1$.
+
+Notre objectif est de déterminer de façon précise
+l'intersection de ces deux droites
+pour calculer la pulsation de coupure $\omega_c$,
+ou fréquence de coupure $f_c$,
+à laquelle le changement de comportement s'effectue.
