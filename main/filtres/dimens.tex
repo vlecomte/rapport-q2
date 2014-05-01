@@ -1,0 +1,44 @@
+\section{Dimensionnement}
+
+Comme expliqué dans la section~\ref{sec:filtres/car-tech}
+sur les caractéristiques techniques,
+le seul choix que nous avons eu à faire est celui des potentiomètres.
+Mais c'est également le plus critique, car
+il détermine les fréquences de coupure qui seront accessibles à l'utilisateur.
+
+Pour un filtre passe-haut comme un filtre passe-bas,
+constitués d'une résistance $R$ et d'une capacité $C$,
+la pulsation de coupure est $1/RC$,
+et la fréquence de coupure est $1/(2\pi RC)$.
+
+Si l'on peut faire varier la résistance de $0$ à une valeur $R\ind{max}$,
+alors la fréquence de coupure peut varier dans l'intervalle
+$[1/(2\pi R\ind{max}C),\infty)$,
+c'est-à-dire que l'on peut décaler la courbe
+de réponse arbitrairement vers la droite.
+Toutefois, nous considérons qu'en-dessous d'un réglage à $10\%$,
+l'erreur relative est trop grande pour choisir correctement la fréquence,
+ce qui limite l'intervalle à $[1/(2\pi R\ind{max}C),10/(2\pi R\ind{max}C)]$.
+
+Les capacités imposées avaient une valeur $C=470\,\nano\farad$,
+et pour les résistances nous avions le choix entre
+$R\ind{max}=10\,\kilo\ohm$, $1\,\kilo\ohm$ ou $100\,\ohm$.
+Elles donnaient donc respectivement les intervalles
+$[34\,\hertz,340\,\hertz]$, $[340\,\hertz,3.4\,\kilo\hertz]$
+et $[3.4\,\kilo\hertz,34\,\kilo\hertz]$
+pour la sélection de la fréquence de coupure.
+
+Le facteur décisif de notre choix a été
+qu'une fréquence de $3.4\,\kilo\hertz$ est
+presque deux octaves plus haute que la note la plus aiguë
+qu'une soprano peut atteindre (A5, ou $880\,\hertz$).%
+\cite{vocal-ranges}
+Dès lors, pouvoir régler la fréquence de coupure d'un filtre
+entre $3.4\,\kilo\hertz$ et $34\,\kilo\hertz$,
+avec la résistance $R\ind{max} = 100\,\ohm$, aura très peu d'effet.
+
+Ensuite, nous avons attribué les deux potentiomètres restants
+aux deux filtres, sachant que la fréquence de coupure du passe-haut
+doit être plus basse que celle du passe-bas,
+ce qui a donné $R\ind{2,max}=10\,\kilo\ohm$ pour le passe-haut,
+et $R\ind{3,max}=1\,\kilo\ohm$ pour le passe-bas.

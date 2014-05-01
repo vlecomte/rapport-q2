@@ -15,14 +15,17 @@ sont conservés, et les autres signaux sont atténués.
 
 Ce n'est par contre pas un filtre passe-bande parfait:
 au lieu d'une coupure nette de signal, le gain décroît
-de manière linéaire en échelle log-log.
+de manière presque linéaire en échelle log-log.
 Cela peut avoir des avantages.
 En effet, cela permet d'atténuer certaines fréquences sans pour autant
 les supprimer complètement.
 
 Enfin, les pulsations de coupures $1/R_2C_2$ et $1/R_3C_3$
+sont compatibles avec l'analogie hydraulique de la section
+\ref{sec:filtres/intuition}.
+Plus le tuyau est fin et la membrane est large (pour de grands $R$ et $C$),
+plus cette dernière mettra du temps à se charger,
+ce qui induira une fréquence caractéristique plus petite.
+Ces expressions impliquent aussi qu'elles
 peuvent être réglées facilement en changeant les valeurs des résistances,
 grâce au curseur mobile des potentiomètres.
-Dans la prochaine section, nous sélectionnerons les potentiomètres
-qui permettront le choix de pulsations de coupure
-le plus adapté.
