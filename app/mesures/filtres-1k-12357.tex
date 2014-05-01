@@ -1,0 +1,51 @@
+\section{Filtres passe-bas et passe-haut isolés}
+
+Ces mesures avaient pour but de confirmer la modélisation théorique
+des filtres passe-bas et passe-haut.
+Nous avons mis une résistance $R=1\,\kilo\ohm$ et une capacité
+$C=470\,\nano\farad$ en série.
+Un générateur de signaux imposait une tension sinusoïdale aux bornes.
+
+Nous avons d'abord mesuré les valeurs de la résistance et de la capacité
+individuellement au multimètre pour éliminer les incertitudes liées
+à la fabrication.
+
+Nous avons mesuré $R=1.003\,\kilo\ohm$ et $C=433\,\nano\farad$.
+
+Ensuite, nous avons placé des voltmètres en mode AC aux bornes du générateur,
+de la résistance et de la capacité.
+Nous avons fait varier la fréquence et noté à chaque point
+la fréquence et les trois tensions efficaces (RMS) correspondants.
+Les mesures sont rassemblées dans la table~\ref{tab:filtres-1k}
+
+\begin{table}
+    \centering
+    \begin{tabu}{r|r*{3}{r@{.}l}}
+        \toprule
+        \multicolumn{1}{l}{\No} &
+        \multicolumn{1}{c}{$f$ (\hertz)} &
+        \multicolumn{2}{c}{$V\ind{in}$ (\volt)} &
+        \multicolumn{2}{c}{$V_R$ (\volt)} &
+        \multicolumn{2}{c}{$V_C$ (\volt)} \\
+        \hline
+        1 & 10 & 5&75 & 0&181 & 5&78 \\
+        2 & 20 & 5&75 & 0&351 & 5&75 \\
+        3 & 29 & 5&75 & 0&514 & 5&72 \\
+        4 & 51 & 5&74 & 0&896 & 5&65 \\
+        5 & 69 & 5&73 & 1&18 & 5&57 \\
+        6 & 99 & 5&73 & 1&66 & 5&45 \\
+        7 & 197 & 5&67 & 2&90 & 4&79 \\
+        8 & 289 & 5&62 & 3&64 & 4&18 \\
+        9 & 505 & 5&55 & 4&57 & 3&03 \\
+        10 & 688 & 5&52 & 4&89 & 2&42 \\
+        11 & 994 & 5&52 & 5&16 & 1&80 \\
+        12 & 1964 & 5&51 & 5&38 & 0&980 \\
+        13 & 2940 & 5&54 & 5&46 & 0&291 \\
+        14 & 5070 & 5&67 & 5&64 & 0&433 \\
+        15 & 6920 & 5&86 & 5&84 & 0&341 \\
+        16 & 10010 & 6&34 & 6&39 & 0&251 \\
+        \bottomrule
+    \end{tabu}
+    \caption{Mesures de fréquences et tensions efficaces}
+    \label{tab:filtres-1k}
+\end{table}
