@@ -1,0 +1,36 @@
+\subsection{Première méthode: projection orthogonale}
+
+À partir de maintenant supposons que nous sommes passés en échelle log-log,
+et que nous avons choisi une série de $n\geq 2$ points%
+\footnote{
+    Les consignes suggèrent de ne considérer que 3 points pour commencer.
+    Toutefois, il nous a semblé plus simple d'introduire les méthodes
+    directement dans leur forme à $n$ points.
+}:
+\[
+    (x_1,y_1),(x_2,y_2),\ldots,(x_n,y_n)
+\]
+pour déterminer l'une des droites qui est apparue dans le graphe.
+Il s'agit donc de trouver la droit qui s'approche le plus de ses points.
+
+La première méthode consiste à prendre le polynôme interpolateur
+$I \in \mathbb{R}[X]_{n-1}$ passant par chacun des $n$ points,%
+\footnote{
+    Ce polynôme, appelé polynôme de Lagrange, existe et est unique.%
+    \cite{lagrange-poly}
+}
+puis calculer sa projection orthogonale $D$
+sur l'espace des droites $\mathbb{R}[X]_1$
+selon le produit scalaire:
+\begin{equation}
+    \scal{P}{Q} = P(x_1)Q(x_1) + P(x_2)Q(x_2) + \cdots + P(x_n)Q(x_n)
+\end{equation}
+
+Pour déterminer cette projection, il faut considérer la base usuelle
+$u=\{1,X\}$ de $\mathbb{R}[X]_1$
+puis en extraire une base orthonormée $e=\{e_1,e_2\}$ par la méthode
+de Gram-Schmidt, et ensuite calculer la droite $D$
+selon la formule:
+\begin{equation}
+    D = \scal{I}{e_1}e_1 + \scal{I}{e_2}e_2
+\end{equation}
