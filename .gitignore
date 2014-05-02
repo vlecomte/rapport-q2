@@ -12,5 +12,6 @@
 *.out
 *.run.xml
 *(busy)
-# Output pdf
+# Output pdf, but not images
 *.pdf
+!img/*.pdf
