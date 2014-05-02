@@ -1,0 +1,41 @@
+\section{Caractère défini positif du produit scalaire}
+\label{sec:math/defini-pos}
+
+Soient $x_1,\ldots,x_n$ des réels distincts,
+et $P,Q$ des polynômes de $\reals[X]_{n-1}$.
+Prouvons par induction que le produit scalaire:
+\begin{equation}
+    \scal{P}{Q} = P(x_1)Q(x_1) + \cdots + P(x_n)Q(x_n)
+\end{equation}
+est défini positif,
+ou par contraposition que $\scal{P}{P}=0$ entraîne $P=0$.
+
+\paragraph{Cas de base}
+Pour $n=1$, le polynôme $P$ est constant.
+Par conséquent, $\scal{P}{P} = P(x_1)^2 = 0$
+implique que $P$ est nul en tout point.
+
+
+\paragraph{Cas récurrent}
+Supposons que:
+\begin{equation}
+    \scal{P}{P} = P(x_1)^2 + \cdots + P(x_n)^2 = 0
+\end{equation}
+Ceci étant une somme de carrés, tous ses termes sont nuls,
+donc $P(x_i) = 0$ pour $i=1,\ldots,n$.
+
+En particulier, $P$ est donc un multiple de $(X-x_n)$,
+et peut s'exprimer sous la forme
+\begin{equation}
+    P(X) = (X-x_n)\cdot Q(X)
+\end{equation}
+avec $Q$ dans $\reals[X]_{n-2}$.
+
+Puisque $(X-x_n)$ ne s'annule qu'en $x_n$,
+$Q(x)$ doit s'annuler en $x_1,\ldots,x_{n-1}$,
+donc
+\begin{equation}
+    Q(x_1)^2 + \cdots + Q(x_{n-1})^2 = 0 = \scal{Q}{Q}
+\end{equation}
+
+Par l'hypothèse de récurrence, $Q=0$, donc $P=0$.
