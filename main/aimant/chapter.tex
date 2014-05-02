@@ -5,26 +5,26 @@ N'ayant pas de tel aimant à disposition, nous avons réalisé un électro-aiman
 d'un coeur en forme de E de fer orienté, matériau ferromagnétique.
 \section{Intuition}
 Le solénoide étant enroulé sur un coeur magnétique, et l'entrefer étant petit, le champ magnétisant dans 
-une boucle passant parle coeur du solénoide, l'entrefer et reveant au solénoide à travers une branche 
-du E doit être constant. Ceci pourrait être un bon point de départ pour obtenir le champ B présent dans l'entrefer.
-%insérer schéma simple avec la boucle
+une boucle passant par le coeur du solénoide, l'entrefer et revenant au solénoide à travers une branche 
+du E doit être constant. Ceci pourrait être un bon point de départ pour obtenir le champ $B$ présent dans l'entrefer.
+\includegraphics{img/schema-aimant-bobine}
 \section{Hypothèses}
 \begin{itemize}
 \item Le solénoide étant enroulé autour d'un coeur ferromagnétique ayant \[\mu = \mu_0 * 1600\], et puisque les 
 tours du solénoides sont fortements serrés et une épaisse bobine, nous supposons qu'aucun champ ne passe 
 à entre les fils et que tout le champ magnétique généré passe par l'entrefer.\\
-\item Nous supposons également que tout le champ magnétisant H passe directement par l'entrefer, et que rien ne passe par 
+\item Nous supposons également que tout le champ magnétisant $H$ passe directement par l'entrefer, et que rien ne passe par 
 le dessus ou le dessous de la branche intermédiaire du E.
-\item Le champ B que nous voulons obtenir dans l'entrefer est un champ de 0,1 T. Cette valeur fut choisie car elle nous 
+\item Le champ $B$ que nous voulons obtenir dans l'entrefer est un champ de $0,1\tesla$. Cette valeur fut choisie car elle nous 
 d'obtenir une force suffisante pour faire bouger la membrane avec une amplitude satisfaisante tout en gardant la bobine 
 mobile relativement légère car avec peu de tours de fils de cuivre.
 \end{itemize}
+Il est à noter que notre entrefer mesure $0.5\centi\meter$ car nous avons rajouter des plaquettes afin de le réduire.
 \section{Développement théorique}
 Le champ magnétisant généré par la bobine est 
 $\int{H dl} = N I$
 En prenant une boucle dans notre circuit magnétique, grâce à Gauss généralisée, nous avons que
 $H_i l + H_e e = N I (1)$
-%rajouter schéma avec surfaces, boucles etc
 Nous avons également que $B_i S_i = B_e S_e (2)$  avec $S_i \simeq S_e$
 ainsi que \\
 $B_i = \mu H_i \:et\:  B_e = \mu_0 H_e$
@@ -33,12 +33,12 @@ Nous pouvons alors réécrire l'équation (1) $H_e = \frac{N I}{e}$.
 Nous obtenons alors le champ $B$ recherché $B = B_e = \mu_0 \frac{N I}{e}$.
 \section{Calcul}
 Puisque nous voulons obtenir un champ $B = 0,1 \tesla$, et que nous fournissons $I = 1 A$ afin de ne pas faire trop 
-chauffer la bobine, et que nous connaissons e, nous pouvons calculer le nombre de tours N requis pour obtenir 0.1T.
+chauffer la bobine, et que nous connaissons $e$, nous pouvons calculer le nombre de tours $N$ requis pour obtenir 0.1\tesla.
 $N = \frac{0.1 * 0.5}{\mu_0 * 1} = 400$
 \section{Résultats pratiques}
 Grâce à un tesla-mètre, nous avons pu vérifier que notre première hypothèse était correcte, car nous n'obtenions 
-qu'environ 10 mT à côté de la bobine. 
+qu'environ $10 \mili\tesla$ à côté de la bobine. 
 \\La deuxième hypothèse était cependant trop forte par rapport à la réalité, car une 
 partie du champ magnétique passe en dehors de l'entrefer. Afin de palier à ce déficit, nous avons exagéré le nombre de 
 tours de la bobine mobile ($N \simeq 550$) et nous avons alors obtenu $B = 110 \milli\tesla$ dans l'entrefer, 
-ce qui était le champ désiré.       
+ce qui était le champ désiré.
