@@ -7,21 +7,29 @@ function line = approx_lin1(x,y)
 %   Conditions:
 %       - all xi are distinct
 %       - x and y have the same length
+%   Returns:
+%       [l,k]
 
-n = size(x);
 % Evaluates polynomials
-ev = [ones(n),x];
+ev = [ones(size(x)),x];
+
 % Original basis
 u1 = [1;0];
 u2 = [0;1];
+
 % Scalar product (u1|u2)
 u1u2 = (ev*u1)' * (ev*u2);
-% Orthogonal basis
-v1 = u1
-v2 = u2 - u1u2*u1
-% Squared norms
-v1v1 = (ev*v1)' * (ev*v1)
-v2v2 = (ev*v2)' * (ev*v2)
+% Squared norm of u1
+u1u1 = (ev*u1)' * (ev*u1);
+
+% Orthogonal basis: we subtract from u2 its projection onto <u1>
+v1 = u1;
+v2 = u2 - u1u2*u1/u1u1;
+
+% Squared norms of v1 and v2
+v1v1 = (ev*v1)' * (ev*v1);
+v2v2 = (ev*v2)' * (ev*v2);
+
 % Projection:
 %   instead of using an orthonormal basis,
 %   we divide by the square norm
