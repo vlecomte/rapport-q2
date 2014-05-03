@@ -2,24 +2,31 @@
 \section{Introduction}
 Dans la quasi totalité des haut-parleurs d'aujourd'hui se trouve un aimant permanent générant un champ magnétique.
 N'ayant pas de tel aimant à disposition, nous avons réalisé un électro-aimant grâce à du fil de cuivre enroulé autour 
-d'un coeur en forme de E de fer orienté, matériau ferromagnétique.
+d'un coeur en forme de E de fer doux orienté, matériau ferromagnétique. Ce type de matériau a pour effet d'augmenter très fortement le champ magnétique et d'avoir un cycle d'hystérésis très étroit (donc se démagnétisant rapidement).
 \section{Intuition}
 Le solénoide étant enroulé sur un coeur magnétique, et l'entrefer étant petit, le champ magnétisant dans 
 une boucle passant par le coeur du solénoide, l'entrefer et revenant au solénoide à travers une branche 
 du E doit être constant. Ceci pourrait être un bon point de départ pour obtenir le champ $B$ présent dans l'entrefer.
-\includegraphics{img/schema-aimant-bobine}
+
+\begin{figure}	
+\begin{center}
+\includegraphics[scale=0.7]{img/schema-aimant-bobine}
+\end{center}
+\caption{Schema de la bobine fixe}		
+\label{fig:bobinefixe}		
+\end{figure}
+
 \section{Hypothèses}
 \begin{itemize}
-\item Le solénoide étant enroulé autour d'un coeur ferromagnétique ayant \[\mu = \mu_0 * 1600\], et puisque les 
+\item Le solénoide étant enroulé autour d'un coeur ferromagnétique ayant \[\mu = \mu_0 * 1600\] et puisque les 
 tours du solénoides sont fortements serrés et une épaisse bobine, nous supposons qu'aucun champ ne passe 
-à entre les fils et que tout le champ magnétique généré passe par l'entrefer.\\
+à entre les fils et que tout le champ magnétique généré passe par l'entrefer.
 \item Nous supposons également que tout le champ magnétisant $H$ passe directement par l'entrefer, et que rien ne passe par 
 le dessus ou le dessous de la branche intermédiaire du E.
-\item Le champ $B$ que nous voulons obtenir dans l'entrefer est un champ de $0,1\tesla$. Cette valeur fut choisie car elle nous 
-d'obtenir une force suffisante pour faire bouger la membrane avec une amplitude satisfaisante tout en gardant la bobine 
+\item Le champ $B$ que nous voulons obtenir dans l'entrefer est un champ de $0,1\tesla$. Cette valeur fut choisie car elle nous permet d'obtenir une force suffisante pour faire bouger la membrane avec une amplitude satisfaisante tout en gardant la bobine 
 mobile relativement légère car avec peu de tours de fils de cuivre.
 \end{itemize}
-Il est à noter que notre entrefer mesure $0.5\centi\meter$ car nous avons rajouter des plaquettes afin de le réduire.
+Il est à noter que notre entrefer mesure $0.5\centi\meter$ car nous avons rajouté des plaquettes afin de le réduire.
 \section{Développement théorique}
 Le champ magnétisant généré par la bobine est 
 $\int{H dl} = N I$
