@@ -67,7 +67,7 @@ Les étapes de l'algorithme sont:
         De nouveau, il s'agit d'un nombre constant de produits scalaires
         et de multiplications par un scalaire, donc la complexité
         de cette étape est $O(n)$.
-    \item Trouver deux équations indépendantes dans le système transformé
+    \item Résoudre le système transformé
         \begin{equation}
             S' \equiv
             \left\{
@@ -78,10 +78,11 @@ Les étapes de l'algorithme sont:
                 \end{array}
             \right.
         \end{equation}
-        ce qui se fait en $O(n)$ en prenant la première équation et
-        parcourant les autres pour en trouver une indépendante.
-    \item Résoudre le système de deux équations en $k,l$,
-        en complexité $O(1)$.
+        c'est-à-dire échelonner la matrice complète du système,
+        en ne gardant qu'un élément non-nul les colonnes des coefficients.
+        Il y a deux colonnes, et pour chacune cela prend
+        $O(n)$ opérations.
+        Cette étape s'exécute donc en $O(n)$.
 \end{enumerate}
 
 Encore une fois, la complexité temporelle totale de cette méthode est $O(n)$.
@@ -98,6 +99,9 @@ leurs complexités en espace sont aussi $O(n)$.%
 
 Par conséquent, le temps et la quantité de mémoire pris par
 chacune des méthodes seront comparables,
-et dépendront largement de l'implémentation.
-Dès lors, il nous faudra recourir à des arguments légèrement plus subjectifs
+et dépendront fortement de l'implémentation.
+Dès lors, il nous faudra recourir à des arguments plus subjectifs
 pour faire un choix.
+
+Des implémentations Matlab de chacune des trois méthodes sont disponibles
+à la section~\ref{sec:codes/methodes}.
