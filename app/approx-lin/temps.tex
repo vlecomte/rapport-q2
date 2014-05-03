@@ -1,0 +1,103 @@
+\section{Complexité en temps}
+
+Maintenant que nous sommes sûrs que les trois méthodes donnent le même
+résultat, nous pouvons nous demander quelle méthode donne ce résultat
+en premier et plus particulièrement quand le nombre de mesures $n$ devient
+grand.
+
+Pour cela nous allons utiliser le concept de complexité algorithmique
+en temps, et la notation grand $O$.
+Un action en $O(1)$ s'exécute en \emph{temps constant} par rapport à $n$,
+et une action en $O(n)$ s'exécute en \emph{temps linéaire},
+directement proportionnel à $n$.
+
+\subsubsection*{Méthode 1}
+
+Notons qu'il n'y a pas besoin de calculer le polynôme $I$ directement.
+En effet, le produit scalaire défini n'implique que ses évaluations
+aux points $x_i$.
+Par conséquent, les étapes de l'algorithme sont:
+\begin{enumerate}
+    \item Calculer une base orthonormée $\{e_1,e_2\}$ à partir de la base
+        $\{1,X\}$. Cela demande un nombre constant de produits scalaires
+        et de multiplications par des scalaires,
+        les premiers en $O(n)$, et les dernières en $O(1)$.
+        La complexité de cette étape est donc $O(n)$.
+    \item Calculer la projection avec la formule
+        $D=\scal{I}{e_1}e_1+\scal{I}{e_2}e_2$.
+        De nouveau, il s'agit d'un nombre constant de produits scalaires
+        et de multiplications par des scalaires,
+        donc la complexité de cette étape est $O(n)$.
+\end{enumerate}
+
+En résumé la complexité temporelle de cette méthode est $O(n)$.
+
+\subsubsection*{Méthode 2}
+
+Les étapes de l'algorithme sont:
+\begin{enumerate}
+    \item Exprimer et additionner les termes de la fonction de distance
+        $\dist^2$ pour arriver à la forme $Ak^2+Bl^2+Ck+Dl+Ekl+F$.
+        Il y a $n$ termes de taille constante, donc cette étape
+        est en $O(n)$
+    \item Une fois arrivé à cette forme, égaler $\nabla f(k,l)$ à 0
+        pour en trouver le minimum.
+        Cela ne dépendant plus du tout de $n$, la complexité de cette étape
+        est $O(1)$.
+\end{enumerate}
+
+En résumé, la complexité temporelle de cette méthode est $O(n)$.
+
+\subsubsection*{Méthode 3}
+
+Pour sa première partie, cette méthode est très similaire à la méthode~1.
+Les étapes de l'algorithme sont:
+\begin{enumerate}
+    \item Calculer une base orthonormée $\{e_1,e_2\}$ à partir de la base
+        de l'espace colonne. Cela demande un nombre constant de produits
+        scalaires et de multiplications par des scalaires,
+        à chaque fois en $O(n)$ (car les vecteurs sont de dimension $n$).
+        La complexité de cette étape est donc $O(n)$.
+    \item Calculer la projection avec la formule
+        \begin{equation}
+            \left(\begin{array}{c}y'_1\\\vdots\\y'_n\end{array}\right)
+            =\scal{\begin{array}{c}y_1\\\vdots\\y_n\end{array}}{e_1}e_1
+            +\scal{\begin{array}{c}y_1\\\vdots\\y_n\end{array}}{e_2}e_2
+        \end{equation}
+        De nouveau, il s'agit d'un nombre constant de produits scalaires
+        et de multiplications par un scalaire, donc la complexité
+        de cette étape est $O(n)$.
+    \item Trouver deux équations indépendantes dans le système transformé
+        \begin{equation}
+            S' \equiv
+            \left\{
+                \begin{array}{ccc}
+                    kx_1+l &=& y'_1\\
+                    \vdots && \vdots\\
+                    kx_n+l &=& y'_n
+                \end{array}
+            \right.
+        \end{equation}
+        ce qui se fait en $O(n)$ en prenant la première équation et
+        parcourant les autres pour en trouver une indépendante.
+    \item Résoudre le système de deux équations en $k,l$,
+        en complexité $O(1)$.
+\end{enumerate}
+
+Encore une fois, la complexité temporelle totale de cette méthode est $O(n)$.
+
+\subsubsection*{Comparaison}
+
+Les complexités en temps de ces trois méthodes sont toutes $O(n)$,
+et à cause du temps pris pour utiliser la mémoire,
+leurs complexités en espace sont aussi $O(n)$.%
+\footnote{
+    Nous savons que celles-ci sont au moins $O(n)$ à cause de l'espace
+    initial occupé par les points de mesure.
+}
+
+Par conséquent, le temps et la quantité de mémoire pris par
+chacune des méthodes seront comparables,
+et dépendront largement de l'implémentation.
+Dès lors, il nous faudra recourir à des arguments légèrement plus subjectifs
+pour faire un choix.
