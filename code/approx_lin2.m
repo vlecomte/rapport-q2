@@ -23,6 +23,4 @@ F = sum(y.*y);
 %   { Ek + 2Bl + D = 0
 coeff = [2*A E; E 2*B];
 ind = [-C;-D];
-kl = coeff\ind;
-% Outputting [l,k]
-line = [kl(2) kl(1)];
+line = coeff\ind;

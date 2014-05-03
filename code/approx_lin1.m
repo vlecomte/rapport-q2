@@ -8,14 +8,14 @@ function line = approx_lin1(x,y)
 %       - all xi are distinct
 %       - x and y have the same length
 %   Returns:
-%       [l,k]
+%       [k,l]
 
 % Evaluates polynomials
-ev = [ones(size(x)),x];
+ev = [x, ones(size(x))];
 
 % Original basis
-u1 = [1;0];
-u2 = [0;1];
+u1 = [0;1];
+u2 = [1;0];
 
 % Scalar product (u1|u2)
 u1u2 = (ev*u1)' * (ev*u2);
@@ -34,5 +34,3 @@ v2v2 = (ev*v2)' * (ev*v2);
 %   instead of using an orthonormal basis,
 %   we divide by the square norm
 line = (ev*v1)'*y * v1/v1v1 + (ev*v2)'*y * v2/v2v2;
-
-end
