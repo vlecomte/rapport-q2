@@ -5,7 +5,7 @@ le fait que la droite $D$ passe par les $n$ points.
 Cela donne un système:
 \begin{equation}
     S\equiv \left\{
-        \begin{array}{ccl}
+        \begin{array}{ccc}
             kx_1+l &=& y_1 \\
             \vdots && \vdots \\
             kx_n+l &=& y_n \\
@@ -18,19 +18,17 @@ Pour le résoudre, il faut projeter le vecteur des termes indépendants
 \[
     \left(
         \begin{array}{c}
-            y_1\\
-            y_2\\
-            y_3
+            y_1\\\vdots\\y_n
         \end{array}
     \right)
 \]
 sur l'espace colonne de la matrice les coefficients de $S$
 \[
     \left(
-        \begin{array}{rc}
+        \begin{array}{cc}
             x_1&1\\
-            x_2&1\\
-            x_3&1
+            \vdots&\vdots\\
+            x_n&1
         \end{array}
     \right)
 \]

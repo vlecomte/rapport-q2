@@ -1,0 +1,71 @@
+\section{Équivalence des résultats}
+
+Dans cette section nous allons prouver que les méthodes~1 et~3
+reviennent à minimiser la fonction $\dist(D)$ de la méthode~2,
+et que cette fonction admet un minimum global unique.
+Nous en conclurons que les trois méthodes ont toujours un résultat,
+et qu'il est toujours identique.
+
+Commençons par la méthode~1.
+Nous savons que la projection orthogonale d'un vecteur $\vec{v}$
+sur un sous-espace $V$ est l'unique élément $P_V(\vec{v})$
+de $V$ qui minimise la distance
+\begin{equation}
+    \dist(P_V(\vec{v}),\vec{v}) =
+    \sqrt{\scal{P_V(\vec{v})-\vec{v}}{P_V(\vec{v})-\vec{v}}}
+\end{equation}
+Dans notre cas, on sait donc que la droite $D$ minimise
+le produit scalaire
+\begin{equation}
+    \begin{aligned}
+        \sqrt{\scal{D-I}{D-I}}
+        &= \sqrt{(D(x_1)-I(x_1))^2+\cdots+(D(x_n)-I(x_n))^2} \\
+        &= \sqrt{(D(x_1)-y_1)^2+\cdots+(D(x_n)-y_n)^2}
+    \end{aligned}
+\end{equation}
+la deuxième égalité découle de la définition du polynôme $I$.
+Ceci est exactement l'expression de la fonction $\dist(D)$ recherchée.
+De plus, l'ensemble de destination de la projection $\reals[X]_1$
+est finiment engendré, ce qui garantit l'existence et donc l'unicité
+du minimum.
+
+Il ne nous reste plus qu'à ramener la méthode~3 à la méthode~2.
+La projection effectuée sur l'espace colonne revient à trouver
+les coefficients $\alpha,\beta$ de la combinaison linéaire
+\[
+    \alpha
+    \left(
+        \begin{array}{c}
+            x_1\\\vdots\\x_n
+        \end{array}
+    \right)
+    +\beta
+    \left(
+        \begin{array}{c}
+            1\\\vdots\\1
+        \end{array}
+    \right)
+    \mbox{ la plus proche de }
+    \left(
+        \begin{array}{c}
+            y_1\\\vdots\\y_n
+        \end{array}
+    \right)
+\]
+donc celle qui minimise la distance (basée sur le produit scalaire canonique)
+\[
+    \sqrt{(\alpha x_1 + \beta - y_1)^2+\cdots+(\alpha x_n + \beta - y_n)^2}
+\]
+
+Or, une fois cette projection réinjectée dans le système $S$,
+il est clair que la solution $(k,l)$ est égale à $(\alpha,\beta)$.
+Dès lors, la méthode~3 trouve également des $k,l$ minimisant
+la distance
+\[
+    \sqrt{(kx_1+l-y_1)^2+\cdots+(kx_n+l-y_n)^2}
+\]
+ou encore
+\[
+    \sqrt{(D(x_1)-y_1)^2+\cdots+(D(x_n)-y_n)^2}
+\]
+ce qui conclut notre preuve.\qed
