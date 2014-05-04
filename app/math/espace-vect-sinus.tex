@@ -1,7 +1,12 @@
 \section{Espace vectoriel des sinusoïdes}
 \label{sec:math/espace-vect-sinus}
 
-Pour des fonctions sinusoïdales $f$ et $g$, on a:
+Nous prouverons simplement ici que l'addition dans $\mathbb{S}_\omega$
+est interne.
+Les autres propriétés d'un espace vectoriel sont plus simples
+et moins intéressantes à vérifier.
+
+Pour des fonctions sinusoïdales $f$ et $g$ de $\mathbb{S}_\omega$, on a:
 \[
     \begin{array}{rcl}
         (f+g)(t) &=& A\cos(\omega t + \phi) + B\cos(\omega t + \psi) \\
@@ -10,21 +15,25 @@ Pour des fonctions sinusoïdales $f$ et $g$, on a:
     \end{array}
 \]
 
-Calculons l'amplitude résultante:
+Calculons l'amplitude résultante%
+\footnote{
+    Ce qui prouve par hasard la loi des cosinus.
+}:
 \[
     \begin{array}{rcl}
         C &=& \sqrt{(A\cos\phi+B\cos\psi)^2+(A\sin\phi+B\sin\psi)^2} \\
+          &=& \sqrt{A^2+B^2+AB(2\cos\phi\cos\psi+2\sin\phi\sin\psi)} \\
           &=& \sqrt{A^2+B^2+2AB\cos(\phi-\psi)}
     \end{array}
 \]
-qu'on peut également trouver grâce à la loi des cosinus.
+
 On peut donc réécrire la somme:
 \[
     (f+g)(t) = C\left[ \frac{A\cos\phi+B\cos\psi}{C}\, \cos(\omega t)
                      - \frac{A\sin\phi+B\sin\psi}{C}\, \sin(\omega t) \right]
 \]
 
-Enfin, puisque $\left( \frac{A\cos\phi+B\cos\psi}{C} \right)^2
+Enfin, étant donné que $\left( \frac{A\cos\phi+B\cos\psi}{C} \right)^2
 + \left( \frac{A\sin\phi+B\sin\psi}{C} \right)^2 = 1$,
 il existe un réel $\theta$ tel que:
 \[
@@ -43,5 +52,4 @@ et donc:
                  &=& C\cos(\omega t + \theta)
     \end{array}
 \]
-
-\textbf{À COMPLÉTER ET RÉINTÉGRER AVEC LES PHASEURS}
+ce qui démontre que $f+g$ est bien un élément de $\mathbb{S}_\omega$.\qed
