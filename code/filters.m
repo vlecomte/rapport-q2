@@ -34,7 +34,8 @@ phrightline = exp(phright(1) * log_f + phright(2));
 % Cutoff frequency: intersection of the lines
 fc_ph = exp(-(phright(2)-phleft(2))/(phright(1)-phleft(1)))
 
-loglog(f,Gph,'o', exp(log_f), phleftline, exp(log_f), phrightline,
+loglog(f, Gph, 'o',
+        exp(log_f), phleftline, exp(log_f), phrightline,
         ones(size(vertical))*fc_ph, vertical, '--');
 
 % Calculating the linear approximations for low-pass

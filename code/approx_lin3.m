@@ -1,5 +1,6 @@
 function line = approx_lin3(x,y)
-%Computes a linear approximation y=kx+l for points (x1,y1),...,(xn,yn)
+%Computes a linear approximation y=kx+l
+%       for points (x1,y1),...,(xn,yn)
 %   Simply solves the overdetermined system:
 %       { kx1 + l = y1
 %       {  .        .

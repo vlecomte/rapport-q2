@@ -1,5 +1,6 @@
 function line = approx_lin1(x,y)
-%Computes a linear approximation y=kx+l for points (x1,y1),...,(xn,yn)
+%Computes a linear approximation y=kx+l
+%       for points (x1,y1),...,(xn,yn)
 %   Uses the the scalar product
 %       (f|g) = f(x1)g(x1) + ... + f(xn)g(xn)
 %   to project the implicit function f(xi) = yi
