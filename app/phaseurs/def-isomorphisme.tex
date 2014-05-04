@@ -1,9 +1,9 @@
 \section{Définition de l'isomorphisme}
 Commençons par étudier l'ensemble des fonctions du temps
 \[
-    f(t) = F\cos(\omega t + \phi)
+    f(t) = |F|\cos(\omega t + \phi)
 \]
-où $F$ est une constante réelle (avec éventuellement une dimension physique
+où $|F|$ est une constante réelle (avec éventuellement une dimension physique
 \footnote{
     En réalité, le support complet des grandeurs physiques
     nécessite une extension de la définition d'espace vectoriel.
@@ -34,20 +34,20 @@ la simplicité d'une exponentielle.
 Elles sont donc un bon candidat potentiel.
 Nous savons que:
 \begin{equation}
-    f(t) = F\cos(\omega t + \phi) = \mathfrak{Re}\{Fe^{j(\omega t + \phi)}\}
-    = \mathfrak{Re}\{Fe^{j\phi}\cdot e^{j\omega t}\}
+    f(t) = |F|\cos(\omega t + \phi) = \mathfrak{Re}\{|F|e^{j(\omega t + \phi)}\}
+    = \mathfrak{Re}\{|F|e^{j\phi}\cdot e^{j\omega t}\}
 \end{equation}
 où $j$ est l'unité imaginaire.
 Remarquons que $e^{j\omega t}$ ne dépend pas de la sinusoïde représentée.
-Cela signifie que la constante complexe $Fe^{j\phi}$,
+Cela signifie que la constante complexe $|F|e^{j\phi}$,
 qu'on appellera \emph{phaseur}, contient
 toute l'information qui caractérise la fonction $f$.
-D'ailleurs, l'amplitude $F$ correspond module du phaseur
+D'ailleurs, l'amplitude $|F|$ correspond module du phaseur
 tandis que le déphasage $\phi$ correspond à son argument.
 
 On peut même aller plus loin: définissons l'application $L$
-qui à une fonction $f(t) = F\cos(\omega t + \phi)$
-associe le complexe $Fe^{j\phi}$.
+qui à une fonction $f(t) = |F|\cos(\omega t + \phi)$
+associe le complexe $|F|e^{j\phi}$.
 On peut montrer (voir l'annexe~\ref{sec:math/isomorphisme}) qu'il s'agit d'un
 isomorphisme entre $\mathbb{S}_\omega$ et $\mathbb{C}$.
 
@@ -59,16 +59,16 @@ Cela a deux conséquences importantes:
         indifféremment sur les fonctions ou sur les phaseurs correspondants.
 \end{itemize}
 
-On peut déjà voir les avantages de cette représentation.
+On peut déjà entrevoir les avantages de cette représentation.
 En effet,
 les opérations sur les complexes sont bien plus simples et mieux connues
 que celles sur les fonctions.
 
 Nous noterons en général les fonctions en minuscules,
-les amplitudes en majuscules,
-et les phaseurs en majuscule avec une barre.
-Par exemple: $v(t) = V\cos(\omega t + \phi)$ et
-$\overline{V} = Ve^{j\phi}$.
+les phaseurs en majuscule,
+et les amplitudes comme le module des phaseurs.
+Par exemple: $v(t) = |V|\cos(\omega t + \phi)$ et
+$V = |V|e^{j\phi}$.
 
-Dans les sous-sections suivantes, nous allons montrer
-encore d'autres avantages.
+Dans les sections suivantes, nous allons montrer en détail
+les nombreux avantages des phaseurs.

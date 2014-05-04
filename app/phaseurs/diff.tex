@@ -1,30 +1,31 @@
 \section{Différentiation}
+\label{sec:phaseurs/diff}
 
 Nous allons maintenant déterminer l'opération qu'il faut effectuer
 sur le phaseur d'une fonction pour obtenir le phaseur de sa dérivée temporelle.
 
-Prenons comme d'habitude une fonction $f(t) = F\cos(\omega t + \phi)$
-de phaseur $\overline{F} = Fe^{j\phi}$
+Prenons comme d'habitude une fonction $f(t) = |F|\cos(\omega t + \phi)$
+de phaseur $F = |F|e^{j\phi}$
 et dérivons-la:
 \begin{equation}
-    \frac{d}{dt}f(t) = \omega (-A\sin(\omega t + \phi))
-    = \omega A \cos(\omega t + \pi/2 + \phi)
+    \frac{d}{dt}f(t) = \omega (-|F|\sin(\omega t + \phi))
+    = \omega |F| \cos(\omega t + \pi/2 + \phi)
 \end{equation}
 
-Le phaseur correspondant $\overline{F'}$ vaut:
+Le phaseur correspondant $F'$ vaut:
 \begin{equation}
-    \overline{F'} = \omega A e^{j(\pi/2 + \phi)} = \omega A e^{j\pi/2} e^{j\phi}
-    = j\omega A e^{j\phi} = j\omega \overline{F}
+    F' = \omega |F| e^{j(\pi/2 + \phi)} = \omega |F| e^{j\pi/2} e^{j\phi}
+    = j\omega |F| e^{j\phi} = j\omega F
 \end{equation}
 
 On découvre donc que quand on dérive une fonction sinusoïdale,
 son phaseur est simplement multiplié par $j\omega$.
 \footnote{
     Alternativement, on aurait pu voir que
-    $(\mathfrak{Re}\{ Ae^{j\phi} \cdot e^{j\omega t}  \})'
-    = \mathfrak{Re}\{(Ae^{j\phi} \cdot e^{j\omega t})'\}
-    = \mathfrak{Re}\{j\omega A e^{j\phi} \cdot e^{j\omega t}\}$,
-    ce qui montre également que le phaseur $Ae^{j\phi}$
+    $(\mathfrak{Re}\{ |F|e^{j\phi} \cdot e^{j\omega t}  \})'
+    = \mathfrak{Re}\{(|F|e^{j\phi} \cdot e^{j\omega t})'\}
+    = \mathfrak{Re}\{j\omega |F| e^{j\phi} \cdot e^{j\omega t}\}$,
+    ce qui montre également que le phaseur $|F|e^{j\phi}$
     est multiplié par $j\omega$.
 }
 Cela a comme conséquence immédiate de simplifier énormément
@@ -38,11 +39,11 @@ Reprenons l'équation différentielle décrivant le filtre passe-bas
 \]
 on peut la réécrire sous forme de phaseurs:
 \begin{equation}
-    \overline{V\ind{in}} = RC(j\omega)\overline{V_C} + \overline{V_C}
+    V\ind{in} = RC(j\omega)V_C + V_C
 \end{equation}
 ce qui donne immédiatement la solution:
 \begin{equation}
-    \overline{V_C} = \frac{\overline{V\ind{in}}}{1 + j\omega RC}
+    V_C = \frac{V\ind{in}}{1 + j\omega RC}
 \end{equation}
 
 On peut ensuite extraire l'amplitude et le déphasage de $v_C$
@@ -50,10 +51,9 @@ en calculant respectivement le module et l'argument de $\overline{V_C}$:
 \begin{equation}
     \left\{
         \begin{array}{ccl}
-            V_C &=& \left\|\,\overline{V_C}\,\right\|
-            = V\ind{in}\,/\,\|1+j\omega RC\|
-            = V\ind{in}\,/\sqrt{1 + (\omega RC)^2} \\
-            \phi &=& \arg\left(\overline{V_C}\right) = -\arg(1+j\omega RC)
+            |V_C| &=& |V\ind{in}|\,/\,|1+j\omega RC|
+            = |V\ind{in}|\,/\sqrt{1 + (\omega RC)^2} \\
+            \phi &=& \arg(V_C) = -\arg(1+j\omega RC)
             = - \arctan(\omega RC)
         \end{array}
     \right.

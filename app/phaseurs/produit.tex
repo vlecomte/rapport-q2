@@ -10,39 +10,39 @@ la moyenne de ce produit.
 Un exemple d'application est la puissance moyenne absorbée par un circuit,
 qui vaut la moyenne du produit $v\cdot i$ de la tension et du courant.
 
-Posons $f(t) = F\cos(\omega t + \phi)$ et $g(t) = G\cos(\omega t + \psi)$.
+Posons $f(t) = |F|\cos(\omega t + \phi)$ et $g(t) = |G|\cos(\omega t + \psi)$.
 Exprimons le produit de ces deux fonctions:
 \begin{equation}
     \begin{split}
-        (f\cdot g)(t) &= FG\cos(\omega t + \phi)\cos(\omega t + \psi) \\
-        &= \frac{FG}{2}(\cos(2\omega t + \phi + \psi) + \cos(\phi - \psi))
+        (f\cdot g)(t) &= |F||G|\cos(\omega t + \phi)\cos(\omega t + \psi) \\
+        &= \frac{|F||G|}{2}(\cos(2\omega t + \phi + \psi) + \cos(\phi - \psi))
     \end{split}
 \end{equation}
 la seconde égalité découlant de la formule de Simpson.
 
 Le terme $\cos(2\omega t + \phi + \psi)$ oscille autour de 0,
 donc sa contribution à la moyenne est nulle.
-Il reste donc le terme constant $\frac{1}{2}FG\cos(\phi - \psi)$.
+Il reste donc le terme constant $\frac{1}{2}|F||G|\cos(\phi - \psi)$.
 Nous reconnaissons ici la forme du produit scalaire des phaseurs
-$Fe^{j\phi}$ et $Ge^{j\psi}$ par rapport à la base orthonormée $\{1,j\}$,
+$|F|e^{j\phi}$ et $|G|e^{j\psi}$ par rapport à la base orthonormée $\{1,j\}$,
 divisée par deux.
 
 Exprimons ce produit scalaire pour s'en assurer:
 \begin{equation}
     \begin{array}{rcl}
-        \scal{Fe^{j\phi}}{Ge^{j\psi}}
-        &=& \scal{F(\cos\phi+j\sin\phi)}{G(\cos\psi+j\sin\psi)} \\
-        &=& FG\,\big[\cos\phi\cos\psi \scal{1}{1}
+        \scal{|F|e^{j\phi}}{|G|e^{j\psi}}
+        &=& \scal{|F|(\cos\phi+j\sin\phi)}{|G|(\cos\psi+j\sin\psi)} \\
+        &=& |F||G|\,\big[\cos\phi\cos\psi \scal{1}{1}
         + \cos\phi\sin\psi \scal{1}{j} \\
         && + \sin\phi\cos\psi \scal{j}{1}
         + \sin\phi\sin\psi \scal{j}{j}\big] \\
-        &=& FG(\cos\phi\cos\psi + \sin\phi\sin\psi) \\
-        &=& FG\cos(\phi-\psi)
+        &=& |F||G|(\cos\phi\cos\psi + \sin\phi\sin\psi) \\
+        &=& |F||G|\cos(\phi-\psi)
     \end{array}
 \end{equation}
 
 Nous avons donc prouvé que la moyenne de $(f\cdot g)(t)$
-vaut $\frac{1}{2}\scal{\overline{F}}{\overline{G}}$.
+vaut $\frac{1}{2}\scal{F}{G}$.
 Cela permet notamment de tirer avantage de la forme classique $a+bj$
 des complexes pour les phaseurs,
 avec laquelle $\scal{a+bj}{c+dj}$ vaut simplement $ac + bd$.

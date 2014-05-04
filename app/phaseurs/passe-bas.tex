@@ -36,12 +36,12 @@ La solution de l'équation homogène correspondante est $v_C = e^{-t/RC}$.
 Toutefois, il s'agit d'une exponentielle décroissante,
 donc son effet n'est pas présent à l'état d'équilibre.
 
-Posons $v\ind{in}(t) = V\ind{in}\cos(\omega t)$.
+Posons $v\ind{in}(t) = |V\ind{in}|\cos(\omega t)$.
 Puisque le signal d'entrée est sinusoïdal, on peut trouver une solution
 particulière de la forme
 \[
-    v_C(t) = V_C\cos(\omega t + \phi)
-    = (V_C\cos\phi)\,\cos(\omega t) - (V_C\sin\phi)\,\sin(\omega t)
+    v_C(t) = |V_C|\cos(\omega t + \phi)
+    = (|V_C|\cos\phi)\,\cos(\omega t) - (|V_C|\sin\phi)\,\sin(\omega t)
 \]
 
 En substituant ces expressions dans l'équation,
@@ -50,8 +50,8 @@ on obtient:
 \begin{equation}
     \left\{
         \begin{array}{ccrcr}
-            V\ind{in} &=& V_C\cos\phi &-& \omega RC\ V_C\sin\phi \\
-            0 &=& -\omega RC\ V_C\cos\phi &-& V_C\sin\phi
+            |V\ind{in}| &=& |V_C|\cos\phi &-& \omega RC\ |V_C|\sin\phi \\
+            0 &=& -\omega RC\ |V_C|\cos\phi &-& |V_C|\sin\phi
         \end{array}
     \right.
 \end{equation}
@@ -59,8 +59,8 @@ ou encore:
 \begin{equation}
     \left\{
         \begin{array}{ccl}
-            V_C\cos\phi &=& V\ind{in}\,/(1+(\omega RC)^2) \\
-            V_C\sin\phi &=& V\ind{in}\,(-\omega RC) / (1+(\omega RC)^2)
+            |V_C|\cos\phi &=& |V\ind{in}|\,/(1+(\omega RC)^2) \\
+            |V_C|\sin\phi &=& |V\ind{in}|\,(-\omega RC) / (1+(\omega RC)^2)
         \end{array}
     \right.
 \end{equation}
@@ -68,7 +68,7 @@ et donc:
 \begin{equation}
     \left\{
         \begin{array}{ccl}
-            V_C &=& V\ind{in}\,/ \sqrt{1+(\omega RC)^2} \\
+            |V_C| &=& |V\ind{in}|\,/ \sqrt{1+(\omega RC)^2} \\
             \phi &=& \arctan(-\omega RC)
         \end{array}
     \right.
