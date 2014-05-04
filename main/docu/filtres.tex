@@ -1,23 +1,30 @@
 \section{Filtres}
-Nous avons choisi le thème "filtre" afin faire nos recherches bibliographiques. En effet ce terme nous semblait 
-important, voire capital dans la bonne réalisation de ce projet, le cahier des charges nous imposant un réglage 
+\Large{\textbf{En cours de correction par Giulia}}
+Le second grand thème que nous avons décidé d'approfondir est le filtre. En effet, ce terme nous semblait 
+important, voire capital pour la réalisation de ce projet, le cahier des charges nous imposant un réglage 
 analogique des fréquences.
 
 \paragraph{}
+Comme le suggère son nom, un filtre laisse passer ou bloque certaines fréquences à partir d'une \emph{fréquence coupure}. Dans le cas d'un filtre idéal, la transition entre l'état passant et l'état bloquant est instantané. Mais dans la réalité, il existe une zone autour de la fréquence de coupure pour laquelle les fréquences sont seulement atténuées. Il existe quatre grandes catégories de filtres : 
+\begin{itemize}
+\item les filtres passe-haut : qui empêchent le passage des basses fréquences se situant sous la fréquence de coupure
+\item les filtres passe-bas : ceux-ci 
+
+
 Nous avons donc appris que les filtres sont dépendants de la fréquence et vice-versa. En effet ils permettent de 
 laisser passer ou de bloquer certaines fréquences mais il y a pour ces mêmes filtres une "fréquence de coupure" 
-qui limite le bon fonctionnement de ceux-ci. Nous nous sommes interessés au filtres basiques et quatre types en 
+qui limite le bon fonctionnement de ceux-ci. Nous nous sommes intéressés au filtres basiques et quatre types en 
 ressortent : passe-haut, passe-bas, passe-bande et coupe-bande. Dans notre cas, seuls les deux premiers types nous 
-interessent. Le filtre passe-haut permet de réduire la bande de fréquences basses, et le filtre passe-bas permet de 
+intéressent. Le filtre passe-haut permet de réduire la bande de fréquences basses, et le filtre passe-bas permet de 
 réduire les fréquences élevées. On découvre aussi dans nos sources que tous ces types peuvent être implanté dans un 
-système de manière active, ou passive. La manière passive ne nécéssite pas d'alimentation externe mais bien de 
+système de manière active, ou passive. La manière passive ne nécessite pas d'alimentation externe mais bien de 
 capacités et d'inductances de très hautes valeurs. Rajouter un amplificateur opérationnel nous amène donc 
 dans la méthode d'un filtre de type 
-actif. \cite[p.~249-251]{Kularatna}
+actif. \cite{Kularatna}
 
 \paragraph{}
 Notre deuxième grande découverte est une nouvelle manière de résoudre les circuits R-L-C, en utilisant les 
-complexes \cite[p. 375-379]{Irwin}. Cette méthode réduit drastiquement les calculs et nous a permis de gagner 
+complexes \cite{Irwin}. Cette méthode réduit drastiquement les calculs et nous a permis de gagner 
 énormément de temps. La section \ref{complexes} utilise cette méthode lors du calcul des phaseurs. Le principal 
 avantage étant d'éviter de résoudre une équation différentielle. Le calcul s'effectue comme pour les circuits de 
 type DC, et donne comme résultat un seul nombre complexe, dont nous pouvons déduire l'amplitude et le déphasage du 
