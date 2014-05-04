@@ -36,17 +36,16 @@ phrightline = exp(phright(1) * log_f + phright(2));
 % Cutoff frequency: intersection of the lines
 fc_ph = exp(-(phright(2)-phleft(2))/(phright(1)-phleft(1)));
 
-loglog(f, Gph, 'o',
-        exp(log_f), phleftline, exp(log_f), phrightline,
+loglog(f, Gph, 'o', reg_f, phleftline, reg_f, phrightline,
         ones(size(vertical))*fc_ph, vertical, '--');
 
 % Calculating the linear approximations for low-pass
-pbleft = approx_lin1(log(f(left)), log(Gpb(left)))
+pbleft = approx_lin1(log(f(left)), log(Gpb(left)));
 pbleftline = exp(pbleft(1) * log_f + pbleft(2));
-pbright = approx_lin1(log(f(right)), log(Gpb(right)))
+pbright = approx_lin1(log(f(right)), log(Gpb(right)));
 pbrightline = exp(pbright(1) * log_f + pbright(2));
 % Cutoff frequency: intersection of the lines
-fc_pb = exp(-(pbright(2)-pbleft(2))/(pbright(1)-pbleft(1)))
+fc_pb = exp(-(pbright(2)-pbleft(2))/(pbright(1)-pbleft(1)));
 
 loglog(f,Gpb,'o', reg_f, pbleftline, reg_f, pbrightline,
         ones(size(vertical))*fc_pb, vertical, '--');
@@ -56,11 +55,11 @@ ones_f = ones(size(reg_f));
 ph_theory = 1 ./ sqrt(1 + (fc_ph./reg_f).^2);
 pb_theory = 1 ./ sqrt(1 + (reg_f./fc_pb).^2);
 
-%loglog(f,Gph,'o',f,Gpb,'o', reg_f, ph_theory, reg_f, pb_theory);
+loglog(f,Gph,'o',f,Gpb,'o', reg_f, ph_theory, reg_f, pb_theory);
 
 % Theoretical asymptotes and cutoff frequencies
 phleft_theory = [1 log(2*pi*R*C)];
 phright_theory = [0 0];
-pbleft_theory = [0 0]
-pbright_theory = [-1 -log(2*pi*R*C)]
-fc_ph_theory = fc_pb_theory = 1/(2*pi*R*C)
+pbleft_theory = [0 0];
+pbright_theory = [-1 -log(2*pi*R*C)];
+fc_ph_theory = fc_pb_theory = 1/(2*pi*R*C);
