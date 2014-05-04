@@ -10,7 +10,47 @@ Vc = [5.78;5.75;5.72;5.65;5.57;5.45;4.79;4.18;
 
 loglog(f,Vin,f,Vr,'-*',f,Vc,'-*');
 
+% Gain for high-pass and low-pass filters
 Gph = Vr ./ Vin;
 Gpb = Vc ./ Vin;
 
 loglog(f,Gph,'-*',f,Gpb,'-*');
+
+% Point subsets for the linear approximation
+left = [1 2 3 4 5];
+right = [12 13 14 15 16];
+
+% Abscissae for displaying the lines
+log_f = linspace(log(f(1)), log(f(16)));
+reg_f = exp(log_f);
+% Ordinates for displaying the cutoff frequency
+vertical = exp(linspace(-3,0));
+
+% Calculating the linear approximations for high-pass
+phleft = approx_lin1(log(f(left)), log(Gph(left)));
+phleftline = exp(phleft(1) * log_f + phleft(2));
+phright = approx_lin1(log(f(right)), log(Gph(right)));
+phrightline = exp(phright(1) * log_f + phright(2));
+% Cutoff frequency: intersection of the lines
+fc_ph = exp(-(phright(2)-phleft(2))/(phright(1)-phleft(1)))
+
+loglog(f,Gph,'o', exp(log_f), phleftline, exp(log_f), phrightline,
+        ones(size(vertical))*fc_ph, vertical, '--');
+
+% Calculating the linear approximations for low-pass
+pbleft = approx_lin1(log(f(left)), log(Gpb(left)));
+pbleftline = exp(pbleft(1) * log_f + pbleft(2));
+pbright = approx_lin1(log(f(right)), log(Gpb(right)))
+pbrightline = exp(pbright(1) * log_f + pbright(2));
+% Cutoff frequency: intersection of the lines
+fc_pb = exp(-(pbright(2)-pbleft(2))/(pbright(1)-pbleft(1)))
+
+loglog(f,Gpb,'o', reg_f, pbleftline, reg_f, pbrightline,
+        ones(size(vertical))*fc_pb, vertical, '--');
+
+% Displaying the theoretical functions based on the cutoff frequency
+ones_f = ones(size(reg_f));
+phreal = 1 ./ sqrt(1 + (fc_ph./reg_f).^2);
+pbreal = 1 ./ sqrt(1 + (reg_f./fc_pb).^2);
+
+loglog(f,Gph,'o',f,Gpb,'o', reg_f, phreal, reg_f, pbreal);
