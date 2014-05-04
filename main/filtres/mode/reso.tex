@@ -1,34 +1,36 @@
 \subsection{Résolution}
 
 Définissons comme sur la figure~\ref{fig:filtres-v1v2v3}
-$v_1(t),v_2(t),v_3(t)$ les tensions
-à l'entrée, après le filtre passe-haut et après le filtre passe-bas;
-et $\overline{V_1}, \overline{V_2}, \overline{V_3}$ leurs phaseurs associés.
+$V_1$, $V_2$, et $V_3$ les phaseurs des tensions
+à l'entrée, après le filtre passe-haut, et après le filtre passe-bas.
+Pour une explication des phaseurs, voir l'annexe~\ref{chap:phaseurs},
+et plus particulièrement la section~\ref{sec:phaseurs/impedance}.
 
 Tout le courant passant à travers le condensateur $C_2$ passe
 aussi à travers la résistance $R_2$.
 Par conséquent, on peut appliquer la loi de division des tensions,
 avec les impédances $\frac{1}{j\omega C_2}$ et $R_2$:
 \begin{equation}
-    \overline{V_2}\,\big/\,\overline{V_1}
+    V_2\,/\,V_1
     = \frac{R_2}{\frac{1}{j\omega C_2} + R_2}
     = \frac{j\omega R_2C_2}{1+j\omega R_2C_2}
 \end{equation}
 Ce rapport est appelé \emph{fonction de transfert}, et nous le notons
 $H\ind{ph}(j\omega)$.
 
-Pour le filtre passe-bas, on peut supposer de manière similaire que
-le courant à l'entrée de l'ampli audio est négligeable,
-et appliquer la loi de division des tensions avec les impédances
+Pour le filtre passe-bas, de la même manière, tout le courant
+passant à travers la résistance $R_3$ passe aussi à travers le
+condensateur $C_3$, donc on peut appliquer
+la loi de division des tensions avec les impédances
 $R_3$ et $\frac{1}{j\omega C_3}$:
 \begin{equation}
-    \overline{V_3}\,\big/\,\overline{V_2}
+    V_3\,/\,V_2
     = \frac{\frac{1}{j\omega C_3}}{\frac{1}{j\omega C_3} + R_3}
     = \frac{1}{1+j\omega R_3C_3}
 \end{equation}
 que nous notons $H\ind{pb}(j\omega)$.
 
-Étant donné que la tension $v_2$ est répétée de la sortie du filtre passe-haut
+Étant donné que la tension $V_2$ est répétée de la sortie du filtre passe-haut
 à l'entrée du filtre passe-bas, la fonction de transfert totale du système est:
 \begin{align}
     H\ind{tot}(j\omega) &= H\ind{ph}(j\omega)\,H\ind{pb}(j\omega) =
