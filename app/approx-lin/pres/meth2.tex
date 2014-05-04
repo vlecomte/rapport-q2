@@ -1,1 +1,41 @@
-\subsection{Deuxième méthode}
+\subsection{Deuxième méthode: optimisation}
+
+La deuxième méthode suit un peu plus littéralement
+le problème à résoudre.
+Il s'agit ici de trouver la droite $D(X) = kX+l$
+qui minimise la fonction de distance $\dist(D)$
+aux points de mesures, définie comme:
+\begin{equation}
+    \dist(D) = \sqrt{(D(x_1)-y_1)^2+\cdots+(D(x_n)-y_n)^2}
+\end{equation}
+
+La fonction $f(x)=x^2$ étant strictiment croissante sur $\mathbb{R}_{\geq 0}$,
+cela revient à minimiser la fonction
+\begin{equation}
+    \begin{aligned}
+        \dist^2(D) &= (D(x_1)-y_1)^2+\cdots+(D(x_n)-y_n)^2 \\
+                   &= (kx_1+l-y_1)^2+\cdots+(kx_n+l-y_n)^2
+    \end{aligned}
+\end{equation}
+
+Ceci est en réalité une fonction à deux variables $f(k,l)$,
+qui, une fois l'addition effectuée, prend la forme
+d'un polynôme du second degré:
+\begin{equation}
+    f(k,l) = Ak^2+Bl^2+Ck+Dl+Ekl+F
+\end{equation}
+pour des constantes $A,B,C,D,E,F \in \reals$.
+Elle est définie et dérivable sur $\reals^2$,
+donc le minimum ne peut se trouver qu'à un point critique.
+
+Il ne reste qu'à calculer le gradient:
+\begin{equation}
+    \begin{aligned}
+        \nabla f(k,l) &= \left(\frac{\partial f}{\partial x_1}(k,l),\ 
+            \frac{\partial f}{\partial x_2}(k,l)\right) \\
+        &= (2Ak+El+C,\ 2Bl+Ek+D)
+    \end{aligned}
+\end{equation}
+et l'égaler à zéro pour trouver l'unique point $(k,l)$ idéal.
+On peut vérifier avec la matrice hessienne qu'il s'agit bien
+d'un minimum.

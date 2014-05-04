@@ -1,0 +1,28 @@
+\section{Implémentations des 3 méthodes}
+\label{sec:codes/methodes}
+
+Les codes ci-dessous sont des implémentations des trois méthodes
+d'identification linéaire.
+Elles prennent en entrée les abcisses et ordonnées de mesures
+et renvoient les coefficients de la droite trouvée.
+
+Les trois implémentations s'exécutent en $O(n)$ et donnent le même résultat
+à des erreurs de troncage près.
+
+\lstset{
+    language=Octave,
+    basicstyle=\footnotesize,
+    %title=\lstname,
+    frame=single,
+    numbers=left,
+    breaklines=true,
+}
+
+\subsection{Méthode 1}
+\lstinputlisting{code/approx_lin1.m}
+
+\subsection{Méthode 2}
+\lstinputlisting{code/approx_lin2.m}
+
+\subsection{Méthode 3}
+\lstinputlisting{code/approx_lin3.m}

@@ -7,18 +7,22 @@
 \RequirePackage[english,frenchb]{babel}
 \RequirePackage{csquotes}
 
-\RequirePackage{hyperref}
+\RequirePackage[hidelinks]{hyperref}
 \RequirePackage[backend=biber,sorting=none,isbn=false]{biblatex}
 \RequirePackage{parskip}
 
 \RequirePackage{graphicx}
 \RequirePackage{tabu,booktabs}
 \RequirePackage{enumitem}
-\RequirePackage{amsmath,amsfonts}
+\RequirePackage{amsmath,amsthm,amsfonts}
 \RequirePackage[squaren]{SIunits}
+\RequirePackage{listings}
+
 
 % General
 \addbibresource{top/ref.bib}
+\setcounter{tocdepth}{2}
+
 \linespread{1.15}
 \setlength{\parskip}{.3em plus.1em minus.1em}
 \setlist[itemize,enumerate]{topsep=0em,itemsep=0em,after=\vspace{.2em}}
@@ -50,8 +54,10 @@
 \newcommand{\sts}{\hspace{.1em}}
 
 % Math
+\newcommand{\reals}{\mathbb{R}} % Set of real numbers
 \newcommand{\ind}[1]{_{\mathrm{#1}}} % Text indices
 \newcommand{\scal}[2]{\left(#1\,\middle|\,#2\right)} % Scalar product
+\newcommand{\dist}{\mathrm{dist}} % Distance function
 
 % Multiple footnotes with hyperref
 \let\oldFootnote\footnote

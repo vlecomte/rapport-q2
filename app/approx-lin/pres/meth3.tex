@@ -1,1 +1,36 @@
-\subsection{Troisième méthode}
+\subsection{Troisième méthode: système surdéterminé}
+
+La troisième méthode consiste à exprimer
+le fait que la droite $D$ passe par les $n$ points.
+Cela donne un système:
+\begin{equation}
+    S\equiv \left\{
+        \begin{array}{ccc}
+            kx_1+l &=& y_1 \\
+            \vdots && \vdots \\
+            kx_n+l &=& y_n \\
+        \end{array}
+    \right.
+\end{equation}
+qui est surdéterminé quand $n>2$.
+
+Pour le résoudre, il faut projeter le vecteur des termes indépendants
+\[
+    \left(
+        \begin{array}{c}
+            y_1\\\vdots\\y_n
+        \end{array}
+    \right)
+\]
+sur l'espace colonne de la matrice les coefficients de $S$
+\[
+    \left(
+        \begin{array}{cc}
+            x_1&1\\
+            \vdots&\vdots\\
+            x_n&1
+        \end{array}
+    \right)
+\]
+selon le produit scalaire canonique de $\reals^3$.
+Ensuite, il suffit de le résoudre de la façon normale.

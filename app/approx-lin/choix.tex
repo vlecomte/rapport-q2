@@ -1,0 +1,80 @@
+\section{Choix de la méthode}
+
+Dans cette section, nous allons justifier
+le choix que nous avons effectué d'utiliser la première méthode,
+en répondant à deux critiques auxquelles nous avons pu penser,%
+\footnote{
+    Nous ne considérerons pas ici les erreurs numériques
+    dues au troncage des nombres flottants.
+}
+puis en présentant une version améliorée et plus générale.
+
+\subsection{Réponse aux critiques}
+
+Une première critique possible contre cette méthode
+est qu'elle utilise un polynôme interpolateur $I$.
+Or, construire un tel polynôme a pour complexité $O(n\log n)$.
+\cite{lagrange-complexity}
+Dès lors, on pourrait penser que cela va augmenter sa complexité totale.
+
+Toutefois, comme expliqué dans la section précédente
+(\ref{sec:approx-lin/temps}),
+il n'est pas nécessaire de calculer l'expression du polynôme $I$,
+et la méthode a la même complexité que les deux autres.
+
+Une deuxième critique que l'on peut y trouver est que,
+quand le nombre de points de mesure augmente,
+les polynômes interpolateurs ont tendance à varier énormément
+dès que l'on s'éloigne en abcisse,
+à cause des termes de degré supérieur.
+Il y a donc lieu de s'inquiéter par rapport à la fidélité
+de l'approximation linéaire que la méthode~1 va produire.
+
+Néanmoins, cela n'a pas d'effet sur le résultat, comme nous l'avons
+prouvé en section~\ref{sec:approx-lin/resultat},
+car à nouveau les seules ordonnées qui interviennent dans le calcul
+sont celles des points de mesure.
+
+\subsection{Généralisation de la méthode}
+
+Les réponses aux deux critiques ci-dessus tendent à indiquer
+que le polynôme interpolateur $I$ n'est pas un élément clé du raisonnement,
+qu'il n'est pas indispensable.
+Nous allons donc définir une version modifiée de la méthode~1,
+qui fait directement intervenir les points de mesure.
+
+Nous partons de la constatation que, lorsque l'on veut projeter
+un élement d'un espace $E$ vers un espace $V$, ici $\reals[X]_1$,
+le produit scalaire ne doit être défini positif que
+pour les éléments non-nuls de $V$, et il suffit qu'il soit semi-défini
+positif pour les éléments de $E$.
+\cite{semi-def-pos}
+
+Dès lors, en gardant le même produit scalaire, il n'est pas nécessaire
+de se limiter aux polynômes de degré $n-1$.
+En effet, pour une fonction $f$ réelle quelconque, le produit
+scalaire
+\[
+    \scal{f}{f} = f(x_1)^2+\cdots+f(x_n)^2
+\]
+est bien positif ou nul.
+
+Nous pouvons donc directement projeter sur l'espace des droites $y=kX+l$
+la fonction $f:A \supset \{x_1,\ldots,x_n\} \to \reals$ de nos mesures
+qui respecte
+\[
+    f(x_1) = y_1, \ldots, f(x_n) = y_n
+\]
+en utilisant une formule identique à
+la~\eqref{eq:proj-ortho-I} mais cette fois pour $f$:
+\begin{equation}
+    D = \scal{f}{e_1}e_1 + \scal{f}{e_2}e_2
+\end{equation}
+
+Cette méthode généralisée a aussi l'avantage de supporter
+des produits scalaires plus exotiques,
+comme
+\[
+    \scal{f}{g} = \int_a^b{f(x)g(x)\,dx}
+\]
+dans le cas où il ne s'agit pas uniquement de mesures discrètes.
