@@ -1,1 +1,64 @@
 \section{Impédance complexe}
+
+La dernière notion liée aux phaseurs que nous allons introduire
+et celle d'impédance complexe.
+La méthode de la section~\ref{sec:phaseurs/diff} permet déjà
+de simplifier fortement les calculs pour les circuits.
+Toutefois, il y a moyen d'aller plus loin.
+
+Pour rappel, la représentation sous forme de phaseurs est une application
+linéaire,
+c'est-à-dire qu'elle conserve les sommes et les multiplications par un scalaire.
+Dans le cadre d'un circuit, cela signifie
+que les lois de Kirchhoff et la loi d'Ohm sont conservées,
+et peuvent être utilisées de la même manière que pour des fonctions
+quelconques.
+
+Toutefois, cela ne permet pas a priori de modéliser les capacités
+et inductances directement.
+C'est pourquoi nous définissons les impédances, qui sont une généralisation
+des résistances.
+
+Une résistance est définie par la loi d'Ohm:
+\begin{equation}
+    R = \frac{v(t)}{i(t)} = \frac{V}{I}
+\end{equation}
+à condition que la tension et le courant soient en phase.
+
+De la même manière on peut partir de l'équation caractéristique
+d'une inductance:
+\begin{equation}
+    v(t) = L\frac{di(t)}{dt}
+\end{equation}
+et la passer sous forme de phaseurs:
+\begin{equation}
+    V = L (j\omega) I
+\end{equation}
+pour définir l'impédance $X_L$ de cette inductance:
+\begin{equation}
+    X_L = \frac{V}{I} = j\omega L
+\end{equation}
+
+Et pour une capacité:
+\begin{equation}
+    i(t) = C\frac{dv(t)}{dt}
+\end{equation}
+se réécrit:
+\begin{equation}
+    I = C (j\omega) V
+\end{equation}
+pour définir l'impédance $X_C$ de cette capacité:
+\begin{equation}
+    \frac{V}{I} = \frac{1}{j\omega C}
+\end{equation}
+
+Cela nous permet de définir une loi d'Ohm généralisée:
+\begin{equation}
+    V = XI
+\end{equation}
+où $X$ est l'impédance du composant.
+\begin{itemize}
+    \item Pour une résistance $R$, $X_R=R$.
+    \item Pour une inductance $L$, $X_L=j\omega L$.
+    \item Pour une capacité $C$, $X_C=1/j\omega C$.
+\end{itemize}
