@@ -1,2 +1,35 @@
 \section{Confrontation avec la pratique}
 \label{sec:filtres/confront}
+
+Afin de valider notre modélisation,
+nous avons fait des mesures sur un circuit RC
+des tensions à l'entrée, à travers la résistance
+et à travers la capacité pour différentes fréquences.
+Cela nous a permis de mesurer en un seul circuit
+les filtres passe-haut et passe-bas.
+Les résultats sont présentés et illustrés
+dans la section~\ref{sec:mesures/filtres-1k}.
+
+À l'aide de l'une des méthodes mathématiques présentées dans
+l'annexe~\ref{chap:approx-lin},
+nous avons dégagé dans les courbes des gains en échelle log-log
+des tendances linéaires.
+Celles-ci sont illustrées dans la figure~\ref{fig:ph-pb-tendances}.
+Les points de mesure épousent presque parfaitement les droites,
+ce qui est un premier signe que la théorie rejoint la pratique.
+
+Ensuite, nous avons déterminé la fréquence de coupure,
+qui se trouve à l'intersection des deux droites.
+Pour rappel, l'expression théorique de la fréquence de coupure est
+$f_c=1/(2\pi RC)$, ce qui pour les valeurs mesurées de résistance et
+de capacité donne $f_c=366.46\,\hertz$.
+
+Les valeurs obtenues pour le filtre passe-haut et le filtre passe-bas
+sont respectivement $325.12\,\hertz$ et $317.51\,\hertz$,
+soit $11\,\%$ et $13\,\%$ plus bas que la valeur théorique.
+
+Une différence si faible est facilement explicable par des imprécisions
+de mesure et des capacités parasites au niveau des contacts,
+le circuit de test n'étant pas soudé.
+Par conséquent, nous considérons que la théorie a sufisamment de preuves
+pour être validée.
