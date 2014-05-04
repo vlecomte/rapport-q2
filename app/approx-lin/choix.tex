@@ -1,0 +1,34 @@
+\section{Choix de la méthode}
+
+Dans cette section, nous allons justifier
+le choix que nous avons effectué d'utiliser la première méthode,
+en répondant à deux critiques auxquelles nous avons pu penser,%
+\footnote{
+    Nous ne considérerons pas ici les erreurs numériques
+    dues au troncage des nombres flottants.
+}
+puis en présentant une version améliorée et plus générale.
+
+Une première critique possible contre cette méthode
+est qu'elle utilise un polynôme interpolateur $I$.
+Or, construire un tel polynôme a pour complexité $O(n\log n)$.
+\cite{lagrange-complexity}
+Dès lors, on pourrait penser que cela va augmenter sa complexité totale.
+
+Toutefois, comme expliqué dans la section précédente
+(\ref{sec:approx-lin/temps}),
+il n'est pas nécessaire de calculer l'expression du polynôme $I$,
+et la méthode a la même complexité que les deux autres.
+
+Une deuxième critique que l'on peut y trouver est que,
+quand le nombre de points de mesure augmente,
+les polynômes interpolateurs ont tendance à varier énormément
+dès que l'on s'éloigne en abcisse,
+à cause des termes de degré supérieur.
+Il y a donc lieu de s'inquiéter par rapport à la fidélité
+de l'approximation linéaire que la méthode~1 va produire.
+
+Néanmoins, cela n'a pas d'effet sur le résultat, comme nous l'avons
+prouvé en section~\ref{sec:approx-lin/resultat},
+car à nouveau les seules ordonnées qui interviennent dans le calcul
+sont celles des points de mesure.
