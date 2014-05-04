@@ -40,7 +40,7 @@ loglog(f,Gph,'o', exp(log_f), phleftline, exp(log_f), phrightline,
 % Calculating the linear approximations for low-pass
 pbleft = approx_lin1(log(f(left)), log(Gpb(left)));
 pbleftline = exp(pbleft(1) * log_f + pbleft(2));
-pbright = approx_lin1(log(f(right)), log(Gpb(right)))
+pbright = approx_lin1(log(f(right)), log(Gpb(right)));
 pbrightline = exp(pbright(1) * log_f + pbright(2));
 % Cutoff frequency: intersection of the lines
 fc_pb = exp(-(pbright(2)-pbleft(2))/(pbright(1)-pbleft(1)))
