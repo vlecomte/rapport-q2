@@ -1,5 +1,6 @@
 function line = approx_lin2(x,y)
-%Computes a linear approximation y=kx+l for points (x1,y1),...,(xn,yn)
+%Computes a linear approximation y=kx+l
+%       for points (x1,y1),...,(xn,yn)
 %   Finds the minimum of the square distance function
 %       dist^2(k,l) = (kx1+l-y1)^2 + ... + (kxn+l-xn)^2
 %   using multivariate calculus.
