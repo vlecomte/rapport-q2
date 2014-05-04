@@ -5,8 +5,37 @@ Définissons comme sur la figure~\ref{fig:filtres-v1v2v3}
 $V_1$, $V_2$, et $V_3$ les phaseurs des tensions
 à l'entrée, après le filtre passe-haut, et après le filtre passe-bas.
 Pour une explication des phaseurs, voir l'annexe~\ref{chap:phaseurs},
-et plus particulièrement la section~\ref{sec:phaseurs/impedance}.
-
+et plus particulièrement la section~\ref{sec:phaseurs/impedance}.\\
+\begin{figure}
+ \begin{center}
+  \begin{circuitikz}
+   \draw
+   (0,0)
+   node[anchor=east]{$V_1$}
+   to [C, l=$C_2$, o-] (2,0)
+   to [short, -*] (3,0)
+   node[anchor=south]{$V_2$}
+   to [R, l=$R_2$] (3,-3)
+   node [ground]{}
+   (6,-0.5) node[op amp,yscale=-1] (opamp2) {}
+   (opamp2.+) node[left ]{}
+   (opamp2.-) node[left ]{} 
+   (3,0) to [short] (5,0)
+   (4.80,-1) to [short] (4.80,-2)
+   to [short] (8,-2)
+   to [short, -*] (8,-0.5)
+   to [short] (7,-0.5)
+   (8,-0.2) node[anchore=south]{$V_2$}
+   (8, -0.5) to [R, l=$R_3$] (11,-0.5)
+   to [short] (11,-0.5)
+   to [C, l=$C_3$] (11,-3.5)
+   node[ground]{}
+   (11,-0.5) to [short, -o] (12,-0.5)
+   node[anchor=west]{$V_3$}
+   ;
+  \end{circuitikz}
+ \end{center}
+\end{figure}\\
 Tout le courant passant à travers le condensateur $C_2$ passe
 aussi à travers la résistance $R_2$.
 Par conséquent, on peut appliquer la loi de division des tensions,
