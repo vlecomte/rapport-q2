@@ -1,0 +1,16 @@
+[0] Config.pm:387> INFO - This is Biber 1.6
+[0] Config.pm:390> INFO - Logfile is 'out/full.blg'
+[68] biber-darwin:218> INFO - === Dim mai  4, 2014, 19:28:19
+[68] Biber.pm:325> INFO - Reading 'out/full.bcf'
+[132] Biber.pm:623> INFO - Found 17 citekeys in bib section 0
+[144] Biber.pm:2995> INFO - Processing section 0
+[158] Biber.pm:3129> INFO - Looking for bibtex format file 'top/ref.bib' for section 0
+[169] bibtex.pm:898> INFO - Decoding LaTeX character macros into UTF-8
+[175] bibtex.pm:775> INFO - Found BibTeX data source 'top/ref.bib'
+[188] Utils.pm:169> WARN - Datamodel: Entry 'US6275597' (top/ref.bib): Invalid format '14-04-30' of date field 'urldate' - ignoring
+[200] Utils.pm:169> WARN - I didn't find a database entry for 'Pearson' (section 0)
+[312] Biber.pm:2881> INFO - Overriding locale 'fr_BE.UTF-8' default tailoring 'variable = shifted' with 'variable = non-ignorable'
+[312] Biber.pm:2887> INFO - Sorting 'entry' list 'none' keys
+[415] bbl.pm:472> INFO - Writing 'out/full.bbl' with encoding 'UTF-8'
+[417] bbl.pm:545> INFO - Output to out/full.bbl
+[425] Biber.pm:105> INFO - WARNINGS: 2

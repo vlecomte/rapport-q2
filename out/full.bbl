@@ -1,0 +1,354 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist{entry}{none}
+    \entry{f1964compound}{misc}{}
+      \name{labelname}{1}{}{%
+        {{hash=e82c257854498ea4e56184b75ef799c2}{F}{F\bibinitperiod}{N.J.}{N\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=e82c257854498ea4e56184b75ef799c2}{F}{F\bibinitperiod}{N.J.}{N\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Google Patents}%
+      }
+      \strng{namehash}{e82c257854498ea4e56184b75ef799c2}
+      \strng{fullhash}{e82c257854498ea4e56184b75ef799c2}
+      \field{sortinit}{0}
+      \field{labeltitle}{Compound loudspeaker diaphragm}
+      \field{month}{10~20}
+      \field{note}{US Patent 3,153,463}
+      \field{title}{Compound loudspeaker diaphragm}
+      \field{urlday}{18}
+      \field{urlmonth}{04}
+      \field{urlyear}{2014}
+      \field{year}{1964}
+      \verb{url}
+      \verb http://www.google.com/patents/US3153463
+      \endverb
+    \endentry
+    \entry{Larousse}{url}{}
+      \name{labelname}{1}{}{%
+        {{hash=7393eb4580d78ee55c4f4e68d9076284}{B.}{B\bibinitperiod}{J.}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=7393eb4580d78ee55c4f4e68d9076284}{B.}{B\bibinitperiod}{J.}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{7393eb4580d78ee55c4f4e68d9076284}
+      \strng{fullhash}{7393eb4580d78ee55c4f4e68d9076284}
+      \field{sortinit}{0}
+      \field{labeltitle}{La Grande Encyclopédie Larousse [en ligne]}
+      \field{title}{La Grande Encyclopédie Larousse [en ligne]}
+      \field{urlday}{12}
+      \field{urlmonth}{03}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://www.larousse.fr/archives/grande-encyclopedie/page/6486
+      \endverb
+    \endentry
+    \entry{US6275597}{misc}{}
+      \name{labelname}{3}{}{%
+        {{hash=44c50c98bb23ad37fbbdf1748503ab60}{Roozen}{R\bibinitperiod}{N.B.}{N\bibinitperiod}{}{}{}{}}%
+        {{hash=3c6ae468dc819bf56a0722e2c72eec4b}{Hirschberg}{H\bibinitperiod}{A.}{A\bibinitperiod}{}{}{}{}}%
+        {{hash=9a7d484f2299f4a8c26ce515f5de2105}{Van\bibnamedelima Eck}{V\bibinitperiod\bibinitdelim E\bibinitperiod}{P.}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{3}{}{%
+        {{hash=44c50c98bb23ad37fbbdf1748503ab60}{Roozen}{R\bibinitperiod}{N.B.}{N\bibinitperiod}{}{}{}{}}%
+        {{hash=3c6ae468dc819bf56a0722e2c72eec4b}{Hirschberg}{H\bibinitperiod}{A.}{A\bibinitperiod}{}{}{}{}}%
+        {{hash=9a7d484f2299f4a8c26ce515f5de2105}{Van\bibnamedelima Eck}{V\bibinitperiod\bibinitdelim E\bibinitperiod}{P.}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Google Patents}%
+      }
+      \strng{namehash}{5da57a08dfeffad83210b36097421e1d}
+      \strng{fullhash}{5da57a08dfeffad83210b36097421e1d}
+      \field{sortinit}{0}
+      \field{labeltitle}{Loudspeaker system having a bass-reflex port}
+      \field{month}{08~14}
+      \field{note}{US Patent 6,275,597}
+      \field{title}{Loudspeaker system having a bass-reflex port}
+      \field{year}{2001}
+      \verb{url}
+      \verb http://www.google.fr/patents/US6275597
+      \endverb
+      \warn{\item Datamodel: Entry 'US6275597' (top/ref.bib): Invalid format '14-04-30' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{Kularatna}{book}{}
+      \name{labelname}{1}{}{%
+        {{hash=21264afda13c03b621edeac330b3fcfe}{Nihal}{N\bibinitperiod}{Kularatna}{K\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=21264afda13c03b621edeac330b3fcfe}{Nihal}{N\bibinitperiod}{Kularatna}{K\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {Boca Raton (Fla.)}%
+      }
+      \list{publisher}{1}{%
+        {CRC Press}%
+      }
+      \strng{namehash}{21264afda13c03b621edeac330b3fcfe}
+      \strng{fullhash}{21264afda13c03b621edeac330b3fcfe}
+      \field{sortinit}{0}
+      \field{labeltitle}{Electronic circuit design : from concepts to implementation}
+      \field{title}{Electronic circuit design : from concepts to implementation}
+      \field{year}{2008}
+      \field{pages}{483}
+    \endentry
+    \entry{Irwin}{book}{}
+      \name{labelname}{2}{}{%
+        {{hash=4027a24a7c80d3c9846b6c7e987c0028}{David}{D\bibinitperiod}{Irwin\bibnamedelima J.}{I\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+        {{hash=0c5fd8b8acfc2173f240b8bb6a827993}{Mark}{M\bibinitperiod}{Nelms\bibnamedelima Robert}{N\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{hash=4027a24a7c80d3c9846b6c7e987c0028}{David}{D\bibinitperiod}{Irwin\bibnamedelima J.}{I\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+        {{hash=0c5fd8b8acfc2173f240b8bb6a827993}{Mark}{M\bibinitperiod}{Nelms\bibnamedelima Robert}{N\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {Hoboken (N.J.)}%
+      }
+      \list{publisher}{2}{%
+        {John Wiley}%
+        {Sons Inc}%
+      }
+      \strng{namehash}{9841fabaa3394cba547ebd36b9139b3f}
+      \strng{fullhash}{9841fabaa3394cba547ebd36b9139b3f}
+      \field{sortinit}{0}
+      \field{labeltitle}{Engineering circuit analysis}
+      \field{edition}{Tenth edition}
+      \field{title}{Engineering circuit analysis}
+      \field{year}{2011}
+      \field{pages}{839}
+    \endentry
+    \entry{highpass-def}{inreference}{}
+      \name{labelname}{2}{}{%
+        {{hash=a5f79039ae72053cc3a21608d794a35f}{Johnson}{J\bibinitperiod}{Richard\bibnamedelima A.}{R\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+        {{hash=7dd39b350fdc7237ceb2c5b4f54f7644}{Lepage}{L\bibinitperiod}{W.\bibnamedelimi R.}{W\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{hash=a5f79039ae72053cc3a21608d794a35f}{Johnson}{J\bibinitperiod}{Richard\bibnamedelima A.}{R\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+        {{hash=7dd39b350fdc7237ceb2c5b4f54f7644}{Lepage}{L\bibinitperiod}{W.\bibnamedelimi R.}{W\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {McGraw-Hill Book Company}%
+      }
+      \strng{namehash}{f9f2317d9829cc20581b3e8103e778ac}
+      \strng{fullhash}{f9f2317d9829cc20581b3e8103e778ac}
+      \field{sortinit}{0}
+      \field{labeltitle}{Filter, electric}
+      \field{booktitle}{McGraw-Hill Encyclopedia of Science and Technology}
+      \field{title}{Filter, electric}
+      \field{volume}{5}
+      \field{year}{1960}
+      \field{pages}{266\bibrangedash 271}
+    \endentry
+    \entry{high-low-pass-combined}{book}{}
+      \name{labelname}{1}{}{%
+        {{hash=c24a096b988340fe5ae47cae4eb23490}{Kanasewich}{K\bibinitperiod}{E.\bibnamedelimi R.}{E\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=c24a096b988340fe5ae47cae4eb23490}{Kanasewich}{K\bibinitperiod}{E.\bibnamedelimi R.}{E\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {University of Alberta Press}%
+      }
+      \strng{namehash}{c24a096b988340fe5ae47cae4eb23490}
+      \strng{fullhash}{c24a096b988340fe5ae47cae4eb23490}
+      \field{sortinit}{0}
+      \field{labeltitle}{Time Sequence Analysis in Geophysics}
+      \field{title}{Time Sequence Analysis in Geophysics}
+      \field{year}{1981}
+      \field{pages}{260}
+    \endentry
+    \entry{hearing-range}{incollection}{}
+      \name{labelname}{2}{}{%
+        {{hash=5461bbb7e78d7f7e58811f84409e302f}{Elert}{E\bibinitperiod}{Glenn}{G\bibinitperiod}{}{}{}{}}%
+        {{hash=f801997ee694351b886540354ce37e05}{Choudhary}{C\bibinitperiod}{Rizwan}{R\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{hash=5461bbb7e78d7f7e58811f84409e302f}{Elert}{E\bibinitperiod}{Glenn}{G\bibinitperiod}{}{}{}{}}%
+        {{hash=f801997ee694351b886540354ce37e05}{Choudhary}{C\bibinitperiod}{Rizwan}{R\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{805488a064468f63497672d5b77b46dd}
+      \strng{fullhash}{805488a064468f63497672d5b77b46dd}
+      \field{sortinit}{0}
+      \field{labeltitle}{Frequency Range of Human Hearing}
+      \field{booktitle}{The Physics Factbook}
+      \field{title}{Frequency Range of Human Hearing}
+      \field{urlday}{23}
+      \field{urlmonth}{04}
+      \field{urlyear}{2014}
+      \field{year}{2004}
+      \verb{url}
+      \verb http://hypertextbook.com/facts/2003/ChrisDAmbrose.shtml
+      \endverb
+    \endentry
+    \entry{datasheet-lm358n}{online}{}
+      \list{organization}{1}{%
+        {Fairchild Semiconductor}%
+      }
+      \field{sortinit}{0}
+      \field{labeltitle}{LM294,LM358/LM358A,LM258/LM258A}
+      \field{title}{LM294,LM358/LM358A,LM258/LM258A}
+      \field{urlday}{26}
+      \field{urlmonth}{04}
+      \field{urlyear}{2014}
+      \field{year}{2010}
+      \verb{url}
+      \verb http://www.fairchildsemi.com/ds/LM/LM258.pdf
+      \endverb
+    \endentry
+    \entry{datasheet-470nf}{online}{}
+      \list{organization}{1}{%
+        {AVX}%
+      }
+      \field{sortinit}{0}
+      \field{labeltitle}{Radial Leads/SkyCap/SR Series}
+      \field{title}{Radial Leads/SkyCap/SR Series}
+      \field{urlday}{26}
+      \field{urlmonth}{04}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://www.avx.com/docs/catalogs/skycap-sr.pdf
+      \endverb
+    \endentry
+    \entry{datasheet-pot}{online}{}
+      \list{organization}{1}{%
+        {Bourns}%
+      }
+      \field{sortinit}{0}
+      \field{labeltitle}{3386 - 3/8'' Square Trimpot Trimming Potentiometer}
+      \field{title}{3386 - 3/8'' Square Trimpot Trimming Potentiometer}
+      \field{urlday}{26}
+      \field{urlmonth}{04}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://www.bourns.com/data/global/pdfs/3386.pdf
+      \endverb
+    \endentry
+    \entry{vocal-ranges}{incollection}{}
+      \name{labelname}{1}{}{%
+        {{hash=b4e0ba134ea20b3941608a21c8509e30}{O'Connor}{O\bibinitperiod}{Karyn}{K\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=b4e0ba134ea20b3941608a21c8509e30}{O'Connor}{O\bibinitperiod}{Karyn}{K\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{b4e0ba134ea20b3941608a21c8509e30}
+      \strng{fullhash}{b4e0ba134ea20b3941608a21c8509e30}
+      \field{sortinit}{0}
+      \field{labeltitle}{Understanding Vocal Range, Vocal Registers and Voice Type --- A Glossary of Vocal Terms}
+      \field{booktitle}{Singwise}
+      \field{title}{Understanding Vocal Range, Vocal Registers and Voice Type --- A Glossary of Vocal Terms}
+      \field{urlday}{01}
+      \field{urlmonth}{05}
+      \field{urlyear}{2014}
+      \field{year}{2013}
+      \verb{url}
+      \verb www.singwise.com/cgi-bin/main.pl?section=articles&doc=UnderstandingVocalRangeRegistersAndType
+      \endverb
+    \endentry
+    \entry{lagrange-poly}{incollection}{}
+      \name{labelname}{2}{}{%
+        {{hash=e78b28149fd4b1ed6b7e0b424a2b7878}{Archer}{A\bibinitperiod}{Branden}{B\bibinitperiod}{}{}{}{}}%
+        {{hash=5d54d442adc2a0d430f0728fd6530577}{Weisstein}{W\bibinitperiod}{Eric\bibnamedelima W.}{E\bibinitperiod\bibinitdelim W\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{hash=e78b28149fd4b1ed6b7e0b424a2b7878}{Archer}{A\bibinitperiod}{Branden}{B\bibinitperiod}{}{}{}{}}%
+        {{hash=5d54d442adc2a0d430f0728fd6530577}{Weisstein}{W\bibinitperiod}{Eric\bibnamedelima W.}{E\bibinitperiod\bibinitdelim W\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{8aafedbc2d301ad2fce2029b667ef711}
+      \strng{fullhash}{8aafedbc2d301ad2fce2029b667ef711}
+      \field{sortinit}{0}
+      \field{labeltitle}{Lagrange Interpolating Polynomial}
+      \field{booktitle}{MathWorld --- A Wolfram Web Resource}
+      \field{title}{Lagrange Interpolating Polynomial}
+      \field{urlday}{02}
+      \field{urlmonth}{05}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://mathworld.wolfram.com/LagrangeInterpolatingPolynomial.html
+      \endverb
+    \endentry
+    \entry{lagrange-complexity}{article}{}
+      \name{labelname}{1}{}{%
+        {{hash=0a2a44f1dc6c7eec60aa4c95ae25f08c}{Stoss}{S\bibinitperiod}{H.-J.}{H\bibinithyphendelim J\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=0a2a44f1dc6c7eec60aa4c95ae25f08c}{Stoss}{S\bibinitperiod}{H.-J.}{H\bibinithyphendelim J\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{0a2a44f1dc6c7eec60aa4c95ae25f08c}
+      \strng{fullhash}{0a2a44f1dc6c7eec60aa4c95ae25f08c}
+      \field{sortinit}{0}
+      \field{labeltitle}{The complexity of evaluating interpolation polynomials}
+      \field{journaltitle}{Theoretical Computer Science}
+      \field{title}{The complexity of evaluating interpolation polynomials}
+      \field{volume}{41}
+      \field{year}{1985}
+      \field{pages}{319\bibrangedash 323}
+    \endentry
+    \entry{semi-def-pos}{book}{}
+      \name{labelname}{1}{}{%
+        {{hash=197a5ab7fcac45e0c8fbd9d32400c3cb}{Vitale}{V\bibinitperiod}{E.\bibnamedelimi M.}{E\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=197a5ab7fcac45e0c8fbd9d32400c3cb}{Vitale}{V\bibinitperiod}{E.\bibnamedelimi M.}{E\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{197a5ab7fcac45e0c8fbd9d32400c3cb}
+      \strng{fullhash}{197a5ab7fcac45e0c8fbd9d32400c3cb}
+      \field{sortinit}{0}
+      \field{labeltitle}{LFSAB 1102 --- Syllabus d'algèbre}
+      \field{note}{Université catholique de Louvain}
+      \field{title}{LFSAB 1102 --- Syllabus d'algèbre}
+      \field{year}{2013-2014}
+      \field{pages}{25}
+    \endentry
+    \entry{Miller}{thesis}{}
+      \name{labelname}{1}{}{%
+        {{hash=88e3e8645ef8b3d4fd4b15d2fd091df8}{Miller}{M\bibinitperiod}{Ryan}{R\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=88e3e8645ef8b3d4fd4b15d2fd091df8}{Miller}{M\bibinitperiod}{Ryan}{R\bibinitperiod}{}{}{}{}}%
+      }
+      \list{institution}{1}{%
+        {Rensselaer Polytechnic Institute}%
+      }
+      \list{location}{1}{%
+        {Hartford, Connecticut}%
+      }
+      \strng{namehash}{88e3e8645ef8b3d4fd4b15d2fd091df8}
+      \strng{fullhash}{88e3e8645ef8b3d4fd4b15d2fd091df8}
+      \field{sortinit}{0}
+      \field{labeltitle}{Modal Analysis of Loudspeaker Diaphragms}
+      \field{month}{12}
+      \field{title}{Modal Analysis of Loudspeaker Diaphragms}
+      \field{type}{mathesis}
+      \field{urlday}{18}
+      \field{urlmonth}{04}
+      \field{urlyear}{2014}
+      \field{year}{2010}
+      \field{pages}{25}
+      \verb{url}
+      \verb http://www.ewp.rpi.edu/hartford/~ernesto/SPR/Miller-FinalReport.pdf
+      \endverb
+    \endentry
+  \endsortlist
+  \missing{Pearson}
+\endrefsection
+\endinput
+
