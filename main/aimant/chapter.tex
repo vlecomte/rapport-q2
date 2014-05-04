@@ -31,7 +31,7 @@ mobile relativement légère en faisant peu de tours de fils de cuivre.
 \end{itemize}
 Il est à noter que notre entrefer mesure $0.5\centi\meter$ car nous avons rajouté des plaquettes afin de le réduire.
 
-\section{Développement théorique}
+\section{Modélisation}
 Le champ magnétisant généré par la bobine est $\int{H dl} = N I$ .
 En prenant une boucle dans notre circuit magnétique, grâce à Gauss généralisée, nous avons que
 $H_i l + H_e e = N I (1)$
@@ -40,12 +40,12 @@ ainsi que $B_i = \mu H_i \:et\:  B_e = \mu_0 H_e$
 Puisque $\mu \gg \mu_0$ nous savons que $H_i \ll H_e$ grâce à l'équation (2).
 Nous pouvons alors réécrire l'équation (1) $H_e = \frac{N I}{e}$.
 Nous obtenons alors le champ $B$ recherché $B = B_e = \mu_0 \frac{N I}{e}$.
-\section{Calcul}
+
 Puisque nous voulons obtenir un champ $B = 0,1 \tesla$, que nous fournissons $I = 1 A$ afin de ne pas faire trop 
 chauffer la bobine, et que nous connaissons $e$, nous pouvons calculer le nombre de tours $N$ requis pour obtenir 0.1\tesla.
-$N = \frac{0.1 * 0.5}{\mu_0 * 1} = 400$
+$N = \frac{0.1 * 0.5}{\mu_0 * 1} = 400$.
 
-\section{Résultats pratiques}
+\section{Confrontation}
 Grâce à un tesla-mètre, nous avons pu vérifier que notre première hypothèse était correcte, car nous n'obtenions 
 qu'environ $10 \milli\tesla$ à côté de la bobine. 
 
@@ -53,4 +53,3 @@ La deuxième hypothèse était cependant trop forte par rapport à la réalité,
 partie du champ magnétique passe en dehors de l'entrefer. Afin de palier à ce déficit, nous avons exagéré le nombre de 
 tours de la bobine mobile ($N \simeq 550$) et nous avons alors obtenu $B = 112 \milli\tesla$ dans l'entrefer, 
 ce qui était le champ désiré (voir l'annexe \ref{mesures champ} p.\pageref{mesures champ}).
-
