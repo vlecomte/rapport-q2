@@ -8,6 +8,9 @@ indépendante par rapport au smartphone.
 Pour répondre à ces deux attentes, il nous suffit de réaliser un diviseur de tension réglable, que nous avons réalisé 
 à l'aide d'un potentiomètre à l'entrée de la plaquette électronique. Le schéma ci dessous illustre la situation. Le potentiomètre 
 à été schématisé en 2 résistances simples.\\
+
+\begin{figure}	
+\begin{center}
 \begin{circuitikz} \draw
  (1,2)
   to[R,v=$v_1$, l=$R_1$, *-*] (1,0)
@@ -17,7 +20,12 @@ Pour répondre à ces deux attentes, il nous suffit de réaliser un diviseur de 
  (1,0) to[short, *-o] (3,0)
 node[anchor=west]{B}
  (1,-2)node[ground]{}
-;\end{circuitikz}\\
+;\end{circuitikz}
+\end{center}
+\caption{Potentiomètre}		
+\label{potentiometre}		
+\end{figure}
+
 La différence de tension $V =  v_1 + v_2$ est la différence de potentiel provenant du smartphone. 
 En utilisant la loi d'ohm, nous obtenons $V = I (R_1 + R_2)$ et $v_2 = I R_2$. Puisque $I = \frac{V}{R_1+R_2}$, nous obtenons 
 $v_2 = \frac{V R_2}{R_1+R_2}$. $R_1+R_2$ est la résistance totale du potentiomètre, $R_1$ et $R_2$ sont inversément proportionnelles. Plus $R_2$ 
