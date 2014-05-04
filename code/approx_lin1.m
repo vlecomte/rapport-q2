@@ -3,7 +3,8 @@ function line = approx_lin1(x,y)
 %       for points (x1,y1),...,(xn,yn)
 %   Uses the the scalar product
 %       (f|g) = f(x1)g(x1) + ... + f(xn)g(xn)
-%   to project the implicit function f(xi) = yi
+%   to project the implicit function f: xi -> yi
+%   (or the interpolating polynomial I)
 %   onto the space of linear polynomials.
 %   Conditions:
 %       - all xi are distinct
