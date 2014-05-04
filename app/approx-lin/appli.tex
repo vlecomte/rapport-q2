@@ -7,10 +7,27 @@ section~\ref{sec:mesures/filtres-1k}.
 
 Afin de déterminer les deux droites, nous utilisons les points de mesure
 \no 1--5 à gauche et \no 12--16 à droite.
-Les droites trouvées ont pour équation
+Les droites trouvées ont pour équation%
+\footnote{
+    Notez bien que les logarithmes sont en base $e$ dans l'implémentation.
+}
 \begin{equation}
     \begin{array}{rcl}
         y = -0.016678x+0.047312
         y = -0.91454x+5.21947
     \end{array}
 \end{equation}
+ce qui s'approche raisonnablement des équations théoriques basées sur 
+les valeurs mesurées de la résistance et la capacité:
+\begin{equation}
+    \begin{array}{rcl}
+        y = 0x+0
+        y = -x+5.8219
+    \end{array}
+\end{equation}
+
+La valeur de fréquence de coupure calculée
+en prenant l'intersection des deux droites est $f_c=317.51\,\Hz$.
+
+Pour une confrontation de ces résultats avec le modèle théorique,
+voir la section~\ref{sec:filtres/confront}.
