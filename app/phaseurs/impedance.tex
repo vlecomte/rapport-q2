@@ -28,7 +28,7 @@ Une résistance est définie par la loi d'Ohm:
 De la même manière on peut partir de l'équation caractéristique
 d'une inductance:
 \begin{equation}
-    v(t) = L\frac{di(t)}{dt}
+    v(t) = L\,\frac{di(t)}{dt}
 \end{equation}
 et la passer sous forme de phaseurs:
 \begin{equation}
@@ -39,11 +39,11 @@ pour définir l'impédance $X_L$ de cette inductance:
     X_L = \frac{V}{I} = j\omega L
 \end{equation}
 
-Et pour une capacité:
+Et on peut partir de l'équation caractéristique d'une capacité:
 \begin{equation}
-    i(t) = C\frac{dv(t)}{dt}
+    i(t) = C\,\frac{dv(t)}{dt}
 \end{equation}
-se réécrit:
+et la passer sous forme de phaseurs:
 \begin{equation}
     I = C (j\omega) V
 \end{equation}
@@ -56,9 +56,43 @@ Cela nous permet de définir une loi d'Ohm généralisée:
 \begin{equation}
     V = XI
 \end{equation}
-où $X$ est l'impédance du composant.
+où $X$ est l'impédance du composant:
 \begin{itemize}
-    \item Pour une résistance $R$, $X_R=R$.
-    \item Pour une inductance $L$, $X_L=j\omega L$.
-    \item Pour une capacité $C$, $X_C=1/j\omega C$.
+    \item pour une résistance $R$, $X_R=R$;
+    \item pour une inductance $L$, $X_L=j\omega L$;
+    \item pour une capacité $C$, $X_C=1/j\omega C$.
 \end{itemize}
+Nous pouvons donc considérer les inductances et capacités
+exactement de la même manière que les résistances.
+
+Par conséquent, nous pouvons étudier n'importe quel circuit
+en régime sinusoïdal stable formé de résistances,
+capacités et inductances de la même façon que nous étudions
+les circuits DC, en utilisant la méthode des nœuds.
+
+\subsection{Fonction de transfert}
+
+Dans la modélisation des filtres en section \ref{sec:filtres/mode},
+nous utilisons le concept de \emph{fonctions de transfert}.
+
+Ces fonctions sont l'équivalent des gains pour les phaseurs.
+Par exemple pour des tensions de phaseurs
+$V\ind{in}=|V\ind{in}|e^{j\phi}$ et $V\ind{out}=|V\ind{out}|e^{j\psi}$,
+la fonction de transfert est
+\begin{equation}
+    H = \frac{V\ind{out}}{V\ind{in}}
+\end{equation}
+
+Pour retrouver le gain classique $|V\ind{out}|\,/\,|V\ind{in}|$
+et le déphasage $\psi-\phi$,
+il suffit de prendre respectivement le module de la fonction de transfert:
+\begin{equation}
+    |H| = \left|\frac{V\ind{out}}{V\ind{in}}\right|
+    = \frac{|V\ind{out}|}{|V\ind{in}|}
+\end{equation}
+et son argument:
+\begin{equation}
+    \arg(H) = \arg\left(\frac{V\ind{out}}{V\ind{in}}\right)
+    = \arg(V\ind{out}) - \arg(V\ind{in})
+    = \psi-\phi
+\end{equation}
