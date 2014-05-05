@@ -7,8 +7,8 @@ $V_1$, $V_2$, et $V_3$ les phaseurs des tensions
 Pour une explication des phaseurs, voir l'annexe~\ref{chap:phaseurs},
 et plus particulièrement la section~\ref{sec:phaseurs/impedance}.
 
-\begin{figure}[H]
- \begin{center}
+\begin{figure}[h!]
+ \centering
   \begin{circuitikz}
    \draw
    (0,0)
@@ -26,7 +26,7 @@ et plus particulièrement la section~\ref{sec:phaseurs/impedance}.
    to [short] (8,-2)
    to [short, -*] (8,-0.5)
    to [short] (7,-0.5)
-   (8,-0.2) node[anchor=south]{$V_2$}
+   (8,-0.4) node[anchor=south]{$V_2$}
    (8, -0.5) to [R, l=$R_3$] (11,-0.5)
    to [short] (11,-0.5)
    to [C, l=$C_3$] (11,-3.5)
@@ -35,7 +35,8 @@ et plus particulièrement la section~\ref{sec:phaseurs/impedance}.
    node[anchor=west]{$V_3$}
    ;
   \end{circuitikz}
- \end{center}
+  \caption{Schéma électrique partiel}
+  \label{fig:filtres-v1v2v3}
 \end{figure}
 
 Tout le courant passant à travers le condensateur $C_2$ passe

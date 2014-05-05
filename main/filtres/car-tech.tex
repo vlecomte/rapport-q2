@@ -1,6 +1,45 @@
 \section{Caractéristiques techniques}
 \label{sec:filtres/car-tech}
 
+\begin{figure}[h!]
+ \centering
+ \scalebox{0.7}{
+  \begin{circuitikz}
+   \draw
+   (-2,0) node[op amp,yscale=-1] (opamp1) {}
+   (opamp1.+) to [short, -o] (-3.5,0.5)
+   node[anchor=south]{$V_1$}
+   (opamp1.-) to [short] (-3.2,-1.5)
+   to [short] (0,-1.5)
+   to [short] (0,0)
+   (-1,0) to [short, -*] (0,0)
+   node[anchor=south]{$V_1$}
+   to [C, l=$C_2$, -*] (3,0)
+   (3,0.1) node[anchor=south]{$V_2$}
+   (3,0) to [R, l=$R_2$] (3,-3)
+   node [ground]{}
+   (6,-0.5) node[op amp,yscale=-1] (opamp2) {}
+   (opamp2.+) node[left ]{}
+   (opamp2.-) node[left ]{} 
+   (3,0) to [short] (opamp2.+)
+   (4.80,-1) to [short] (4.80,-2)
+   to [short] (8,-2)
+   to [short, -*] (8,-0.5)
+   to [short] (7,-0.5)
+   (8,-0.4) node[anchor=south]{$V_2$}
+   (8, -0.5) to [R, l=$R_3$] (11,-0.5)
+   to [short] (11,-0.5)
+   to [C, l=$C_3$] (11,-3.5)
+   node[ground]{}
+   (11,-0.5) to [short, -o] (12,-0.5)
+   node[anchor=west]{$V_3$}
+   ;
+  \end{circuitikz}
+  }
+  \caption{Schéma électrique complet des filtres}
+  \label{fig:schema-elec-filtres}
+\end{figure}
+
 Comme illustré dans la figure~\ref{fig:schema-elec-filtres},
 la sous-ensemble des filtres est composé, dans l'ordre, de:
 \begin{enumerate}

@@ -24,12 +24,62 @@ et pour le filtre passe-bas:
     = \arctan(-\omega R_3C_3)
 \end{align}
 
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \begin{loglogaxis}[
+                xlabel={Fréquence (\hertz)},
+                ylabel={Gain},
+            ]
+            \addplot[domain=0.3:1.9e5,samples=100]
+            {1 / sqrt(1+1/(2*pi*10e3*470e-9*x)^2)};
+        \end{loglogaxis}
+    \end{tikzpicture}
+    \qquad
+    \begin{tikzpicture}
+        \begin{semilogxaxis}[
+                xlabel={Fréquence (\hertz)},
+                ylabel={Déphasage (deg)},
+            ]
+            \addplot[domain=0.3:1.9e5,samples=100]
+            {atan(1/(2*pi*10e3*470e-9*x)};
+        \end{semilogxaxis}
+    \end{tikzpicture}
+    \caption{Courbes caractéristiques du filtre passe-haut}
+    \label{fig:graphes-ph}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \begin{loglogaxis}[
+                xlabel={Fréquence (\hertz)},
+                ylabel={Gain},
+            ]
+            \addplot[domain=0.3:1.9e5,samples=100]
+            {1 / sqrt(1+(2*pi*200*470e-9*x)^2)};
+        \end{loglogaxis}
+    \end{tikzpicture}
+    \qquad
+    \begin{tikzpicture}
+        \begin{semilogxaxis}[
+                xlabel={Fréquence (\hertz)},
+                ylabel={Déphasage (deg)},
+            ]
+            \addplot[domain=0.3:1.9e5,samples=100]
+            {atan(-2*pi*200*470e-9*x)};
+        \end{semilogxaxis}
+    \end{tikzpicture}
+    \caption{Courbes caractéristiques du filtre passe-bas}
+    \label{fig:graphes-pb}
+\end{figure}
+
 Ces résultats sont illustrés par des graphes dans
-les figures~\ref{fig:graphes-pb} et~\ref{fig:graphes-pb},
+les figures~\ref{fig:graphes-ph} et~\ref{fig:graphes-pb},
 avec en abcisse la pulsation
 et en ordonnée le gain et le déphasage.
 Les tendances découvertes sont en pointillés.
-Ici, les potentiomètres sont tous deux réglés à $20\%$,
+Ici, les potentiomètre 2 est réglé à $20\,\%$ et le 3 à $100\,\%$,
 donc $R_2 = 200\,\ohm$ et $R_3 = 2\,\kilo\ohm$.
 
 Nous utilisons une échelle logarithmique pour les fréquences
@@ -47,7 +97,33 @@ donc les gains sont multipliés et les déphasages sont additionnés.%
 }
 Le résultat est illustré dans la figure~\ref{fig:graphes-bande}.
 
-Nous avons noté sur les graphes les pulsations
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \begin{loglogaxis}[
+                xlabel={Fréquence (\hertz)},
+                ylabel={Gain},
+            ]
+            \addplot[domain=0.3:1.7e5,samples=100]
+            {1 / sqrt(1+1/(2*pi*10e3*470e-9*x)^2)
+                / sqrt(1+(2*pi*200*470e-9*x)^2)};
+        \end{loglogaxis}
+    \end{tikzpicture}
+    \qquad
+    \begin{tikzpicture}
+        \begin{semilogxaxis}[
+                xlabel={Fréquence (\hertz)},
+                ylabel={Déphasage (deg)},
+            ]
+            \addplot[domain=0.3:1.9e5,samples=100]
+            {atan(1/(2*pi*10e3*470e-9*x))+atan(-2*pi*200*470e-9*x)};
+        \end{semilogxaxis}
+    \end{tikzpicture}
+    \caption{Courbes caractéristiques de la combinaison des deux filtres}
+    \label{fig:graphes-bande}
+\end{figure}
+
+Nous noterons les pulsations de coupure
 $\omega\ind{bas} = 1/R_2C_2$ et $\omega\ind{haut}=1/R_3C_3$,%
 \footnote{Nous omettrons les parenthèses lorsque cela améliore la lisibilité.}
 appelées \emph{pulsations de coupure}.
