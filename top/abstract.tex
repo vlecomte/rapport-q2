@@ -1,15 +1,77 @@
 \biabstract
 % English
 {
-    As part of the project of the second quadrimester, we have been entrused the relization of two amplifier circuits adjustable in both frequency and volume, and two speakers that can be connected to these circuits. We therefore designed a woofer type speaker and a tweeter type speaker together with two circuits integrating required functions. This report describes our project, our research, our organization, our calculations as well as the more accurate description of the different blocks forming our circuit. Furthermore, it contains two types of annexes. The theorical annexes allow to better understand some calculations while practical annexes allow to explain in more detail our procedures and our MATLAB codes. Currently, our system allow to distinctly hear the music with a satisfying quality. Since some of the components were provided or imposed, we had a more limited room for maneuver. With opportunities to choose by ourselves our components, we might have been able to reach a better quality as well as a higher volume.
+%    As part of the project of the second quadrimester, we have been entrused the relization of two amplifier circuits adjustable in both frequency and volume, and two speakers that can be connected to these circuits. We therefore designed a woofer type speaker and a tweeter type speaker together with two circuits integrating required functions. This report describes our project, our research, our organization, our calculations as well as the more accurate description of the different blocks forming our circuit. Furthermore, it contains two types of annexes. The theorical annexes allow to better understand some calculations while practical annexes allow to explain in more detail our procedures and our MATLAB codes. Currently, our system allow to distinctly hear the music with a satisfying quality. Since some of the components were provided or imposed, we had a more limited room for maneuver. With opportunities to choose by ourselves our components, we might have been able to reach a better quality as well as a higher volume.
 %And we had a lot of fun ! 
-\newline
+%
+%    ---
+%
+    Smartphones are extremely widespread nowadays,
+    and there are plenty of matching speakers.
+    However, they are quite expensive and are rarely
+    equipped with bass-treble tuning.
+    We therefore designed and built a system with
+    two amplifiers and and two speakers (a tweeter and a woofer)
+    whose volume and frequencies can be adjusted.
+    The main part of this report describes the inner working,
+    modeling and testing of each subset of the device,
+    as well as our research and organization, while
+    the appendices contain both the theoretical and practical
+    tools we used.
+    Our device allows adjusting the volume from 0 to 100\,\%,
+    the lowest frequency from $34\,\hertz$ to $340\,\hertz$ and
+    the highest frequency from $340\,\hertz$ to $3.4\,\kilo\hertz$
+    with satisfactory fidelity, all for less than 10\,\euro{}'s
+    worth of electrical components.
+    With better diaphragms and mass production, we trust we can
+    increase both volume and quality while keeping
+    the price low.
+    \newline
 }
 % Français
 {
-    Dans le cadre du projet du deuxième quadrimestre, il nous a été confié la réalisation de deux circuits amplificateurs, réglables en fréquence et en volume, et de deux haut-parleurs pouvant y être connectés. Nous avons donc conçu un haut-parleur de type woofer et un haut-paleur de type tweeter ainsi que deux circuits intégrant les fonctions demandées.
-Ce rapport décrit notre projet, nos recherches, notre organisation, nos calculs ainsi que la description plus précise des différents blocs formant notre circuit. En outre, il contient deux types d'annexes. Les annexes théoriques permettent de mieux comprendre certains calculs tandis que les annexes pratiques permettent d'expliquer plus en détails nos démarches et nos codes MATLAB.
-Actuellement, notre système nous permet d'entendre distinctement la musique avec une qualité satisfaisante. Certains composants nous ayants préalablement été fournis ou imposés, nous avions une marge de manoeuvre plus limitée.
-Avec la possibilité de choisir nous même nos composants, nous aurions peut-être pu atteindre une meilleure qualité ains qu'un volume plus élevé.
+%    Dans le cadre du projet du deuxième quadrimestre,
+%    il nous a été confié la réalisation de deux circuits amplificateurs,
+%    réglables en fréquence et en volume,
+%    et de deux haut-parleurs pouvant y être connectés.
+%    Nous avons donc conçu un haut-parleur de type woofer
+%    et un haut-paleur de type tweeter
+%    ainsi que deux circuits intégrant les fonctions demandées.
+%    Ce rapport décrit notre projet, nos recherches, notre organisation,
+%    nos calculs ainsi que la description plus précise
+%    des différents blocs formant notre circuit.
+%    En outre, il contient deux types d'annexes.
+%    Les annexes théoriques permettent de mieux comprendre
+%    certains calculs tandis que les annexes pratiques
+%    permettent d'expliquer plus en détails nos démarches et nos codes MATLAB.
+%    Actuellement, notre système nous permet d'entendre distinctement
+%    la musique avec une qualité satisfaisante.
+%    Certains composants nous ayants préalablement été fournis ou imposés,
+%    nous avions une marge de manoeuvre plus limitée.
+%    Avec la possibilité de choisir nous même nos composants,
+%    nous aurions peut-être pu atteindre une meilleure qualité
+%    ainsi qu'un volume plus élevé.
 %Et on s'est super bien amusés
+%
+%    ---
+%
+    Les smartphones sont aujourd'hui très largement répandus,
+    et les enceintes portables adaptées sont légion.
+    Toutefois, celles-ci sont assez coûteuses et disposent rarement
+    d'un système de dosages basses-aigus.
+    Nous avons donc conçu et réalisé un système de deux amplificateurs
+    et deux haut-parleurs (un tweeter et un woofer)
+    réglables en volume et en fréquence.
+    Le corps de ce rapport décrit le fonctionnement, la modélisation
+    et la validation de chaque partie du dispositif,
+    ainsi que notre organisation et nos recherches, tandis que
+    les annexes contiennent les outils théoriques et pratiques utilisés.
+    Notre système permet pour l'instant de régler le volume
+    de 0 à $100\,\%$, la fréquence minimale de $34\,\hertz$ à $340\,\hertz$
+    et la fréquence maximale de $340\,\hertz$ à $3.4\,\kilo\hertz$
+    avec une fidélité satisfaisante, le tout pour moins de 10\,\euro{}
+    en composants électroniques.
+    Avec de meileures membranes et une fabrication en série,
+    nous pensons pouvoir augmenter nettement volume et qualité
+    en restant à un prix très bas.
 }
