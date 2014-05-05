@@ -6,6 +6,20 @@ comme illustré dans la figure~\ref{fig:circ-passe-bas}.
 Le signal d'entrée est reçu aux extrémités, et la tension de sortie est prise
 aux bornes de la capacité.
 
+\begin{figure}[h!]
+    \centering
+    \begin{circuitikz}
+        \draw (0,0)
+        node[anchor=east]{$v\ind{in}$}
+        to[R=$R$, v_<=$v_R$, o-*] (3,0)
+        to[C=$C$, v_<=$v_C$, -*] (6,0)
+        node[ground]{}
+        ;
+    \end{circuitikz}
+    \caption{Schéma électrique d'un circuit RC}
+    \label{fig:circ-passe-bas}
+\end{figure}
+
 Définissons:
 \begin{itemize}
     \item $v\ind{in}(t)$ la tension d'entrée;
