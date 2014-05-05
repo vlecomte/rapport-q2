@@ -35,4 +35,17 @@ sans changement significatif.
     \label{fig:sans-opamp}
 \end{figure}
 
-La figure~\ref{fig:sans-opamp}
+La figure~\ref{fig:sans-opamp} montre le schéma électrique sans ampli-op,
+de la sortie du jack à l'entrée de l'ampli IC.
+Nous pouvons résoudre ce circuit par la méthode des nœuds généralisée,
+dont nous parlons dans la section~\ref{sec:phaseurs/impedance}.
+
+Supposons $V\ind{in}$ connu, cela nous donne le système:
+\begin{equation}
+    \begin{array}{rcl}
+        \frac{V\ind{in}-V_1}{R_{11}} &=&
+        \frac{V_1}{R_{12}}+\frac{V_1-V_2}{1/j\omega C_2} \\
+        \frac{V_1-V_2}{1/j\omega C_2} = \frac{V_2}{R_2} + \frac{V_2-V_3}{R_3} \\
+        \frac{V_2-V_3}{R_3} = \frac{V_3}{1/j\omega C_3}
+    \end{array}
+\end{equation}
