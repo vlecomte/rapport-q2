@@ -42,10 +42,30 @@ dont nous parlons dans la section~\ref{sec:phaseurs/impedance}.
 
 Supposons $V\ind{in}$ connu, cela nous donne le système:
 \begin{equation}
+    \left\{
     \begin{array}{rcl}
         \frac{V\ind{in}-V_1}{R_{11}} &=&
         \frac{V_1}{R_{12}}+\frac{V_1-V_2}{1/j\omega C_2} \\
-        \frac{V_1-V_2}{1/j\omega C_2} = \frac{V_2}{R_2} + \frac{V_2-V_3}{R_3} \\
-        \frac{V_2-V_3}{R_3} = \frac{V_3}{1/j\omega C_3}
+        \frac{V_1-V_2}{1/j\omega C_2} &=&
+        \frac{V_2}{R_2} + \frac{V_2-V_3}{R_3} \\
+        \frac{V_2-V_3}{R_3} &=& \frac{V_3}{1/j\omega C_3}
     \end{array}
+    \right.
+\end{equation}
+Posons $R_1 = R_{11}+R_{12}$ pour les calculs.
+
+Après une résolution assez fastidieuse, on obtient une fonction de transfert
+totale
+\begin{equation}
+    H\ind{tot}(j\omega) = \frac{(j\omega C)(R_2R_{12})}
+    {R_1 + j\omega C(R_1R_3+2R_1R_2+R_{11}R_{12}
+        + (j\omega C)^2(R_1R_2R_3 + R_{11}R_{12}R_3 + 2R_{11}R_{12}R_2
+        - R_{11}R_{12}R_2)}
+\end{equation}
+avec l'hypothèse $C_2 = C_3 = C$.
+
+À titre de comparaison, la fonction de transfert totale avec l'ampli-op est
+\begin{equation}
+    H\ind{tot}(j\omega) = \frac{R_{12}}{R_1}\frac{j\omega CR_2}
+    {1+j\omega CR_2 + (j\omegaC)^2R_2R_3}
 \end{equation}
