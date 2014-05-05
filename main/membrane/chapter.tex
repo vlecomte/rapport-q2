@@ -37,41 +37,61 @@ celui-ci est déterminé par la différence de potentiel entre les deux output d
 intensité, la bobine (et donc la membrane liée à celle-ci) sera accélérée dans une direction ou son opposé, reproduisant 
 ainsi la bande sonore de la musique.
 
-Si la différence de tension entre les 2 output est de $5\volt$, le courant dans la bobine mobile est de 
-$I' = \frac{5\volt}{8\ohm} = 0.625\ampere$ ($8\ohm$ est la résistance totale de la bobine mobile avec une petite 
-résistance ajoutée). La force exercée sur la bobine est donc de $F = 0.04 \newton$
+Si la différence de tension entre les 2 output est de $5\,\volt$, le courant dans la bobine mobile est de 
+$I' = \frac{5\,\volt}{8\,\ohm} = 0.625\,\ampere$ ($8\,\ohm$ est la résistance totale de la bobine mobile avec une petite 
+résistance ajoutée). La force exercée sur la bobine est donc de $F = 0.04\,\newton$
 
 \subsection[b]{Analyse mécanique de la membrane}
 Considérons toutes les forces s'appliquant sur la membrane :
 \begin{itemize}
 \item La force exercée par l'électro-aimant $ \vec{f} $ 
 \item La force de rappel du ressort $ - k \vec{x} $
-\item La force due aux dissipations $ - k \dot{\vec{x}} $
+\item La force due aux dissipations $ - h \dot{\vec{x}} $
 \end{itemize}
 
 Cela nous permet d'exprimer l'équation du mouvement :
 \begin{equation}
-\mathrm{Somme des forces} = \vec{f} - k \vec{x} - k \dot{\vec{x}} = m \ddot{\vec{x}}
-\Leftrightarrow m \ddot{\vec{x}} + k \vec{x} + k \dot{\vec{x}} = \vec{f}
+\mathrm{Somme\ des\ forces} = \vec{f} - k \vec{x} - h \dot{\vec{x}} = m \ddot{\vec{x}}
+\Leftrightarrow m \ddot{\vec{x}} + k \vec{x} + h \dot{\vec{x}} = \vec{f}
 \end{equation}
 
 Ou sous forme phasorielle :
 \begin{equation}
-m (j\omega)^2 x + n (j\omega) + kx = F
-\Leftrightarrow x = \frac{F}{k + hj\omega - m {\omega}^2}
+m (j\omega)^2 X+ h (j\omega)X + kX = F
+\Leftrightarrow X = \frac{F}{k + hj\omega - m {\omega}^2}
 \end{equation}
 
 On suppose que les premières couches d’air devant la membrane sont incompressibles. Par conséquent, elles suivent le même déplacement $X$.
 Pour les déplacer, il faut une pression $P$ telle que 
 \begin{equation}
-P\cdot A = m_{air} {(j \omega)}^{2}X
-\Rightarrow P = m_{air} {(j \omega)}^{2} \frac{F}{k+hj \omega -m {\omega}^{2}}
+P\cdot A = m\ind{air} (j \omega)^2X
+\Rightarrow P = m\ind{air} (j \omega)^2 \frac{F}{k+hj \omega -m \omega^2}
 \end{equation}
 La pression, et donc le volume perçu, ont une courbe caractéristique du type :
 
-Il vaut donc mieux minimiser la pulsation critique $\omega = \sqrt{\frac{k}{m}}$ afin d’avoir une réponse égale opus toutes les fréquences.
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \begin{loglogaxis}[
+                xlabel={Fréquence (log)},
+                ylabel={Pression (log)},
+                width=8cm,
+                xticklabels=\empty,
+                yticklabels=\empty,
+                extra x ticks={1000},
+                extra x tick style={grid=major},
+                extra x tick labels={$\omega = \sqrt{\frac{k}{m}}$}
+            ]
+            \addplot[domain=1e1:1e5,samples=100]
+            {x^2/sqrt((1000-x^2/1000)^2+(1e-5*x)^2)};
+        \end{loglogaxis}
+    \end{tikzpicture}
+    \caption{Amplitude de la variation de pression en fonction de la fréquence}
+\end{figure}
+
+Il vaut donc mieux minimiser la pulsation critique $\omega = \sqrt{\frac{k}{m}}$ afin d’avoir une réponse égale pour toutes les fréquences.
 
 \section{Confrontation}
 Cette force relativement faible fut suffisante pour obtenir une qualité audio acceptable et un volume correct. 
-En minimisant la masse de la bobine mobile (seulement 5\meter \. de fil utilisé contre 50 pour l'électro-aimant, 
-donnant une masse d'environ 16\gram), nous obtenions une grande accélération de $2.5\meter\per\second^2$. 
+En minimisant la masse de la bobine mobile (seulement 5\,\meter de fil utilisé contre 50 pour l'électro-aimant, 
+donnant une masse d'environ 16\,\gram), nous obtenions une grande accélération de $2.5\,\meter\per\second^2$. 
