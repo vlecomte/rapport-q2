@@ -17,6 +17,29 @@ La figure~\ref{fig:regular-to-loglog} montre les graphes
 des mesures de gain du filtre passe-bas en fonction de la fréquence
 avant et après ce changement de variable.
 
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+                xlabel={Fréquence (\hertz)\qquad\qquad\qquad},
+                ylabel={Gain}
+            ]
+            \addplot[only marks,mark=o,mark size=.5mm] table {code/gpb.dat};
+        \end{axis}
+    \end{tikzpicture}
+    \qquad
+    \begin{tikzpicture}
+        \begin{loglogaxis}[
+                xlabel={Fréquence (\hertz)},
+                ylabel={Gain}
+            ]
+            \addplot[only marks,mark=o,mark size=.5mm] table {code/gpb.dat};
+        \end{loglogaxis}
+    \end{tikzpicture}
+    \caption{Mesures de gain en fonction de la fréquence, en échelle normale et en échelle log-log}
+    \label{fig:regular-to-loglog}
+\end{figure}
+
 Outre la très nette amélioration de visibilité,
 l'échelle log-log permet de faire apparaître clairement
 des tendances polynômiales.
