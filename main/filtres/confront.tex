@@ -18,6 +18,36 @@ Celles-ci sont illustrées dans la figure~\ref{fig:ph-pb-tendances}.
 Les points de mesure épousent presque parfaitement les droites,
 ce qui est un premier signe que la théorie rejoint la pratique.
 
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+        \begin{loglogaxis}[
+                xlabel={Fréquence (\hertz)},
+                ylabel={Gain}
+            ]
+            \addplot[domain=8:1000]
+            {exp(-0.016678*ln(x)+0.047312)};
+            \addplot[domain=100:12000]
+            {exp(-0.91454*ln(x)+5.21947)};
+            \addplot[only marks,mark=o,mark size=.5mm] table {code/gpb.dat};
+        \end{loglogaxis}
+    \end{tikzpicture}
+    \begin{tikzpicture}
+        \begin{loglogaxis}[
+                xlabel={Fréquence (\hertz)},
+                ylabel={Gain}
+            ]
+            \addplot[domain=8:1000]
+            {exp(0.97836*ln(x)-5.71483)};
+            \addplot[domain=100:12000]
+            {exp(0.018122*ln(x)+-0.160636)};
+            \addplot[only marks,mark=o,mark size=.5mm] table {code/gph.dat};
+        \end{loglogaxis}
+    \end{tikzpicture}
+    \caption{Tendances linéaires des gains en log-log}
+    \label{fig:ph-pb-tendances}
+\end{figure}
+
 Ensuite, nous avons déterminé la fréquence de coupure,
 qui se trouve à l'intersection des deux droites.
 Pour rappel, l'expression théorique de la fréquence de coupure est
