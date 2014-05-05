@@ -54,18 +54,37 @@ Supposons $V\ind{in}$ connu, cela nous donne le système:
 \end{equation}
 Posons $R_1 = R_{11}+R_{12}$ pour les calculs.
 
-Après une résolution assez fastidieuse, on obtient une fonction de transfert
+Après une résolution assez fastidieuse, nous obtenons une fonction de transfert
 totale
-\begin{equation}
-    H\ind{tot}(j\omega) = \frac{(j\omega C)(R_2R_{12})}
-    {R_1 + j\omega C(R_1R_3+2R_1R_2+R_{11}R_{12}
+\begin{equation} \label{eq:Htot-complique}
+    H\ind{tot}(j\omega) = \frac{j\omega C(R_2R_{12})}
+    {\begin{array}{l}
+            R_1 + j\omega C(R_1R_3+2R_1R_2+R_{11}R_{12})\\
         + (j\omega C)^2(R_1R_2R_3 + R_{11}R_{12}R_3 + 2R_{11}R_{12}R_2
-        - R_{11}R_{12}R_2)}
+        - R_{11}R_{12}R_2)
+\end{array}}
 \end{equation}
 avec l'hypothèse $C_2 = C_3 = C$.
 
 À titre de comparaison, la fonction de transfert totale avec l'ampli-op est
 \begin{equation}
-    H\ind{tot}(j\omega) = \frac{R_{12}}{R_1}\frac{j\omega CR_2}
-    {1+j\omega CR_2 + (j\omegaC)^2R_2R_3}
+    H\ind{tot}(j\omega) = \frac{R_{12}}{R_1}\cdot
+    \frac{j\omega CR_2}
+    {1+j\omega CR_2 + (j\omega C)^2R_2R_3}
+\end{equation}
+
+Nous pouvons simplifier l'expression en~\eqref{eq:Htot-complique}
+par les suppositions, raisonnables dans la plupart des cas
+pour notre choix de potentiomètres:
+\begin{equation}
+    R_2 \gg R_3 \gg R_1 \geq R_{11},R_{12}
+\end{equation}
+ce qui nous donne l'expression
+\begin{equation}
+    \begin{aligned}
+        H\ind{tot}(j\omega) &=& \frac{j\omega C (R_{12} R_2)}
+        {R_1 + j\omega C(R_1\cdot 2R_2) + (j\omega C)^2(R_1\cdot R_2R_3)} \\
+        &=& \frac{R_{12}}{R_1}\cdot
+        \frac{j\omega C R_2}{1+2j\omega CR_2 + (j\omega C)^2R_2R_3}
+    \end{aligned}
 \end{equation}
