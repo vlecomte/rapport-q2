@@ -73,18 +73,41 @@ avec l'hypothèse $C_2 = C_3 = C$.
     {1+j\omega CR_2 + (j\omega C)^2R_2R_3}
 \end{equation}
 
-Nous pouvons simplifier l'expression en~\eqref{eq:Htot-complique}
+Nous pouvons simplifier l'expression~\eqref{eq:Htot-complique}
 par les suppositions, raisonnables dans la plupart des cas
-pour notre choix de potentiomètres:
+pour nos choix de potentiomètres:
 \begin{equation}
     R_2 \gg R_3 \gg R_1 \geq R_{11},R_{12}
 \end{equation}
 ce qui nous donne l'expression
 \begin{equation}
-    \begin{aligned}
-        H\ind{tot}(j\omega) &=& \frac{j\omega C (R_{12} R_2)}
+    \begin{split}
+        H\ind{tot}(j\omega) &= \frac{j\omega C (R_{12} R_2)}
         {R_1 + j\omega C(R_1\cdot 2R_2) + (j\omega C)^2(R_1\cdot R_2R_3)} \\
-        &=& \frac{R_{12}}{R_1}\cdot
+        &= \frac{R_{12}}{R_1}\cdot
         \frac{j\omega C R_2}{1+2j\omega CR_2 + (j\omega C)^2R_2R_3}
-    \end{aligned}
+    \end{split}
 \end{equation}
+qui diffère de la fonction de transfert avec l'ampli-op uniquement
+par le facteur 2 devant $j\omega CR_2$.
+
+Nous pouvons même faire mieux,
+si l'on règle les potentiomètres différemment.
+Si l'on les met chacun sur une nouvelle position:
+\begin{itemize}
+    \item $R_{12}' = 2R_{12}$;
+    \item $R_2' = R_2/2$;
+    \item $R_3' = 2R_3$;
+\end{itemize}
+alors la fonction de transfert devient exactement identique:
+\begin{equation}
+    \begin{split}
+        H\ind{tot}(j\omega) &= \frac{2R_{12}}{R_1} \cdot\frac{j\omega C R_2/2}
+        {1+2j\omega CR_2/2 + (j\omega C)^2R_2/2\cdot 2R_3}\\
+        &= \frac{R_{12}}{R_1}\cdot\frac{j\omega CR_2}
+        {1+j\omega CR_2 + (j\omega C)^2R_2R_3}
+    \end{split}
+\end{equation}
+
+Dès lors, nous avons montré que, sous nos hypothèses, le circuit sans ampli-op
+donne un contrôle décalé, mais équivalent.
