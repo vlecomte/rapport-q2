@@ -18,7 +18,7 @@ calculé que la longueur de fil perpendiculaire au champ par tour de bobine est 
 
 \section{Modélisation}
 
-\subsection[a]{Bobine mobile}
+\subsection{Bobine mobile}
 
 \begin{figure}	
 \begin{center}
@@ -39,9 +39,10 @@ ainsi la bande sonore de la musique.
 
 Si la différence de tension entre les 2 output est de $5\,\volt$, le courant dans la bobine mobile est de 
 $I' = \frac{5\,\volt}{8\,\ohm} = 0.625\,\ampere$ ($8\,\ohm$ est la résistance totale de la bobine mobile avec une petite 
-résistance ajoutée). La force exercée sur la bobine est donc de $F = 0.04\,\newton$
+résistance ajoutée). La force exercée sur la bobine,
+pour $N'=32$, vaut donc $F = 0.04\,\newton$.
 
-\subsection[b]{Analyse mécanique de la membrane}
+\subsection{Analyse mécanique de la membrane}
 Considérons toutes les forces s'appliquant sur la membrane :
 \begin{itemize}
 \item La force exercée par l'électro-aimant $ \vec{f} $ 
@@ -65,7 +66,7 @@ On suppose que les premières couches d’air devant la membrane sont incompress
 Pour les déplacer, il faut une pression $P$ telle que 
 \begin{equation}
 P\cdot A = m\ind{air} (j \omega)^2X
-\Rightarrow P = m\ind{air} (j \omega)^2 \frac{F}{k+hj \omega -m \omega^2}
+\Rightarrow P = \frac{1}{A}m\ind{air} (j \omega)^2 \frac{F}{k+hj \omega -m \omega^2}
 \end{equation}
 La pression, et donc le volume perçu, ont une courbe caractéristique du type :
 
